@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!--
+    Document   : Paciente.hbn.xml
+    Created on : 08 de Julio de 2011, 20:09 PM
+    Author     : Eduardo Lima
+    Description:
+        Purpose of the document follows.
+-->
+<hibernate-mapping package="hospitalpets.modelo">
+  <class name="hospitalpets.modelo.Paciente" table="paciente">
+    <id column="idPaciente" name="paciente">
+        </id>
+    <property column="paciente" name="paciente"/>
+    <property column="procedencia" name="procedencia"/>
+    <property column="barrio" name="barrio"/>
+    <property column="parroquia" name="parroquia"/>
+    <property column="raza" name="raza"/>
+    <property column="peso" name="peso"/>
+    <property column="sexo" name="sexo"/>
+    <many-to-one class="hospitalpets.modelo.Propietario" column="propietario" name="propietario" not-null="true"/>
+    <many-to-one class="hospitalpets.modelo.Medico" column="medico" name="medico" not-null="true"/>
+  </class>
+</hibernate-mapping>

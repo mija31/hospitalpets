@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!--
+    Document   : Medico.hbn.xml
+    Created on : 08 de Julio de 2011, 20:09 PM
+    Author     : Eduardo Lima
+    Description:
+        Purpose of the document follows.
+-->
+<hibernate-mapping package="hospitalpets.modelo">
+  <class name="hospitalpets.modelo.Medico" table="medico">
+    <id column="clave" name="clave">
+        </id>
+    <property column="cedula" name="cedula"/>
+    <property column="nombre" name="nombre"/>
+    <property column="apellido" name="apellido"/>
+  </class>
+</hibernate-mapping>

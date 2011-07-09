@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!--
+    Document   : Consulta.hbn.xml
+    Created on : 08 de Julio de 2011, 17:48 PM
+    Author     : Eduardo Lima
+    Description:
+        Purpose of the document follows.
+-->
+<hibernate-mapping package="hospitalpets.modelo">
+    <class name="hospitalpets.modelo.Consulta" table="consulta">
+
+      <id column="idConsulta" name="numConsulta">
+        </id>
+        <property column="fecha" name="fecha" >
+        <type name="date"/>    
+        </property>
+        <one-to-one name="paciente"  cascade="persist,delete" />
+    </class>
+
+</hibernate-mapping>
