@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!--
+    Document   : Propietario.hbn.xml
+    Created on : 07 de Julio de 2011, 17:48 PM
+    Author     : Eduardo Lima
+    Description:
+        Purpose of the document follows.
+-->
+<hibernate-mapping package="hospitalpets.modelo">
+    <class name="hospitalpets.modelo.Propietario">
+        <id column="cedula" name="cedula">
+        </id>
+        <property column="nombre" name="nombre"/>
+        <property column="apellido" name="apellido"/>
+        <property column="direccion" name="direccion"/>
+        <property column="telefono" name="telefono"/>
+    </class>
+
+</hibernate-mapping>
