@@ -8,14 +8,12 @@
         Purpose of the document follows.
 -->
 <hibernate-mapping package="hospitalpets.modelo">
-    <class name="hospitalpets.modelo.Consulta" table="consulta">
-
-      <id column="idConsulta" name="numConsulta">
+  <class name="hospitalpets.modelo.Consulta" table="consulta">
+    <id column="idConsulta" name="numConsulta">
         </id>
-        <property column="fecha" name="fecha" >
-        <type name="date"/>    
-        </property>
-        <one-to-one name="paciente"  cascade="persist,delete" />
-    </class>
-
+    <property column="fecha" name="fecha">
+      <type name="date"/>
+    </property>
+    <one-to-one cascade="persist,delete" name="paciente"/>
+  </class>
 </hibernate-mapping>

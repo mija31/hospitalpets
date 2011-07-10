@@ -8,13 +8,12 @@
         Purpose of the document follows.
 -->
 <hibernate-mapping package="hospitalpets.modelo">
-    <class name="hospitalpets.modelo.Propietario">
-        <id column="cedula" name="cedula">
+  <class name="hospitalpets.modelo.Propietario" table="propietario">
+    <id column="cedula" name="cedula">
         </id>
-        <property column="nombre" name="nombre"/>
-        <property column="apellido" name="apellido"/>
-        <property column="direccion" name="direccion"/>
-        <property column="telefono" name="telefono"/>
-    </class>
-
+    <property column="nombre" name="nombre"/>
+    <property column="apellido" name="apellido"/>
+    <property column="direccion" name="direccion"/>
+    <property column="telefono" name="telefono"/>
+  </class>
 </hibernate-mapping>

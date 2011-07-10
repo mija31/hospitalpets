@@ -166,17 +166,18 @@ public class VtnMedicoModificar extends javax.swing.JDialog {
 }//GEN-LAST:event_btnCancelarActionPerformed
 
     private void btnModificarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnModificarActionPerformed
-        if(medico!=null){
-        medico.setApellido(txtApellido.getText());
-        medico.setCedula(txtCedula.getText());
-        medico.setNombre(txtNombre.getText());
-        if (ControlAdministraMedico.modificarMedico(medico)) {
-            JOptionPane.showMessageDialog(this, "Los datos se modificaron correctamente");
+        if (medico != null) {
+            medico.setApellido(txtApellido.getText());
+            medico.setCedula(txtCedula.getText());
+            medico.setNombre(txtNombre.getText());
+            if (ControlAdministraMedico.modificarMedico(medico)) {
+                JOptionPane.showMessageDialog(this, "Los datos se modificaron correctamente");
+            } else {
+                JOptionPane.showMessageDialog(this, "Error al modificar los datos");
+            }
         } else {
-            JOptionPane.showMessageDialog(this, "Error al modificar los datos");
+            JOptionPane.showMessageDialog(this, "Error al modificar los datos : El medico no existe");
         }
-        }else
-   JOptionPane.showMessageDialog(this, "Error al modificar los datos : El medico no existe");
 
     }//GEN-LAST:event_btnModificarActionPerformed
 
@@ -190,6 +191,7 @@ public class VtnMedicoModificar extends javax.swing.JDialog {
             txtApellido.setText("");
             txtCedula.setText("");
             txtNombre.setText("");
+            JOptionPane.showMessageDialog(this, "El medico no existe");
         }
     }//GEN-LAST:event_pswPasswordActionPerformed
 

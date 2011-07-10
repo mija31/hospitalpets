@@ -625,12 +625,27 @@ public class VtnPrincipal extends javax.swing.JFrame {
         jMenu5.setText("Propietario");
 
         jMenuItem10.setText("Crear Propietario");
+        jMenuItem10.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem10ActionPerformed(evt);
+            }
+        });
         jMenu5.add(jMenuItem10);
 
         jMenuItem11.setText("Modificar Propietario");
+        jMenuItem11.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem11ActionPerformed(evt);
+            }
+        });
         jMenu5.add(jMenuItem11);
 
         jMenuItem12.setText("Eliminar Propietario");
+        jMenuItem12.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem12ActionPerformed(evt);
+            }
+        });
         jMenu5.add(jMenuItem12);
 
         jMenuBar1.add(jMenu5);
@@ -710,35 +725,7 @@ public class VtnPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton14ActionPerformed
 
     private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
-        switch (numPanel) {
-            case 0:
-                this.pnlPrincipal.remove(pnlDatosGenerales);
-                lblDatosGenerales.setForeground(Color.black);
-                break;
-            case 1:
-                this.pnlPrincipal.remove(pnlDatosPaciente);
-                lblDatosPacientes.setForeground(Color.black);
-                break;
-            case 2:
-                this.pnlPrincipal.remove(pnlSintomas);
-                lblSintomas.setForeground(Color.black);
-                break;
-            case 3:
-                this.pnlPrincipal.remove(pnlDiagnostico);
-                lblDiagnostico.setForeground(Color.black);
-                break;
-            case 4:
-                this.pnlPrincipal.remove(pnlTratamiento);
-                lblTratamiento.setForeground(Color.black);
-                break;
-            default:
-        }
-        this.pnlPrincipal.add(pnlDatosGenerales);
-        pnlPrincipal.setVisible(false);
-        pnlPrincipal.setVisible(true);
-
-        lblDatosGenerales.setForeground(Color.yellow);
-        numPanel = 0;
+        new VtnPacientCrear(this, true).setVisible(true);
 
     }//GEN-LAST:event_jMenuItem1ActionPerformed
 
@@ -821,6 +808,18 @@ public class VtnPrincipal extends javax.swing.JFrame {
     private void jMenuItem8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem8ActionPerformed
         new VtnMedicoEliminar(this, true).setVisible(true);
     }//GEN-LAST:event_jMenuItem8ActionPerformed
+
+    private void jMenuItem10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem10ActionPerformed
+        new VtnPropietarioCrear(this, true).setVisible(true);
+    }//GEN-LAST:event_jMenuItem10ActionPerformed
+
+    private void jMenuItem11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem11ActionPerformed
+        new VtnPropietarioModificar(this, true).setVisible(true);
+    }//GEN-LAST:event_jMenuItem11ActionPerformed
+
+    private void jMenuItem12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem12ActionPerformed
+        new VtnPropietarioEliminar(this, true).setVisible(true);
+    }//GEN-LAST:event_jMenuItem12ActionPerformed
 
     private void datosGenerales() {
     }

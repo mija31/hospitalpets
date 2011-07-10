@@ -24,8 +24,8 @@ public class Paciente {
     private Propietario propietario;
     private Medico medico;
 
-    public final static int MACHO=-1;
-    public final static int HEMBRA=-2;
+    public final static int MACHO=0;
+    public final static int HEMBRA=1;
     public enum RAZAS{BOXER,CHIHAUHAU};
 
     public String getBarrio() {
