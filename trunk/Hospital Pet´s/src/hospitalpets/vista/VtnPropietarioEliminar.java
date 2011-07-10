@@ -4,27 +4,27 @@
  */
 
 /*
- * VtnMedicoEliminar.java
+ * VtnPropietarioEliminar.java
  *
- * Created on 09/07/2011, 03:07:02 PM
+ * Created on 09/07/2011, 05:58:30 PM
  */
 package hospitalpets.vista;
 
-import hospitalpets.control.admin.ControlAdministraMedico;
-import hospitalpets.modelo.Medico;
+import hospitalpets.control.admin.ControlAdministraPropietario;
+import hospitalpets.modelo.Propietario;
 import javax.swing.JOptionPane;
 
 /**
  *
  * @author EDU
  */
-public class VtnMedicoEliminar extends javax.swing.JDialog {
+public class VtnPropietarioEliminar extends javax.swing.JDialog {
 
-    /** Creates new form VtnMedicoEliminar */
-    public VtnMedicoEliminar(java.awt.Frame parent, boolean modal) {
+    /** Creates new form VtnPropietarioEliminar */
+    public VtnPropietarioEliminar(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
         initComponents();
-        medico = new Medico();
+        propietario = new Propietario();
     }
 
     /** This method is called from within the constructor to
@@ -40,14 +40,16 @@ public class VtnMedicoEliminar extends javax.swing.JDialog {
         txtApellido = new javax.swing.JTextField();
         btnCancelar = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
-        txtCedula = new javax.swing.JTextField();
+        txtDireccion = new javax.swing.JTextField();
         txtNombre = new javax.swing.JTextField();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        btnEliminar = new javax.swing.JButton();
+        btneliminar = new javax.swing.JButton();
         jPanel2 = new javax.swing.JPanel();
         jLabel4 = new javax.swing.JLabel();
-        pswPassword = new javax.swing.JPasswordField();
+        txtCedula = new javax.swing.JTextField();
+        txttelefono = new javax.swing.JTextField();
+        jLabel5 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
@@ -65,32 +67,31 @@ public class VtnMedicoEliminar extends javax.swing.JDialog {
 
         jLabel3.setText("Apellido:");
 
-        txtCedula.setEnabled(false);
-        txtCedula.setOpaque(false);
+        txtDireccion.setEnabled(false);
+        txtDireccion.setOpaque(false);
 
         txtNombre.setEnabled(false);
         txtNombre.setOpaque(false);
 
-        jLabel1.setText("Nro Cedula:");
+        jLabel1.setText("Dirección:");
 
         jLabel2.setText("Nombre:");
 
-        btnEliminar.setText("Eliminar");
-        btnEliminar.addActionListener(new java.awt.event.ActionListener() {
+        btneliminar.setText("Eliminar");
+        btneliminar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnEliminarActionPerformed(evt);
+                btneliminarActionPerformed(evt);
             }
         });
 
-        jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder("Ingrese la clave del medico que desea eliminar:"));
+        jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder("Ingrese el número de cedula del Propietario:"));
         jPanel2.setOpaque(false);
 
-        jLabel4.setText("Password:");
+        jLabel4.setText("Nro Cedula:");
 
-        pswPassword.setOpaque(false);
-        pswPassword.addActionListener(new java.awt.event.ActionListener() {
+        txtCedula.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                pswPasswordActionPerformed(evt);
+                txtCedulaActionPerformed(evt);
             }
         });
 
@@ -101,19 +102,23 @@ public class VtnMedicoEliminar extends javax.swing.JDialog {
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jLabel4)
-                .addGap(55, 55, 55)
-                .addComponent(pswPassword, javax.swing.GroupLayout.DEFAULT_SIZE, 141, Short.MAX_VALUE)
+                .addGap(30, 30, 30)
+                .addComponent(txtCedula, javax.swing.GroupLayout.DEFAULT_SIZE, 143, Short.MAX_VALUE)
                 .addContainerGap())
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabel4)
-                    .addComponent(pswPassword, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap())
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txtCedula, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel4)))
         );
+
+        txttelefono.setEnabled(false);
+        txttelefono.setOpaque(false);
+
+        jLabel5.setText("Telefono:");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -122,24 +127,29 @@ public class VtnMedicoEliminar extends javax.swing.JDialog {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(74, 74, 74)
-                        .addComponent(btnEliminar)
-                        .addGap(18, 18, 18)
+                        .addGap(67, 67, 67)
+                        .addComponent(btneliminar)
+                        .addGap(40, 40, 40)
                         .addComponent(btnCancelar))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addContainerGap()
+                        .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addContainerGap()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel1)
-                                    .addComponent(jLabel2)
-                                    .addComponent(jLabel3))
-                                .addGap(55, 55, 55)
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(txtCedula, javax.swing.GroupLayout.DEFAULT_SIZE, 166, Short.MAX_VALUE)
-                                    .addComponent(txtNombre, javax.swing.GroupLayout.DEFAULT_SIZE, 166, Short.MAX_VALUE)
-                                    .addComponent(txtApellido, javax.swing.GroupLayout.DEFAULT_SIZE, 166, Short.MAX_VALUE))))))
+                            .addComponent(jLabel1)
+                            .addComponent(jLabel2)
+                            .addComponent(jLabel3))
+                        .addGap(55, 55, 55)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(txtApellido, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 160, Short.MAX_VALUE)
+                            .addComponent(txtDireccion, javax.swing.GroupLayout.DEFAULT_SIZE, 160, Short.MAX_VALUE)
+                            .addComponent(txtNombre, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 160, Short.MAX_VALUE)))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addContainerGap()
+                        .addComponent(jLabel5)
+                        .addGap(55, 55, 55)
+                        .addComponent(txttelefono, javax.swing.GroupLayout.DEFAULT_SIZE, 161, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
@@ -147,11 +157,7 @@ public class VtnMedicoEliminar extends javax.swing.JDialog {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel1)
-                    .addComponent(txtCedula, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel2)
                     .addComponent(txtNombre, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -159,9 +165,17 @@ public class VtnMedicoEliminar extends javax.swing.JDialog {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel3)
                     .addComponent(txtApellido, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(37, 37, 37)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnEliminar)
+                    .addComponent(jLabel1)
+                    .addComponent(txtDireccion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel5)
+                    .addComponent(txttelefono, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 17, Short.MAX_VALUE)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btneliminar)
                     .addComponent(btnCancelar))
                 .addContainerGap())
         );
@@ -169,42 +183,47 @@ public class VtnMedicoEliminar extends javax.swing.JDialog {
         getContentPane().add(jPanel1, java.awt.BorderLayout.CENTER);
 
         java.awt.Dimension screenSize = java.awt.Toolkit.getDefaultToolkit().getScreenSize();
-        setBounds((screenSize.width-314)/2, (screenSize.height-267)/2, 314, 267);
+        setBounds((screenSize.width-298)/2, (screenSize.height-267)/2, 298, 267);
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelarActionPerformed
         dispose();
 }//GEN-LAST:event_btnCancelarActionPerformed
 
-    private void btnEliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEliminarActionPerformed
-        if (medico != null) {
-            if (ControlAdministraMedico.elimminarMedico(medico)) {
+    private void btneliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btneliminarActionPerformed
+        if (propietario != null) {
+            if (ControlAdministraPropietario.elimminarPropietario(propietario)) {
                 JOptionPane.showMessageDialog(this, "Los datos se eliminaron correctamente");
-                pswPassword.setText("");
                 txtApellido.setText("");
                 txtCedula.setText("");
                 txtNombre.setText("");
-                txtCedula.transferFocusBackward();
+                txtDireccion.setText("");
+                txttelefono.setText("");
+                txtNombre.transferFocusBackward();
             } else {
                 JOptionPane.showMessageDialog(this, "Error al eliminar los datos");
             }
         } else {
-            JOptionPane.showMessageDialog(this, "Error al eliminar el medico no existe");
+            JOptionPane.showMessageDialog(this, "Error al eliminar el propietario no existe");
         }
-}//GEN-LAST:event_btnEliminarActionPerformed
 
-    private void pswPasswordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pswPasswordActionPerformed
-        medico = ControlAdministraMedico.cargarMedico(pswPassword.getText());
-        if (medico != null) {
-            txtApellido.setText(medico.getApellido());
-            txtCedula.setText(medico.getCedula());
-            txtNombre.setText(medico.getNombre());
+}//GEN-LAST:event_btneliminarActionPerformed
+
+    private void txtCedulaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtCedulaActionPerformed
+        propietario = ControlAdministraPropietario.cargarPropietario(txtCedula.getText());
+        if (propietario != null) {
+            txtApellido.setText(propietario.getApellido());
+            txtDireccion.setText(propietario.getDireccion());
+            txtNombre.setText(propietario.getNombre());
+            txttelefono.setText(propietario.getTelefono());
         } else {
             txtApellido.setText("");
-            txtCedula.setText("");
             txtNombre.setText("");
+            txttelefono.setText("");
+            txtDireccion.setText("");
+            JOptionPane.showMessageDialog(this, "El propietario no existe");
         }
-}//GEN-LAST:event_pswPasswordActionPerformed
+}//GEN-LAST:event_txtCedulaActionPerformed
 
     /**
      * @param args the command line arguments
@@ -213,7 +232,7 @@ public class VtnMedicoEliminar extends javax.swing.JDialog {
         java.awt.EventQueue.invokeLater(new Runnable() {
 
             public void run() {
-                VtnMedicoEliminar dialog = new VtnMedicoEliminar(new javax.swing.JFrame(), true);
+                VtnPropietarioEliminar dialog = new VtnPropietarioEliminar(new javax.swing.JFrame(), true);
                 dialog.addWindowListener(new java.awt.event.WindowAdapter() {
 
                     public void windowClosing(java.awt.event.WindowEvent e) {
@@ -226,17 +245,19 @@ public class VtnMedicoEliminar extends javax.swing.JDialog {
     }
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnCancelar;
-    private javax.swing.JButton btnEliminar;
+    private javax.swing.JButton btneliminar;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JPasswordField pswPassword;
     private javax.swing.JTextField txtApellido;
     private javax.swing.JTextField txtCedula;
+    private javax.swing.JTextField txtDireccion;
     private javax.swing.JTextField txtNombre;
+    private javax.swing.JTextField txttelefono;
     // End of variables declaration//GEN-END:variables
-    private Medico medico;
+    private Propietario propietario;
 }

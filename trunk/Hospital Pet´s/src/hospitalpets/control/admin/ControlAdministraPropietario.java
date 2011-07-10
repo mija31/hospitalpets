@@ -9,28 +9,33 @@ import java.util.Vector;
  * @author EDU
  */
 public class ControlAdministraPropietario {
-    private static Propietario p ;
-    private static OperacionDAO ope=new OperacionDAO();
+
+    private static Propietario p;
+    private static OperacionDAO ope = new OperacionDAO();
+
     /** Creates a new instance of ControlerAdministraCliente */
     public ControlAdministraPropietario() {
     }
-    public void crearPropietario(String nombre,String apellido,String cedula, String telefono,String direccion){
-         p=new Propietario();
-         p.setNombre(nombre);
-         p.setApellido(apellido);
-         p.setCedula(cedula);
-         p.setTelefono(telefono);
-         p.setDireccion(direccion);
-         ope.mt_guardar(p);
+
+    public static boolean crearPropietario(String nombre, String apellido, String cedula, String telefono, String direccion) {
+        p = new Propietario();
+        p.setNombre(nombre);
+        p.setApellido(apellido);
+        p.setCedula(cedula);
+        p.setTelefono(telefono);
+        p.setDireccion(direccion);
+        return ope.mt_guardar(p);
     }
-    public Vector<Propietario> cargarPropietario(){
-        return (Vector<Propietario>) ope.cargar(new Propietario(),"propietario");
-    } 
+
+    public static Vector<Propietario> cargarPropietarios() {
+        return (Vector<Propietario>) ope.cargar(new Propietario(), "propietario");
+    }
 //    public Vector buscar(String criterio, String busca, int id){
 //        return ope.cargarCriterio(new Propietario(), "propietario","*",criterio,id, busca);
 //    }
-    public void elimminarPropietario(Propietario c){
-        ope.mt_eliminar(c);
+
+    public static boolean elimminarPropietario(Propietario c) {
+        return ope.mt_eliminar(c);
     }
 //     public void borrar(String nombre, String qq,String id){
 //        Propietario ee=new Propietario();
@@ -39,7 +44,12 @@ public class ControlAdministraPropietario {
 //        ee.setApellido(qq);
 //        ope.mt_eliminar(ee);
 //     }
-     public void modificarPropietario(Propietario c){
-         ope.mt_modificar(c);
-     }
+
+    public static boolean modificarPropietario(Propietario c) {
+        return ope.mt_modificar(c);
+    }
+
+        public static Propietario cargarPropietario(String id){
+        return (Propietario) ope.cargarObjeto(new Propietario(),"propietario","cedula",id);
+    }
 }

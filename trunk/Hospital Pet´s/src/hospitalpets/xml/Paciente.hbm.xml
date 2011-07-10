@@ -18,6 +18,9 @@
     <property column="raza" name="raza"/>
     <property column="peso" name="peso"/>
     <property column="sexo" name="sexo"/>
+    <property column="fechaNacim" name="fechaNacim">
+        <type name="date"/>
+    </property>
     <many-to-one class="hospitalpets.modelo.Propietario" column="propietario" name="propietario" not-null="true"/>
     <many-to-one class="hospitalpets.modelo.Medico" column="medico" name="medico" not-null="true"/>
   </class>
