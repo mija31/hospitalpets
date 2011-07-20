@@ -12,7 +12,7 @@ package hospitalpets.vista;
 
 import com.nilo.plaf.nimrod.NimRODLookAndFeel;
 import com.nilo.plaf.nimrod.NimRODTheme;
-import hospitalpets.ayuda.Ayuda;
+
 import java.awt.Color;
 import java.awt.Image;
 import java.util.logging.Level;
@@ -301,7 +301,7 @@ public class VtnPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenuItem12ActionPerformed
 
     private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
-        Ayuda ayuda = new Ayuda();
+
     }//GEN-LAST:event_jMenuItem2ActionPerformed
 
     private void jCheckBoxMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBoxMenuItem2ActionPerformed

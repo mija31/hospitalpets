@@ -11,7 +11,15 @@ import java.util.ArrayList;
  * @author EDU
  */
 public class Enfermedad {
+    private int idEnfermedad;
 
+    public int getIdEnfermedad() {
+        return idEnfermedad;
+    }
+
+    public void setIdEnfermedad(int idEnfermedad) {
+        this.idEnfermedad = idEnfermedad;
+    }
     private String nombre;
     private String tratamiento;
     private String diagnostico;
