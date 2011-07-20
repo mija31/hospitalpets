@@ -2,6 +2,16 @@
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 <hibernate-mapping package="hospitalpets.modelo">
   <class name="hospitalpets.modelo.Enfermedad" table="enfermedad">
-
+    <id column="idEnfermedad" name="idEnfermedad">
+        <generator class="increment"/>
+    </id>
+    <property column="nombre" name="nombre"/>
+    <property column="diagnostico" name="diagnostico"/>
+    <property column="tratamiento" name="tratamiento"/>
+    <list cascade="all-delete-orphan" name="sintomas">
+      <key column="enfermedad"/>
+      <index column="sintoma"/>
+      <one-to-many class="hospitalpets.modelo.Sintoma"/>
+    </list>
     </class>
 </hibernate-mapping>
