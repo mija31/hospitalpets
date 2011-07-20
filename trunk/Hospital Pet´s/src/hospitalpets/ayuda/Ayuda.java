@@ -1,13 +1,17 @@
 /*
- * Ayuda.java
+ * Ayuda
+ *
+ * Ana Campoverde
+ * Eduardo Lima
+ * German Salas
+ * Yanela Ríos
+ * Carlos Vivanco
  *
  * Created on 27 de abril de 2006, 12:30 PM
  *
- * To change this template, choose Tools | Template Manager
- * and open the template in the editor.
+ * Copyleft
  */
-
-package ayuda;
+package hospitalpets.ayuda;
 
 import java.awt.Component;
 import java.awt.GridLayout;
@@ -18,21 +22,17 @@ import javax.help.JHelp;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 
-/**
- *
- * @author 
- */
 public class Ayuda {
-    
+
     private HelpBroker help_browser = null;
     private HelpSet helpset = null;
-    private HelpSet.Presentation hsp =null;
-    
-    public Ayuda(){
-        try{
+    private HelpSet.Presentation hsp = null;
+
+    public Ayuda() {
+        try {
             URL hsURL = this.getClass().getResource("ayuda.hs");
-            helpset=new HelpSet(null, hsURL);
-            
+            helpset = new HelpSet(null, hsURL);
+
             JHelp help = new JHelp(helpset);
             JFrame frame = new JFrame("help");
             JPanel panel = new JPanel(new GridLayout());
@@ -43,30 +43,28 @@ public class Ayuda {
             frame.pack();
             frame.setLocationRelativeTo(null);
             frame.setVisible(true);
-            frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+            frame.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 
-        }catch (Exception ex){
+        } catch (Exception ex) {
             System.out.println("error");
         }
     }
-
-
 
     /** Creates a new instance of Ayuda */
     public Ayuda(Component component) {
-        try{
+        try {
             URL hsURL = this.getClass().getResource("/resources/ayuda.hs");
-            helpset=new HelpSet(null, hsURL);
-            hsp=helpset.getPresentation("MainWin");
-            help_browser=helpset.createHelpBroker();   
+            helpset = new HelpSet(null, hsURL);
+            hsp = helpset.getPresentation("MainWin");
+            help_browser = helpset.createHelpBroker();
             help_browser.setHelpSetPresentation(hsp);
             help_browser.enableHelpOnButton(component, "introduccion", helpset);
-        }catch (Exception ex){
+        } catch (Exception ex) {
             System.out.println("error");
         }
     }
 
-    public void showAyuda(String tema){
+    public void showAyuda(String tema) {
         try {
             help_browser.setCurrentID(tema);
         } catch (Exception e) {
@@ -74,10 +72,8 @@ public class Ayuda {
         }
         help_browser.setDisplayed(true);
     }
-    
+
     public static void main(String args[]) {
         new Ayuda();
     }
-
-    
 }

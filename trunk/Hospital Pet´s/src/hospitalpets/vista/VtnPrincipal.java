@@ -10,7 +10,7 @@
  */
 package hospitalpets.vista;
 
-import ayuda.Ayuda;
+import hospitalpets.ayuda.Ayuda;
 import java.awt.Color;
 import java.awt.Image;
 import javax.swing.ImageIcon;
@@ -760,7 +760,7 @@ public class VtnPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenuItem12ActionPerformed
 
     private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
-        Ayuda ayuda = new ayuda.Ayuda();
+        Ayuda ayuda = new Ayuda();
     }//GEN-LAST:event_jMenuItem2ActionPerformed
 
     private void datosGenerales() {
