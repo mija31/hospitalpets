@@ -10,10 +10,17 @@
  */
 package hospitalpets.vista;
 
+import com.nilo.plaf.nimrod.NimRODLookAndFeel;
+import com.nilo.plaf.nimrod.NimRODTheme;
 import hospitalpets.ayuda.Ayuda;
 import java.awt.Color;
 import java.awt.Image;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.ImageIcon;
+import javax.swing.SwingUtilities;
+import javax.swing.UIManager;
+import javax.swing.UnsupportedLookAndFeelException;
 
 /**
  *
@@ -23,11 +30,58 @@ public class VtnPrincipal extends javax.swing.JFrame {
 
     /** Creates new form VtnPrincipal */
     public VtnPrincipal() {
+        pielmac();
         initComponents();
         setExtendedState(MAXIMIZED_BOTH);
         ImageIcon im = new ImageIcon(getClass().getResource("/hospitalpets/imagenes/hp112.gif"));
         Image imag = im.getImage();
         setIconImage(imag);
+    }
+    public void pielmac() {
+        try {
+            UIManager.setLookAndFeel("com.birosoft.liquid.LiquidLookAndFeel");
+            SwingUtilities.updateComponentTreeUI(VtnPrincipal.this);
+        } catch (ClassNotFoundException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        } catch (InstantiationException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        } catch (IllegalAccessException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        } catch (UnsupportedLookAndFeelException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
+    }
+
+    public void trans() throws UnsupportedLookAndFeelException {
+        try {
+            UIManager.setLookAndFeel("com.nilo.plaf.nimrod.NimRODLookAndFeel");
+            NimRODTheme nt = new NimRODTheme();
+            nt.setPrimary1(Color.GREEN);
+            nt.setPrimary2(Color.GREEN);
+            nt.setPrimary3(Color.GREEN);
+            nt.setOpacity(0);
+            nt.setFrameOpacity(0);
+            NimRODLookAndFeel NimRODLF = new NimRODLookAndFeel();
+            NimRODLookAndFeel.setCurrentTheme(nt);
+            UIManager.setLookAndFeel(NimRODLF);
+            SwingUtilities.updateComponentTreeUI(VtnPrincipal.this);
+        } catch (ClassNotFoundException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        } catch (InstantiationException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        } catch (IllegalAccessException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        } catch (UnsupportedLookAndFeelException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
     }
 
     /** This method is called from within the constructor to
@@ -39,63 +93,6 @@ public class VtnPrincipal extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        pnlDatosPaciente = new javax.swing.JPanel();
-        jLabel12 = new javax.swing.JLabel();
-        jLabel13 = new javax.swing.JLabel();
-        jLabel14 = new javax.swing.JLabel();
-        jLabel15 = new javax.swing.JLabel();
-        jTextField6 = new javax.swing.JTextField();
-        jComboBox1 = new javax.swing.JComboBox();
-        jTextField7 = new javax.swing.JTextField();
-        jTextField8 = new javax.swing.JTextField();
-        jLabel16 = new javax.swing.JLabel();
-        jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
-        jButton12 = new javax.swing.JButton();
-        pnlSintomas = new javax.swing.JPanel();
-        jLabel17 = new javax.swing.JLabel();
-        jButton5 = new javax.swing.JButton();
-        jButton6 = new javax.swing.JButton();
-        jButton13 = new javax.swing.JButton();
-        pnlDiagnostico = new javax.swing.JPanel();
-        jLabel22 = new javax.swing.JLabel();
-        jButton7 = new javax.swing.JButton();
-        jButton8 = new javax.swing.JButton();
-        jScrollPane2 = new javax.swing.JScrollPane();
-        jTextArea2 = new javax.swing.JTextArea();
-        jButton14 = new javax.swing.JButton();
-        pnlTratamiento = new javax.swing.JPanel();
-        jScrollPane3 = new javax.swing.JScrollPane();
-        jTextArea3 = new javax.swing.JTextArea();
-        jButton9 = new javax.swing.JButton();
-        jButton10 = new javax.swing.JButton();
-        jLabel23 = new javax.swing.JLabel();
-        jPanel1 = new javax.swing.JPanel();
-        lblDatosGenerales = new javax.swing.JLabel();
-        lblDatosPacientes = new javax.swing.JLabel();
-        lblSintomas = new javax.swing.JLabel();
-        lblDiagnostico = new javax.swing.JLabel();
-        lblTratamiento = new javax.swing.JLabel();
-        pnlPrincipal = new javax.swing.JPanel();
-        pnlDatosGenerales = new javax.swing.JPanel();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
-        jLabel8 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
-        jTextField2 = new javax.swing.JTextField();
-        jTextField3 = new javax.swing.JTextField();
-        jLabel9 = new javax.swing.JLabel();
-        jLabel10 = new javax.swing.JLabel();
-        jLabel11 = new javax.swing.JLabel();
-        jTextField4 = new javax.swing.JTextField();
-        jTextField5 = new javax.swing.JTextField();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        jTextArea1 = new javax.swing.JTextArea();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        btnSiguiente1 = new javax.swing.JButton();
         panelImage1 = new org.edisoncor.gui.panel.PanelImage();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
@@ -115,380 +112,9 @@ public class VtnPrincipal extends javax.swing.JFrame {
         jMenuItem5 = new javax.swing.JMenuItem();
         jMenu3 = new javax.swing.JMenu();
         jMenuItem2 = new javax.swing.JMenuItem();
-
-        pnlDatosPaciente.setBackground(new java.awt.Color(204, 255, 204));
-        pnlDatosPaciente.setMinimumSize(new java.awt.Dimension(620, 540));
-        pnlDatosPaciente.setPreferredSize(new java.awt.Dimension(620, 540));
-
-        jLabel12.setText("Datos del Paciente");
-
-        jLabel13.setText("Nombre:");
-
-        jLabel14.setText("Edad:");
-
-        jLabel15.setText("Tipo:");
-
-        jTextField6.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField6ActionPerformed(evt);
-            }
-        });
-
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Perro", "Gato" }));
-
-        jTextField8.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField8ActionPerformed(evt);
-            }
-        });
-
-        jLabel16.setText("Codigo:");
-
-        jButton3.setText("Grabar");
-
-        jButton4.setText("Nuevo");
-
-        jButton12.setText("Siguiente >>");
-        jButton12.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton12ActionPerformed(evt);
-            }
-        });
-
-        javax.swing.GroupLayout pnlDatosPacienteLayout = new javax.swing.GroupLayout(pnlDatosPaciente);
-        pnlDatosPaciente.setLayout(pnlDatosPacienteLayout);
-        pnlDatosPacienteLayout.setHorizontalGroup(
-            pnlDatosPacienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(pnlDatosPacienteLayout.createSequentialGroup()
-                .addGroup(pnlDatosPacienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(pnlDatosPacienteLayout.createSequentialGroup()
-                        .addGap(19, 19, 19)
-                        .addGroup(pnlDatosPacienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addGroup(pnlDatosPacienteLayout.createSequentialGroup()
-                                .addGroup(pnlDatosPacienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel13)
-                                    .addComponent(jLabel15)
-                                    .addComponent(jLabel14))
-                                .addGap(18, 18, 18)
-                                .addGroup(pnlDatosPacienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(jTextField7)
-                                    .addComponent(jComboBox1, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(jTextField6, javax.swing.GroupLayout.DEFAULT_SIZE, 189, Short.MAX_VALUE)))
-                            .addGroup(pnlDatosPacienteLayout.createSequentialGroup()
-                                .addComponent(jLabel16)
-                                .addGap(22, 22, 22)
-                                .addComponent(jTextField8))))
-                    .addGroup(pnlDatosPacienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, pnlDatosPacienteLayout.createSequentialGroup()
-                            .addGap(40, 40, 40)
-                            .addComponent(jButton3)
-                            .addGap(40, 40, 40)
-                            .addComponent(jButton4)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jButton12))
-                        .addGroup(javax.swing.GroupLayout.Alignment.LEADING, pnlDatosPacienteLayout.createSequentialGroup()
-                            .addGap(241, 241, 241)
-                            .addComponent(jLabel12))))
-                .addContainerGap(290, Short.MAX_VALUE))
-        );
-        pnlDatosPacienteLayout.setVerticalGroup(
-            pnlDatosPacienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(pnlDatosPacienteLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel12)
-                .addGap(66, 66, 66)
-                .addGroup(pnlDatosPacienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel16)
-                    .addComponent(jTextField8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(pnlDatosPacienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel15)
-                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(pnlDatosPacienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel13)
-                    .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(pnlDatosPacienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel14)
-                    .addComponent(jTextField7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(86, 86, 86)
-                .addGroup(pnlDatosPacienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton3)
-                    .addComponent(jButton4)
-                    .addComponent(jButton12))
-                .addContainerGap(206, Short.MAX_VALUE))
-        );
-
-        pnlSintomas.setBackground(new java.awt.Color(204, 255, 204));
-        pnlSintomas.setMinimumSize(new java.awt.Dimension(620, 540));
-
-        jLabel17.setText("SINTOMAS");
-
-        jButton5.setText("Grabar");
-
-        jButton6.setText("Nuevo");
-
-        jButton13.setText("Siguiente >>");
-        jButton13.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton13ActionPerformed(evt);
-            }
-        });
-
-        javax.swing.GroupLayout pnlSintomasLayout = new javax.swing.GroupLayout(pnlSintomas);
-        pnlSintomas.setLayout(pnlSintomasLayout);
-        pnlSintomasLayout.setHorizontalGroup(
-            pnlSintomasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(pnlSintomasLayout.createSequentialGroup()
-                .addGroup(pnlSintomasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(pnlSintomasLayout.createSequentialGroup()
-                        .addGap(40, 40, 40)
-                        .addComponent(jButton5)
-                        .addGap(40, 40, 40)
-                        .addComponent(jButton6)
-                        .addGap(18, 18, 18)
-                        .addComponent(jButton13))
-                    .addGroup(pnlSintomasLayout.createSequentialGroup()
-                        .addGap(262, 262, 262)
-                        .addComponent(jLabel17)))
-                .addContainerGap(299, Short.MAX_VALUE))
-        );
-        pnlSintomasLayout.setVerticalGroup(
-            pnlSintomasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(pnlSintomasLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel17)
-                .addGap(286, 286, 286)
-                .addGroup(pnlSintomasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton5)
-                    .addComponent(jButton6)
-                    .addComponent(jButton13))
-                .addContainerGap(206, Short.MAX_VALUE))
-        );
-
-        pnlDiagnostico.setBackground(new java.awt.Color(204, 255, 204));
-        pnlDiagnostico.setMinimumSize(new java.awt.Dimension(620, 540));
-
-        jLabel22.setText("DIAGNOSTICO");
-
-        jButton7.setText("Grabar");
-
-        jButton8.setText("Nuevo");
-
-        jTextArea2.setColumns(20);
-        jTextArea2.setRows(5);
-        jScrollPane2.setViewportView(jTextArea2);
-
-        jButton14.setText("Siguiente >>");
-        jButton14.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton14ActionPerformed(evt);
-            }
-        });
-
-        javax.swing.GroupLayout pnlDiagnosticoLayout = new javax.swing.GroupLayout(pnlDiagnostico);
-        pnlDiagnostico.setLayout(pnlDiagnosticoLayout);
-        pnlDiagnosticoLayout.setHorizontalGroup(
-            pnlDiagnosticoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(pnlDiagnosticoLayout.createSequentialGroup()
-                .addGroup(pnlDiagnosticoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(pnlDiagnosticoLayout.createSequentialGroup()
-                        .addGap(241, 241, 241)
-                        .addComponent(jLabel22))
-                    .addGroup(pnlDiagnosticoLayout.createSequentialGroup()
-                        .addGap(190, 190, 190)
-                        .addComponent(jButton7)
-                        .addGap(40, 40, 40)
-                        .addComponent(jButton8)
-                        .addGap(34, 34, 34)
-                        .addComponent(jButton14))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlDiagnosticoLayout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 600, Short.MAX_VALUE)))
-                .addContainerGap())
-        );
-        pnlDiagnosticoLayout.setVerticalGroup(
-            pnlDiagnosticoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(pnlDiagnosticoLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel22)
-                .addGap(35, 35, 35)
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 393, Short.MAX_VALUE)
-                .addGap(18, 18, 18)
-                .addGroup(pnlDiagnosticoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton7)
-                    .addComponent(jButton8)
-                    .addComponent(jButton14))
-                .addGap(46, 46, 46))
-        );
-
-        pnlTratamiento.setBackground(new java.awt.Color(204, 255, 204));
-        pnlTratamiento.setMinimumSize(new java.awt.Dimension(620, 540));
-
-        jTextArea3.setColumns(20);
-        jTextArea3.setRows(5);
-        jScrollPane3.setViewportView(jTextArea3);
-
-        jButton9.setText("Nuevo");
-
-        jButton10.setText("Grabar");
-
-        jLabel23.setText("TRATAMIENTO");
-
-        javax.swing.GroupLayout pnlTratamientoLayout = new javax.swing.GroupLayout(pnlTratamiento);
-        pnlTratamiento.setLayout(pnlTratamientoLayout);
-        pnlTratamientoLayout.setHorizontalGroup(
-            pnlTratamientoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 620, Short.MAX_VALUE)
-            .addGroup(pnlTratamientoLayout.createSequentialGroup()
-                .addGroup(pnlTratamientoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(pnlTratamientoLayout.createSequentialGroup()
-                        .addGap(241, 241, 241)
-                        .addComponent(jLabel23))
-                    .addGroup(pnlTratamientoLayout.createSequentialGroup()
-                        .addGap(190, 190, 190)
-                        .addComponent(jButton10)
-                        .addGap(40, 40, 40)
-                        .addComponent(jButton9))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlTratamientoLayout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jScrollPane3, javax.swing.GroupLayout.DEFAULT_SIZE, 600, Short.MAX_VALUE)))
-                .addContainerGap())
-        );
-        pnlTratamientoLayout.setVerticalGroup(
-            pnlTratamientoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 540, Short.MAX_VALUE)
-            .addGroup(pnlTratamientoLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel23)
-                .addGap(35, 35, 35)
-                .addComponent(jScrollPane3, javax.swing.GroupLayout.DEFAULT_SIZE, 393, Short.MAX_VALUE)
-                .addGap(18, 18, 18)
-                .addGroup(pnlTratamientoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton10)
-                    .addComponent(jButton9))
-                .addGap(46, 46, 46))
-        );
-
-        jPanel1.setBackground(new java.awt.Color(102, 255, 0));
-        jPanel1.setLayout(new java.awt.GridLayout(10, 1, 0, 3));
-
-        lblDatosGenerales.setFont(new java.awt.Font("Tahoma", 1, 14));
-        lblDatosGenerales.setForeground(new java.awt.Color(255, 255, 51));
-        lblDatosGenerales.setText("Datos Generales");
-        lblDatosGenerales.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jPanel1.add(lblDatosGenerales);
-
-        lblDatosPacientes.setFont(new java.awt.Font("Tahoma", 1, 14));
-        lblDatosPacientes.setText("Datos del Paciente");
-        jPanel1.add(lblDatosPacientes);
-
-        lblSintomas.setFont(new java.awt.Font("Tahoma", 1, 14));
-        lblSintomas.setText("Sintomas");
-        lblSintomas.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jPanel1.add(lblSintomas);
-
-        lblDiagnostico.setFont(new java.awt.Font("Tahoma", 1, 14));
-        lblDiagnostico.setText("Diagnostico");
-        lblDiagnostico.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jPanel1.add(lblDiagnostico);
-
-        lblTratamiento.setFont(new java.awt.Font("Tahoma", 1, 14));
-        lblTratamiento.setText("Tratamiento");
-        lblTratamiento.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jPanel1.add(lblTratamiento);
-
-        pnlPrincipal.setLayout(new java.awt.BorderLayout());
-
-        pnlDatosGenerales.setBackground(new java.awt.Color(204, 255, 204));
-        pnlDatosGenerales.setPreferredSize(new java.awt.Dimension(620, 540));
-
-        jLabel4.setText("DATOS GENERALES DEL CLIENTE");
-        pnlDatosGenerales.add(jLabel4);
-
-        jLabel5.setText("Nombre:");
-        pnlDatosGenerales.add(jLabel5);
-
-        jLabel6.setText("Apellidos:");
-        pnlDatosGenerales.add(jLabel6);
-
-        jLabel7.setText("Cedula:");
-        pnlDatosGenerales.add(jLabel7);
-
-        jLabel8.setText("Fecha de Ingreso:");
-        pnlDatosGenerales.add(jLabel8);
-
-        jTextField1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField1ActionPerformed(evt);
-            }
-        });
-        pnlDatosGenerales.add(jTextField1);
-
-        jTextField2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField2ActionPerformed(evt);
-            }
-        });
-        pnlDatosGenerales.add(jTextField2);
-
-        jTextField3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField3ActionPerformed(evt);
-            }
-        });
-        pnlDatosGenerales.add(jTextField3);
-
-        jLabel9.setText("Telefono:");
-        pnlDatosGenerales.add(jLabel9);
-
-        jLabel10.setText("Celular:");
-        pnlDatosGenerales.add(jLabel10);
-
-        jLabel11.setText("Dirección:");
-        pnlDatosGenerales.add(jLabel11);
-
-        jTextField4.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField4ActionPerformed(evt);
-            }
-        });
-        pnlDatosGenerales.add(jTextField4);
-
-        jTextField5.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField5ActionPerformed(evt);
-            }
-        });
-        pnlDatosGenerales.add(jTextField5);
-
-        jTextArea1.setColumns(20);
-        jTextArea1.setRows(5);
-        jScrollPane1.setViewportView(jTextArea1);
-
-        pnlDatosGenerales.add(jScrollPane1);
-
-        jButton1.setText("Grabar");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
-            }
-        });
-        pnlDatosGenerales.add(jButton1);
-
-        jButton2.setText("Cancelar");
-        pnlDatosGenerales.add(jButton2);
-
-        btnSiguiente1.setText("Siguiente >>");
-        btnSiguiente1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnSiguiente1ActionPerformed(evt);
-            }
-        });
-        pnlDatosGenerales.add(btnSiguiente1);
-
-        pnlPrincipal.add(pnlDatosGenerales, java.awt.BorderLayout.CENTER);
+        jMenu6 = new javax.swing.JMenu();
+        jCheckBoxMenuItem1 = new javax.swing.JCheckBoxMenuItem();
+        jCheckBoxMenuItem2 = new javax.swing.JCheckBoxMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Hospital Pet´s Beta");
@@ -610,57 +236,36 @@ public class VtnPrincipal extends javax.swing.JFrame {
 
         jMenuBar1.add(jMenu3);
 
+        jMenu6.setText("Apariencia");
+
+        jCheckBoxMenuItem1.setSelected(true);
+        jCheckBoxMenuItem1.setText("Mac");
+        jCheckBoxMenuItem1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCheckBoxMenuItem1ActionPerformed(evt);
+            }
+        });
+        jMenu6.add(jCheckBoxMenuItem1);
+
+        jCheckBoxMenuItem2.setText("Trans");
+        jCheckBoxMenuItem2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCheckBoxMenuItem2ActionPerformed(evt);
+            }
+        });
+        jMenu6.add(jCheckBoxMenuItem2);
+
+        jMenuBar1.add(jMenu6);
+
         setJMenuBar(jMenuBar1);
 
         java.awt.Dimension screenSize = java.awt.Toolkit.getDefaultToolkit().getScreenSize();
         setBounds((screenSize.width-767)/2, (screenSize.height-737)/2, 767, 737);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jTextField6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField6ActionPerformed
-        // TODO add your handling code here:
-}//GEN-LAST:event_jTextField6ActionPerformed
-
     private void jTextField7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField7ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField7ActionPerformed
-
-    private void jTextField8ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField8ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField8ActionPerformed
-
-    private void jButton12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton12ActionPerformed
-        this.pnlPrincipal.remove(pnlDatosPaciente);
-        this.pnlPrincipal.add(pnlSintomas);
-        pnlPrincipal.setVisible(false);
-        pnlPrincipal.setVisible(true);
-
-
-        lblDatosPacientes.setForeground(Color.black);
-        lblSintomas.setForeground(Color.yellow);
-        numPanel = 2;
-    }//GEN-LAST:event_jButton12ActionPerformed
-
-    private void jButton13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton13ActionPerformed
-        this.pnlPrincipal.remove(pnlSintomas);
-        this.pnlPrincipal.add(pnlDiagnostico);
-        pnlPrincipal.setVisible(false);
-        pnlPrincipal.setVisible(true);
-
-        lblSintomas.setForeground(Color.black);
-        lblDiagnostico.setForeground(Color.yellow);
-        numPanel = 3;
-    }//GEN-LAST:event_jButton13ActionPerformed
-
-    private void jButton14ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton14ActionPerformed
-        this.pnlPrincipal.remove(pnlDiagnostico);
-        this.pnlPrincipal.add(pnlTratamiento);
-        pnlPrincipal.setVisible(false);
-        pnlPrincipal.setVisible(true);
-
-        lblDiagnostico.setForeground(Color.black);
-        lblTratamiento.setForeground(Color.yellow);
-        numPanel = 4;
-    }//GEN-LAST:event_jButton14ActionPerformed
 
     private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
         new VtnPacientCrear(this, true).setVisible(true);
@@ -668,76 +273,12 @@ public class VtnPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenuItem1ActionPerformed
 
     private void jMenuItem4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem4ActionPerformed
-        switch (numPanel) {
-            case 0:
-                this.pnlPrincipal.remove(pnlDatosGenerales);
-                lblDatosGenerales.setForeground(Color.black);
-                break;
-            case 1:
-                this.pnlPrincipal.remove(pnlDatosPaciente);
-                lblDatosPacientes.setForeground(Color.black);
-                break;
-            case 2:
-                this.pnlPrincipal.remove(pnlSintomas);
-                lblSintomas.setForeground(Color.black);
-                break;
-            case 3:
-                this.pnlPrincipal.remove(pnlDiagnostico);
-                lblDiagnostico.setForeground(Color.black);
-                break;
-            case 4:
-                this.pnlPrincipal.remove(pnlTratamiento);
-                lblTratamiento.setForeground(Color.black);
-                break;
-            default:
-        }
-        this.pnlPrincipal.add(pnlSintomas);
-        pnlPrincipal.setVisible(false);
-        pnlPrincipal.setVisible(true);
-
-        lblSintomas.setForeground(Color.yellow);
-        numPanel = 2;
-
+       
     }//GEN-LAST:event_jMenuItem4ActionPerformed
 
     private void jMenuItem6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem6ActionPerformed
         new VtnMedicoCrear(this, true).setVisible(true);
     }//GEN-LAST:event_jMenuItem6ActionPerformed
-
-    private void btnSiguiente1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnSiguiente1ActionPerformed
-        this.pnlPrincipal.remove(pnlDatosGenerales);
-        this.pnlPrincipal.add(pnlDatosPaciente);
-        pnlPrincipal.setVisible(false);
-        pnlPrincipal.setVisible(true);
-
-        lblDatosGenerales.setForeground(Color.black);
-        lblDatosPacientes.setForeground(Color.yellow);
-        numPanel = 1;
-}//GEN-LAST:event_btnSiguiente1ActionPerformed
-
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
-}//GEN-LAST:event_jButton1ActionPerformed
-
-    private void jTextField5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField5ActionPerformed
-        // TODO add your handling code here:
-}//GEN-LAST:event_jTextField5ActionPerformed
-
-    private void jTextField4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField4ActionPerformed
-        // TODO add your handling code here:
-}//GEN-LAST:event_jTextField4ActionPerformed
-
-    private void jTextField3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField3ActionPerformed
-        // TODO add your handling code here:
-}//GEN-LAST:event_jTextField3ActionPerformed
-
-    private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed
-        // TODO add your handling code here:
-}//GEN-LAST:event_jTextField2ActionPerformed
-
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
-        // TODO add your handling code here:
-}//GEN-LAST:event_jTextField1ActionPerformed
 
     private void jMenuItem7ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem7ActionPerformed
         new VtnMedicoModificar(this, true).setVisible(true);
@@ -763,6 +304,22 @@ public class VtnPrincipal extends javax.swing.JFrame {
         Ayuda ayuda = new Ayuda();
     }//GEN-LAST:event_jMenuItem2ActionPerformed
 
+    private void jCheckBoxMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBoxMenuItem2ActionPerformed
+try {
+            trans();
+        } catch (UnsupportedLookAndFeelException ex) {
+            Logger.getLogger(VtnPrincipal.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        jCheckBoxMenuItem1.setSelected(false);
+        jCheckBoxMenuItem2.setSelected(true);        // TODO add your handling code here:
+    }//GEN-LAST:event_jCheckBoxMenuItem2ActionPerformed
+
+    private void jCheckBoxMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBoxMenuItem1ActionPerformed
+        pielmac();
+        jCheckBoxMenuItem1.setSelected(true);
+        jCheckBoxMenuItem2.setSelected(false);         // TODO add your handling code here:
+    }//GEN-LAST:event_jCheckBoxMenuItem1ActionPerformed
+
     private void datosGenerales() {
     }
 
@@ -778,42 +335,14 @@ public class VtnPrincipal extends javax.swing.JFrame {
         });
     }
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton btnSiguiente1;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton10;
-    private javax.swing.JButton jButton12;
-    private javax.swing.JButton jButton13;
-    private javax.swing.JButton jButton14;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
-    private javax.swing.JButton jButton6;
-    private javax.swing.JButton jButton7;
-    private javax.swing.JButton jButton8;
-    private javax.swing.JButton jButton9;
-    private javax.swing.JComboBox jComboBox1;
-    private javax.swing.JLabel jLabel10;
-    private javax.swing.JLabel jLabel11;
-    private javax.swing.JLabel jLabel12;
-    private javax.swing.JLabel jLabel13;
-    private javax.swing.JLabel jLabel14;
-    private javax.swing.JLabel jLabel15;
-    private javax.swing.JLabel jLabel16;
-    private javax.swing.JLabel jLabel17;
-    private javax.swing.JLabel jLabel22;
-    private javax.swing.JLabel jLabel23;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
+    private javax.swing.JCheckBoxMenuItem jCheckBoxMenuItem1;
+    private javax.swing.JCheckBoxMenuItem jCheckBoxMenuItem2;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
     private javax.swing.JMenu jMenu3;
     private javax.swing.JMenu jMenu4;
     private javax.swing.JMenu jMenu5;
+    private javax.swing.JMenu jMenu6;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenuItem jMenuItem10;
@@ -827,33 +356,9 @@ public class VtnPrincipal extends javax.swing.JFrame {
     private javax.swing.JMenuItem jMenuItem7;
     private javax.swing.JMenuItem jMenuItem8;
     private javax.swing.JMenuItem jMenuItem9;
-    private javax.swing.JPanel jPanel1;
-    private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JScrollPane jScrollPane3;
-    private javax.swing.JTextArea jTextArea1;
-    private javax.swing.JTextArea jTextArea2;
-    private javax.swing.JTextArea jTextArea3;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
-    private javax.swing.JTextField jTextField4;
-    private javax.swing.JTextField jTextField5;
-    private javax.swing.JTextField jTextField6;
-    private javax.swing.JTextField jTextField7;
-    private javax.swing.JTextField jTextField8;
-    private javax.swing.JLabel lblDatosGenerales;
-    private javax.swing.JLabel lblDatosPacientes;
-    private javax.swing.JLabel lblDiagnostico;
-    private javax.swing.JLabel lblSintomas;
-    private javax.swing.JLabel lblTratamiento;
     private org.edisoncor.gui.panel.PanelImage panelImage1;
-    private javax.swing.JPanel pnlDatosGenerales;
-    private javax.swing.JPanel pnlDatosPaciente;
-    private javax.swing.JPanel pnlDiagnostico;
-    private javax.swing.JPanel pnlPrincipal;
-    private javax.swing.JPanel pnlSintomas;
-    private javax.swing.JPanel pnlTratamiento;
     // End of variables declaration//GEN-END:variables
     int numPanel = 0;
 }
+
+
