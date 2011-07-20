@@ -10,6 +10,7 @@
  */
 package hospitalpets.vista;
 
+import ayuda.Ayuda;
 import java.awt.Color;
 import java.awt.Image;
 import javax.swing.ImageIcon;
@@ -598,7 +599,13 @@ public class VtnPrincipal extends javax.swing.JFrame {
 
         jMenu3.setText("Ayuda");
 
+        jMenuItem2.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_F1, 0));
         jMenuItem2.setText("Acerca de ?");
+        jMenuItem2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem2ActionPerformed(evt);
+            }
+        });
         jMenu3.add(jMenuItem2);
 
         jMenuBar1.add(jMenu3);
@@ -751,6 +758,10 @@ public class VtnPrincipal extends javax.swing.JFrame {
     private void jMenuItem12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem12ActionPerformed
         new VtnPropietarioEliminar(this, true).setVisible(true);
     }//GEN-LAST:event_jMenuItem12ActionPerformed
+
+    private void jMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem2ActionPerformed
+        Ayuda ayuda = new ayuda.Ayuda();
+    }//GEN-LAST:event_jMenuItem2ActionPerformed
 
     private void datosGenerales() {
     }
