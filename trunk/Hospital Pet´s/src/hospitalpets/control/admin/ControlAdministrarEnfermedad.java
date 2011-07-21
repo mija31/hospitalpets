@@ -23,7 +23,7 @@ public class ControlAdministrarEnfermedad {
     public static boolean crearMedico() {
         m = new Enfermedad();
         m.setDiagnostico(null);
-
+        m.setTratamiento(null);
         m.setNombre(null);
         m.setSintomas(null);
         return ope.mt_guardar(ope);
