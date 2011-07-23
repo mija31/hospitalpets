@@ -21,5 +21,7 @@
     <mapping resource="hospitalpets/xml/Medico.hbm.xml"/>
     <mapping resource="hospitalpets/xml/Consulta.hbm.xml"/>
     <mapping resource="hospitalpets/xml/Paciente.hbm.xml"/>
+    <mapping resource="hospitalpets/xml/Sintoma.hbm.xml"/>
+    <mapping resource="hospitalpets/xml/Enfermedad.hbm.xml"/>
   </session-factory>
 </hibernate-configuration>

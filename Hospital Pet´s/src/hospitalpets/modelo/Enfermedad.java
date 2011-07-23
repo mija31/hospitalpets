@@ -5,6 +5,7 @@
 package hospitalpets.modelo;
 
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  *
@@ -23,7 +24,19 @@ public class Enfermedad {
     private String nombre;
     private String tratamiento;
     private String diagnostico;
-    private ArrayList<Sintoma> sintomas;
+    private List sintomas;
+
+    public List getSintomas() {
+        return sintomas;
+    }
+
+    public void setSintomas(List sintomas) {
+        this.sintomas = sintomas;
+    }
+
+    public Enfermedad(){
+        sintomas=new ArrayList<Sintoma>();
+    }
 
     public String getDiagnostico() {
         return diagnostico;
@@ -41,14 +54,7 @@ public class Enfermedad {
         this.nombre = nombre;
     }
 
-    public ArrayList<Sintoma> getSintomas() {
-        return sintomas;
-    }
-
-    public void setSintomas(ArrayList<Sintoma> sintomas) {
-        this.sintomas = sintomas;
-    }
-
+    
     public String getTratamiento() {
         return tratamiento;
     }

@@ -116,9 +116,10 @@ public class OperacionDAO {
             System.err.println("es fatal");
             return null;
         }
-        for (int i = 0; i < especi.size(); i++) {
-            esp.add(especi.get(i));
-        }
+        esp=new Vector(especi);
+//        for (int i = 0; i < especi.size(); i++) {
+//            esp.add(especi.get(i));
+//        }
         return esp;
     }
 

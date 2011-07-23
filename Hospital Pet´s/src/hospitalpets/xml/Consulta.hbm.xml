@@ -10,10 +10,18 @@
 <hibernate-mapping package="hospitalpets.modelo">
   <class name="hospitalpets.modelo.Consulta" table="consulta">
     <id column="idConsulta" name="numConsulta">
+        <generator class="increment"/>
         </id>
     <property column="fecha" name="fecha">
       <type name="date"/>
     </property>
     <one-to-one cascade="persist,delete" name="paciente"/>
+
+    <set name="enfermedad" table="Consul_Enfer">
+        <key column="idConsulta"/>
+        <many-to-many column="idEnfermedad" class="hospitalpets.modelo.Enfermedad"/>
+    </set>
+
+
   </class>
 </hibernate-mapping>
