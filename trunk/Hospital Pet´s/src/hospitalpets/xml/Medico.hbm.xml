@@ -8,7 +8,7 @@
         Purpose of the document follows.
 -->
 <hibernate-mapping package="hospitalpets.modelo">
-  <class name="hospitalpets.modelo.Medico" table="medico">
+      <class name="hospitalpets.modelo.Medico" table="medico">
     <id column="clave" name="clave">
         </id>
     <property column="cedula" name="cedula"/>

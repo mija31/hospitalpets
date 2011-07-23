@@ -7,6 +7,9 @@ package hospitalpets.control.admin;
 
 import hospitalpets.control.dao.OperacionDAO;
 import hospitalpets.modelo.Enfermedad;
+import hospitalpets.modelo.Sintoma;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  *
@@ -20,13 +23,13 @@ public class ControlAdministrarEnfermedad {
     public ControlAdministrarEnfermedad() {
     }
 
-    public static boolean crearMedico() {
+    public static boolean crearEnfermedad(String nombre,List<Sintoma> sintoma,String diagnostico,String tratamiento) {
         m = new Enfermedad();
-        m.setDiagnostico(null);
-        m.setTratamiento(null);
-        m.setNombre(null);
-        m.setSintomas(null);
-        return ope.mt_guardar(ope);
+        m.setDiagnostico(diagnostico);
+        m.setTratamiento(tratamiento);
+        m.setNombre(nombre);
+        m.setSintomas(sintoma);
+        return ope.mt_guardar(m);
     }
 
 

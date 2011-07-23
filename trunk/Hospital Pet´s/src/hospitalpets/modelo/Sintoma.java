@@ -11,15 +11,16 @@ package hospitalpets.modelo;
  */
 public class Sintoma {
     private String nombre;
-    private int idSintoma;
+    private String idSintoma;
 
-    public int getSintoma() {
+    public String getIdSintoma() {
         return idSintoma;
     }
 
-    public void setSintoma(int idSintoma) {
+    public void setIdSintoma(String idSintoma) {
         this.idSintoma = idSintoma;
     }
+
 
     public String getNombre() {
         return nombre;

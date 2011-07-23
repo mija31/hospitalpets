@@ -8,9 +8,10 @@
     <property column="nombre" name="nombre"/>
     <property column="diagnostico" name="diagnostico"/>
     <property column="tratamiento" name="tratamiento"/>
+    
     <list cascade="all-delete-orphan" name="sintomas">
-      <key column="enfermedad"/>
-      <index column="sintoma"/>
+      <key column="idEnfermedad"/>
+      <index column="ORDEN"/>
       <one-to-many class="hospitalpets.modelo.Sintoma"/>
     </list>
     </class>
