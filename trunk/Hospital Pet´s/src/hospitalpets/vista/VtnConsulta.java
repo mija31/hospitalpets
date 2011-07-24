@@ -10,6 +10,8 @@
  */
 package hospitalpets.vista;
 
+import hospitalpets.modelo.Sintoma;
+
 /**
  *
  * @author EDU
@@ -66,6 +68,7 @@ public class VtnConsulta extends javax.swing.JDialog {
         jPanel19 = new javax.swing.JPanel();
         cbFiebrePres = new javax.swing.JCheckBox();
         cbFiebreAus = new javax.swing.JCheckBox();
+        jScrollPane2 = new javax.swing.JScrollPane();
         jPanel20 = new javax.swing.JPanel();
         jPanel22 = new javax.swing.JPanel();
         cbDiarreaPres = new javax.swing.JCheckBox();
@@ -100,6 +103,76 @@ public class VtnConsulta extends javax.swing.JDialog {
         jPanel33 = new javax.swing.JPanel();
         cbSecrecionVerdosaVulvaPres = new javax.swing.JCheckBox();
         cbSecrecionVerdosaVulvaAus = new javax.swing.JCheckBox();
+        jScrollPane3 = new javax.swing.JScrollPane();
+        jPanel21 = new javax.swing.JPanel();
+        jPanel28 = new javax.swing.JPanel();
+        cbUlceraPres = new javax.swing.JCheckBox();
+        cbUlceraAus = new javax.swing.JCheckBox();
+        jPanel34 = new javax.swing.JPanel();
+        cbPruritoPres = new javax.swing.JCheckBox();
+        cbPruritoAus = new javax.swing.JCheckBox();
+        jPanel35 = new javax.swing.JPanel();
+        cbSeborreaPres = new javax.swing.JCheckBox();
+        cbSeborreaAus = new javax.swing.JCheckBox();
+        jPanel36 = new javax.swing.JPanel();
+        cbMalOlorPelajePres = new javax.swing.JCheckBox();
+        cbMalOlorPelajeAus = new javax.swing.JCheckBox();
+        jPanel37 = new javax.swing.JPanel();
+        cbSecrecionPurulentaPres = new javax.swing.JCheckBox();
+        cbSecrecionPurulentaAus = new javax.swing.JCheckBox();
+        jPanel38 = new javax.swing.JPanel();
+        cbCostrasPres = new javax.swing.JCheckBox();
+        cbCostrasAus = new javax.swing.JCheckBox();
+        jPanel39 = new javax.swing.JPanel();
+        cbCambioColoracionPelajePres = new javax.swing.JCheckBox();
+        cbCambioColoracionPelajeAus = new javax.swing.JCheckBox();
+        jPanel40 = new javax.swing.JPanel();
+        cbEritemaPres = new javax.swing.JCheckBox();
+        cbEritemaAus = new javax.swing.JCheckBox();
+        jScrollPane4 = new javax.swing.JScrollPane();
+        jPanel41 = new javax.swing.JPanel();
+        jPanel42 = new javax.swing.JPanel();
+        cbEdemaPerifericoPres = new javax.swing.JCheckBox();
+        cbEdemaPerifericoAus = new javax.swing.JCheckBox();
+        jPanel43 = new javax.swing.JPanel();
+        cbEdemaPulmonarPres = new javax.swing.JCheckBox();
+        cbEdemaPulmonarAus = new javax.swing.JCheckBox();
+        jPanel45 = new javax.swing.JPanel();
+        cbResistenciaEjercicioPres = new javax.swing.JCheckBox();
+        cbResistenciaEjercicioAus = new javax.swing.JCheckBox();
+        jPanel46 = new javax.swing.JPanel();
+        cbDesmayoPres = new javax.swing.JCheckBox();
+        cbDesmayoAus = new javax.swing.JCheckBox();
+        jPanel47 = new javax.swing.JPanel();
+        cbMucosasCianoticaPres = new javax.swing.JCheckBox();
+        cbMucosasCianoticaAus = new javax.swing.JCheckBox();
+        jPanel48 = new javax.swing.JPanel();
+        cbPresionArterialDisminuidaPres = new javax.swing.JCheckBox();
+        cbPresionArterialDisminuidaAus = new javax.swing.JCheckBox();
+        jPanel49 = new javax.swing.JPanel();
+        cbAscitisPres = new javax.swing.JCheckBox();
+        cbAscitisAus = new javax.swing.JCheckBox();
+        jPanel50 = new javax.swing.JPanel();
+        cbBradicardiasPres = new javax.swing.JCheckBox();
+        cbBradicardiasAus = new javax.swing.JCheckBox();
+        jPanel51 = new javax.swing.JPanel();
+        cbTaquicardiaPres = new javax.swing.JCheckBox();
+        cbTaquicardiaAus = new javax.swing.JCheckBox();
+        jPanel52 = new javax.swing.JPanel();
+        cbPresenciaSoploCardiacoPres = new javax.swing.JCheckBox();
+        cbPresenciaSoploCardiacoAus = new javax.swing.JCheckBox();
+        jPanel53 = new javax.swing.JPanel();
+        cbDerramePleuralPres = new javax.swing.JCheckBox();
+        cbDerramePleuralAus = new javax.swing.JCheckBox();
+        jPanel54 = new javax.swing.JPanel();
+        cbCianosisPres = new javax.swing.JCheckBox();
+        cbCianosisAus = new javax.swing.JCheckBox();
+        jPanel55 = new javax.swing.JPanel();
+        cbSoploMitralPres = new javax.swing.JCheckBox();
+        cbSoploMitralAus = new javax.swing.JCheckBox();
+        jButton1 = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
@@ -480,7 +553,6 @@ public class VtnConsulta extends javax.swing.JDialog {
         jPanel9.setLayout(jPanel9Layout);
         jPanel9Layout.setHorizontalGroup(
             jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 681, Short.MAX_VALUE)
             .addGroup(jPanel9Layout.createSequentialGroup()
                 .addGap(60, 60, 60)
                 .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -496,7 +568,7 @@ public class VtnConsulta extends javax.swing.JDialog {
                             .addComponent(jPanel16, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(jPanel12, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(jPanel13, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
-                .addContainerGap(120, Short.MAX_VALUE))
+                .addContainerGap(96, Short.MAX_VALUE))
         );
         jPanel9Layout.setVerticalGroup(
             jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -521,7 +593,7 @@ public class VtnConsulta extends javax.swing.JDialog {
                 .addComponent(jPanel18, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPanel19, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(198, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         jScrollPane1.setViewportView(jPanel9);
@@ -934,7 +1006,7 @@ public class VtnConsulta extends javax.swing.JDialog {
                         .addComponent(jPanel22, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(jPanel24, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jPanel23, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                .addContainerGap(73, Short.MAX_VALUE))
+                .addContainerGap(81, Short.MAX_VALUE))
         );
         jPanel20Layout.setVerticalGroup(
             jPanel20Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -961,10 +1033,865 @@ public class VtnConsulta extends javax.swing.JDialog {
                 .addComponent(jPanel32, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPanel31, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(69, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jTabbedPane1.addTab("Sistema Digestivo", jPanel20);
+        jScrollPane2.setViewportView(jPanel20);
+
+        jTabbedPane1.addTab("Sistema Digestivo", jScrollPane2);
+
+        jPanel28.setBorder(javax.swing.BorderFactory.createTitledBorder("Ulceras "));
+
+        cbUlceraPres.setText("Presente");
+        cbUlceraPres.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cbUlceraPresActionPerformed(evt);
+            }
+        });
+
+        cbUlceraAus.setSelected(true);
+        cbUlceraAus.setText("Ausente");
+        cbUlceraAus.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cbUlceraAusActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel28Layout = new javax.swing.GroupLayout(jPanel28);
+        jPanel28.setLayout(jPanel28Layout);
+        jPanel28Layout.setHorizontalGroup(
+            jPanel28Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel28Layout.createSequentialGroup()
+                .addContainerGap(233, Short.MAX_VALUE)
+                .addComponent(cbUlceraPres)
+                .addGap(92, 92, 92)
+                .addComponent(cbUlceraAus)
+                .addGap(84, 84, 84))
+        );
+        jPanel28Layout.setVerticalGroup(
+            jPanel28Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel28Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addComponent(cbUlceraAus)
+                .addComponent(cbUlceraPres))
+        );
+
+        jPanel34.setBorder(javax.swing.BorderFactory.createTitledBorder("Prurito "));
+
+        cbPruritoPres.setText("Presente");
+        cbPruritoPres.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cbPruritoPresActionPerformed(evt);
+            }
+        });
+
+        cbPruritoAus.setSelected(true);
+        cbPruritoAus.setText("Ausente");
+        cbPruritoAus.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cbPruritoAusActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel34Layout = new javax.swing.GroupLayout(jPanel34);
+        jPanel34.setLayout(jPanel34Layout);
+        jPanel34Layout.setHorizontalGroup(
+            jPanel34Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel34Layout.createSequentialGroup()
+                .addContainerGap(233, Short.MAX_VALUE)
+                .addComponent(cbPruritoPres)
+                .addGap(92, 92, 92)
+                .addComponent(cbPruritoAus)
+                .addGap(84, 84, 84))
+        );
+        jPanel34Layout.setVerticalGroup(
+            jPanel34Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel34Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addComponent(cbPruritoAus)
+                .addComponent(cbPruritoPres))
+        );
+
+        jPanel35.setBorder(javax.swing.BorderFactory.createTitledBorder("Seborrea "));
+
+        cbSeborreaPres.setText("Presente");
+        cbSeborreaPres.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cbSeborreaPresActionPerformed(evt);
+            }
+        });
+
+        cbSeborreaAus.setSelected(true);
+        cbSeborreaAus.setText("Ausente");
+        cbSeborreaAus.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cbSeborreaAusActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel35Layout = new javax.swing.GroupLayout(jPanel35);
+        jPanel35.setLayout(jPanel35Layout);
+        jPanel35Layout.setHorizontalGroup(
+            jPanel35Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel35Layout.createSequentialGroup()
+                .addContainerGap(230, Short.MAX_VALUE)
+                .addComponent(cbSeborreaPres)
+                .addGap(95, 95, 95)
+                .addComponent(cbSeborreaAus)
+                .addGap(84, 84, 84))
+        );
+        jPanel35Layout.setVerticalGroup(
+            jPanel35Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel35Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addComponent(cbSeborreaPres)
+                .addComponent(cbSeborreaAus))
+        );
+
+        jPanel36.setBorder(javax.swing.BorderFactory.createTitledBorder("Mal olor del pelaje "));
+
+        cbMalOlorPelajePres.setText("Presente");
+        cbMalOlorPelajePres.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cbMalOlorPelajePresActionPerformed(evt);
+            }
+        });
+
+        cbMalOlorPelajeAus.setSelected(true);
+        cbMalOlorPelajeAus.setText("Ausente");
+        cbMalOlorPelajeAus.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cbMalOlorPelajeAusActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel36Layout = new javax.swing.GroupLayout(jPanel36);
+        jPanel36.setLayout(jPanel36Layout);
+        jPanel36Layout.setHorizontalGroup(
+            jPanel36Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel36Layout.createSequentialGroup()
+                .addContainerGap(233, Short.MAX_VALUE)
+                .addComponent(cbMalOlorPelajePres)
+                .addGap(92, 92, 92)
+                .addComponent(cbMalOlorPelajeAus)
+                .addGap(84, 84, 84))
+        );
+        jPanel36Layout.setVerticalGroup(
+            jPanel36Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel36Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addComponent(cbMalOlorPelajeAus)
+                .addComponent(cbMalOlorPelajePres))
+        );
+
+        jPanel37.setBorder(javax.swing.BorderFactory.createTitledBorder("Secreción purulenta "));
+
+        cbSecrecionPurulentaPres.setText("Presente");
+        cbSecrecionPurulentaPres.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cbSecrecionPurulentaPresActionPerformed(evt);
+            }
+        });
+
+        cbSecrecionPurulentaAus.setSelected(true);
+        cbSecrecionPurulentaAus.setText("Ausente");
+        cbSecrecionPurulentaAus.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cbSecrecionPurulentaAusActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel37Layout = new javax.swing.GroupLayout(jPanel37);
+        jPanel37.setLayout(jPanel37Layout);
+        jPanel37Layout.setHorizontalGroup(
+            jPanel37Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel37Layout.createSequentialGroup()
+                .addContainerGap(230, Short.MAX_VALUE)
+                .addComponent(cbSecrecionPurulentaPres)
+                .addGap(95, 95, 95)
+                .addComponent(cbSecrecionPurulentaAus)
+                .addGap(84, 84, 84))
+        );
+        jPanel37Layout.setVerticalGroup(
+            jPanel37Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel37Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addComponent(cbSecrecionPurulentaPres)
+                .addComponent(cbSecrecionPurulentaAus))
+        );
+
+        jPanel38.setBorder(javax.swing.BorderFactory.createTitledBorder("Costras "));
+
+        cbCostrasPres.setText("Presente");
+        cbCostrasPres.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cbCostrasPresActionPerformed(evt);
+            }
+        });
+
+        cbCostrasAus.setSelected(true);
+        cbCostrasAus.setText("Ausente");
+        cbCostrasAus.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cbCostrasAusActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel38Layout = new javax.swing.GroupLayout(jPanel38);
+        jPanel38.setLayout(jPanel38Layout);
+        jPanel38Layout.setHorizontalGroup(
+            jPanel38Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel38Layout.createSequentialGroup()
+                .addContainerGap(230, Short.MAX_VALUE)
+                .addComponent(cbCostrasPres)
+                .addGap(95, 95, 95)
+                .addComponent(cbCostrasAus)
+                .addGap(84, 84, 84))
+        );
+        jPanel38Layout.setVerticalGroup(
+            jPanel38Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel38Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addComponent(cbCostrasPres)
+                .addComponent(cbCostrasAus))
+        );
+
+        jPanel39.setBorder(javax.swing.BorderFactory.createTitledBorder("Cambio en la coloración del pelaje "));
+
+        cbCambioColoracionPelajePres.setText("Presente");
+        cbCambioColoracionPelajePres.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cbCambioColoracionPelajePresActionPerformed(evt);
+            }
+        });
+
+        cbCambioColoracionPelajeAus.setSelected(true);
+        cbCambioColoracionPelajeAus.setText("Ausente");
+        cbCambioColoracionPelajeAus.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cbCambioColoracionPelajeAusActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel39Layout = new javax.swing.GroupLayout(jPanel39);
+        jPanel39.setLayout(jPanel39Layout);
+        jPanel39Layout.setHorizontalGroup(
+            jPanel39Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel39Layout.createSequentialGroup()
+                .addContainerGap(230, Short.MAX_VALUE)
+                .addComponent(cbCambioColoracionPelajePres)
+                .addGap(95, 95, 95)
+                .addComponent(cbCambioColoracionPelajeAus)
+                .addGap(84, 84, 84))
+        );
+        jPanel39Layout.setVerticalGroup(
+            jPanel39Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel39Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addComponent(cbCambioColoracionPelajePres)
+                .addComponent(cbCambioColoracionPelajeAus))
+        );
+
+        jPanel40.setBorder(javax.swing.BorderFactory.createTitledBorder("Eritema "));
+
+        cbEritemaPres.setText("Presente");
+        cbEritemaPres.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cbEritemaPresActionPerformed(evt);
+            }
+        });
+
+        cbEritemaAus.setSelected(true);
+        cbEritemaAus.setText("Ausente");
+        cbEritemaAus.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cbEritemaAusActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel40Layout = new javax.swing.GroupLayout(jPanel40);
+        jPanel40.setLayout(jPanel40Layout);
+        jPanel40Layout.setHorizontalGroup(
+            jPanel40Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel40Layout.createSequentialGroup()
+                .addContainerGap(233, Short.MAX_VALUE)
+                .addComponent(cbEritemaPres)
+                .addGap(92, 92, 92)
+                .addComponent(cbEritemaAus)
+                .addGap(84, 84, 84))
+        );
+        jPanel40Layout.setVerticalGroup(
+            jPanel40Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel40Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addComponent(cbEritemaAus)
+                .addComponent(cbEritemaPres))
+        );
+
+        javax.swing.GroupLayout jPanel21Layout = new javax.swing.GroupLayout(jPanel21);
+        jPanel21.setLayout(jPanel21Layout);
+        jPanel21Layout.setHorizontalGroup(
+            jPanel21Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel21Layout.createSequentialGroup()
+                .addGap(43, 43, 43)
+                .addGroup(jPanel21Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addComponent(jPanel35, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jPanel36, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jPanel37, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jPanel40, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jPanel34, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jPanel28, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jPanel38, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jPanel39, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(59, Short.MAX_VALUE))
+        );
+        jPanel21Layout.setVerticalGroup(
+            jPanel21Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel21Layout.createSequentialGroup()
+                .addGap(22, 22, 22)
+                .addComponent(jPanel40, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jPanel34, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jPanel28, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jPanel35, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jPanel36, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jPanel37, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jPanel38, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jPanel39, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        jScrollPane3.setViewportView(jPanel21);
+
+        jTabbedPane1.addTab("Dermatologia", jScrollPane3);
+
+        jPanel42.setBorder(javax.swing.BorderFactory.createTitledBorder("Edema periférico "));
+
+        cbEdemaPerifericoPres.setText("Presente");
+        cbEdemaPerifericoPres.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cbEdemaPerifericoPresActionPerformed(evt);
+            }
+        });
+
+        cbEdemaPerifericoAus.setSelected(true);
+        cbEdemaPerifericoAus.setText("Ausente");
+        cbEdemaPerifericoAus.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cbEdemaPerifericoAusActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel42Layout = new javax.swing.GroupLayout(jPanel42);
+        jPanel42.setLayout(jPanel42Layout);
+        jPanel42Layout.setHorizontalGroup(
+            jPanel42Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel42Layout.createSequentialGroup()
+                .addContainerGap(211, Short.MAX_VALUE)
+                .addComponent(cbEdemaPerifericoPres)
+                .addGap(92, 92, 92)
+                .addComponent(cbEdemaPerifericoAus)
+                .addGap(84, 84, 84))
+        );
+        jPanel42Layout.setVerticalGroup(
+            jPanel42Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel42Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addComponent(cbEdemaPerifericoAus)
+                .addComponent(cbEdemaPerifericoPres))
+        );
+
+        jPanel43.setBorder(javax.swing.BorderFactory.createTitledBorder("Edema pulmonar "));
+
+        cbEdemaPulmonarPres.setText("Presente");
+        cbEdemaPulmonarPres.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cbEdemaPulmonarPresActionPerformed(evt);
+            }
+        });
+
+        cbEdemaPulmonarAus.setSelected(true);
+        cbEdemaPulmonarAus.setText("Ausente");
+        cbEdemaPulmonarAus.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cbEdemaPulmonarAusActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel43Layout = new javax.swing.GroupLayout(jPanel43);
+        jPanel43.setLayout(jPanel43Layout);
+        jPanel43Layout.setHorizontalGroup(
+            jPanel43Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel43Layout.createSequentialGroup()
+                .addContainerGap(211, Short.MAX_VALUE)
+                .addComponent(cbEdemaPulmonarPres)
+                .addGap(92, 92, 92)
+                .addComponent(cbEdemaPulmonarAus)
+                .addGap(84, 84, 84))
+        );
+        jPanel43Layout.setVerticalGroup(
+            jPanel43Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel43Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addComponent(cbEdemaPulmonarAus)
+                .addComponent(cbEdemaPulmonarPres))
+        );
+
+        jPanel45.setBorder(javax.swing.BorderFactory.createTitledBorder("Resistencia al ejercicio "));
+
+        cbResistenciaEjercicioPres.setText("Presente");
+        cbResistenciaEjercicioPres.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cbResistenciaEjercicioPresActionPerformed(evt);
+            }
+        });
+
+        cbResistenciaEjercicioAus.setSelected(true);
+        cbResistenciaEjercicioAus.setText("Ausente");
+        cbResistenciaEjercicioAus.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cbResistenciaEjercicioAusActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel45Layout = new javax.swing.GroupLayout(jPanel45);
+        jPanel45.setLayout(jPanel45Layout);
+        jPanel45Layout.setHorizontalGroup(
+            jPanel45Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel45Layout.createSequentialGroup()
+                .addContainerGap(211, Short.MAX_VALUE)
+                .addComponent(cbResistenciaEjercicioPres)
+                .addGap(92, 92, 92)
+                .addComponent(cbResistenciaEjercicioAus)
+                .addGap(84, 84, 84))
+        );
+        jPanel45Layout.setVerticalGroup(
+            jPanel45Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel45Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addComponent(cbResistenciaEjercicioAus)
+                .addComponent(cbResistenciaEjercicioPres))
+        );
+
+        jPanel46.setBorder(javax.swing.BorderFactory.createTitledBorder("Desmayos "));
+
+        cbDesmayoPres.setText("Presente");
+        cbDesmayoPres.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cbDesmayoPresActionPerformed(evt);
+            }
+        });
+
+        cbDesmayoAus.setSelected(true);
+        cbDesmayoAus.setText("Ausente");
+        cbDesmayoAus.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cbDesmayoAusActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel46Layout = new javax.swing.GroupLayout(jPanel46);
+        jPanel46.setLayout(jPanel46Layout);
+        jPanel46Layout.setHorizontalGroup(
+            jPanel46Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel46Layout.createSequentialGroup()
+                .addContainerGap(208, Short.MAX_VALUE)
+                .addComponent(cbDesmayoPres)
+                .addGap(95, 95, 95)
+                .addComponent(cbDesmayoAus)
+                .addGap(84, 84, 84))
+        );
+        jPanel46Layout.setVerticalGroup(
+            jPanel46Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel46Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addComponent(cbDesmayoPres)
+                .addComponent(cbDesmayoAus))
+        );
+
+        jPanel47.setBorder(javax.swing.BorderFactory.createTitledBorder("Mucosas cianóticas  "));
+
+        cbMucosasCianoticaPres.setText("Presente");
+        cbMucosasCianoticaPres.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cbMucosasCianoticaPresActionPerformed(evt);
+            }
+        });
+
+        cbMucosasCianoticaAus.setSelected(true);
+        cbMucosasCianoticaAus.setText("Ausente");
+        cbMucosasCianoticaAus.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cbMucosasCianoticaAusActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel47Layout = new javax.swing.GroupLayout(jPanel47);
+        jPanel47.setLayout(jPanel47Layout);
+        jPanel47Layout.setHorizontalGroup(
+            jPanel47Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel47Layout.createSequentialGroup()
+                .addContainerGap(208, Short.MAX_VALUE)
+                .addComponent(cbMucosasCianoticaPres)
+                .addGap(95, 95, 95)
+                .addComponent(cbMucosasCianoticaAus)
+                .addGap(84, 84, 84))
+        );
+        jPanel47Layout.setVerticalGroup(
+            jPanel47Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel47Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addComponent(cbMucosasCianoticaPres)
+                .addComponent(cbMucosasCianoticaAus))
+        );
+
+        jPanel48.setBorder(javax.swing.BorderFactory.createTitledBorder("Presión arterial disminuida "));
+
+        cbPresionArterialDisminuidaPres.setText("Presente");
+        cbPresionArterialDisminuidaPres.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cbPresionArterialDisminuidaPresActionPerformed(evt);
+            }
+        });
+
+        cbPresionArterialDisminuidaAus.setSelected(true);
+        cbPresionArterialDisminuidaAus.setText("Ausente");
+        cbPresionArterialDisminuidaAus.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cbPresionArterialDisminuidaAusActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel48Layout = new javax.swing.GroupLayout(jPanel48);
+        jPanel48.setLayout(jPanel48Layout);
+        jPanel48Layout.setHorizontalGroup(
+            jPanel48Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel48Layout.createSequentialGroup()
+                .addContainerGap(208, Short.MAX_VALUE)
+                .addComponent(cbPresionArterialDisminuidaPres)
+                .addGap(95, 95, 95)
+                .addComponent(cbPresionArterialDisminuidaAus)
+                .addGap(84, 84, 84))
+        );
+        jPanel48Layout.setVerticalGroup(
+            jPanel48Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel48Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addComponent(cbPresionArterialDisminuidaPres)
+                .addComponent(cbPresionArterialDisminuidaAus))
+        );
+
+        jPanel49.setBorder(javax.swing.BorderFactory.createTitledBorder("Ascitis "));
+
+        cbAscitisPres.setText("Presente");
+        cbAscitisPres.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cbAscitisPresActionPerformed(evt);
+            }
+        });
+
+        cbAscitisAus.setSelected(true);
+        cbAscitisAus.setText("Ausente");
+        cbAscitisAus.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cbAscitisAusActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel49Layout = new javax.swing.GroupLayout(jPanel49);
+        jPanel49.setLayout(jPanel49Layout);
+        jPanel49Layout.setHorizontalGroup(
+            jPanel49Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel49Layout.createSequentialGroup()
+                .addContainerGap(211, Short.MAX_VALUE)
+                .addComponent(cbAscitisPres)
+                .addGap(92, 92, 92)
+                .addComponent(cbAscitisAus)
+                .addGap(84, 84, 84))
+        );
+        jPanel49Layout.setVerticalGroup(
+            jPanel49Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel49Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addComponent(cbAscitisAus)
+                .addComponent(cbAscitisPres))
+        );
+
+        jPanel50.setBorder(javax.swing.BorderFactory.createTitledBorder("Bradicardias  "));
+
+        cbBradicardiasPres.setText("Presente");
+        cbBradicardiasPres.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cbBradicardiasPresActionPerformed(evt);
+            }
+        });
+
+        cbBradicardiasAus.setSelected(true);
+        cbBradicardiasAus.setText("Ausente");
+        cbBradicardiasAus.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cbBradicardiasAusActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel50Layout = new javax.swing.GroupLayout(jPanel50);
+        jPanel50.setLayout(jPanel50Layout);
+        jPanel50Layout.setHorizontalGroup(
+            jPanel50Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel50Layout.createSequentialGroup()
+                .addContainerGap(208, Short.MAX_VALUE)
+                .addComponent(cbBradicardiasPres)
+                .addGap(95, 95, 95)
+                .addComponent(cbBradicardiasAus)
+                .addGap(84, 84, 84))
+        );
+        jPanel50Layout.setVerticalGroup(
+            jPanel50Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel50Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addComponent(cbBradicardiasPres)
+                .addComponent(cbBradicardiasAus))
+        );
+
+        jPanel51.setBorder(javax.swing.BorderFactory.createTitledBorder("Taquicardia "));
+
+        cbTaquicardiaPres.setText("Presente");
+        cbTaquicardiaPres.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cbTaquicardiaPresActionPerformed(evt);
+            }
+        });
+
+        cbTaquicardiaAus.setSelected(true);
+        cbTaquicardiaAus.setText("Ausente");
+        cbTaquicardiaAus.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cbTaquicardiaAusActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel51Layout = new javax.swing.GroupLayout(jPanel51);
+        jPanel51.setLayout(jPanel51Layout);
+        jPanel51Layout.setHorizontalGroup(
+            jPanel51Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel51Layout.createSequentialGroup()
+                .addContainerGap(208, Short.MAX_VALUE)
+                .addComponent(cbTaquicardiaPres)
+                .addGap(95, 95, 95)
+                .addComponent(cbTaquicardiaAus)
+                .addGap(84, 84, 84))
+        );
+        jPanel51Layout.setVerticalGroup(
+            jPanel51Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel51Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addComponent(cbTaquicardiaPres)
+                .addComponent(cbTaquicardiaAus))
+        );
+
+        jPanel52.setBorder(javax.swing.BorderFactory.createTitledBorder("Presencia de soplo cardiaco "));
+
+        cbPresenciaSoploCardiacoPres.setText("Presente");
+        cbPresenciaSoploCardiacoPres.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cbPresenciaSoploCardiacoPresActionPerformed(evt);
+            }
+        });
+
+        cbPresenciaSoploCardiacoAus.setSelected(true);
+        cbPresenciaSoploCardiacoAus.setText("Ausente");
+        cbPresenciaSoploCardiacoAus.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cbPresenciaSoploCardiacoAusActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel52Layout = new javax.swing.GroupLayout(jPanel52);
+        jPanel52.setLayout(jPanel52Layout);
+        jPanel52Layout.setHorizontalGroup(
+            jPanel52Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel52Layout.createSequentialGroup()
+                .addContainerGap(211, Short.MAX_VALUE)
+                .addComponent(cbPresenciaSoploCardiacoPres)
+                .addGap(92, 92, 92)
+                .addComponent(cbPresenciaSoploCardiacoAus)
+                .addGap(84, 84, 84))
+        );
+        jPanel52Layout.setVerticalGroup(
+            jPanel52Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel52Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addComponent(cbPresenciaSoploCardiacoAus)
+                .addComponent(cbPresenciaSoploCardiacoPres))
+        );
+
+        jPanel53.setBorder(javax.swing.BorderFactory.createTitledBorder("Derrame pleural "));
+
+        cbDerramePleuralPres.setText("Presente");
+        cbDerramePleuralPres.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cbDerramePleuralPresActionPerformed(evt);
+            }
+        });
+
+        cbDerramePleuralAus.setSelected(true);
+        cbDerramePleuralAus.setText("Ausente");
+        cbDerramePleuralAus.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cbDerramePleuralAusActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel53Layout = new javax.swing.GroupLayout(jPanel53);
+        jPanel53.setLayout(jPanel53Layout);
+        jPanel53Layout.setHorizontalGroup(
+            jPanel53Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel53Layout.createSequentialGroup()
+                .addContainerGap(208, Short.MAX_VALUE)
+                .addComponent(cbDerramePleuralPres)
+                .addGap(95, 95, 95)
+                .addComponent(cbDerramePleuralAus)
+                .addGap(84, 84, 84))
+        );
+        jPanel53Layout.setVerticalGroup(
+            jPanel53Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel53Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addComponent(cbDerramePleuralPres)
+                .addComponent(cbDerramePleuralAus))
+        );
+
+        jPanel54.setBorder(javax.swing.BorderFactory.createTitledBorder("Cianosis "));
+
+        cbCianosisPres.setText("Presente");
+        cbCianosisPres.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cbCianosisPresActionPerformed(evt);
+            }
+        });
+
+        cbCianosisAus.setSelected(true);
+        cbCianosisAus.setText("Ausente");
+        cbCianosisAus.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cbCianosisAusActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel54Layout = new javax.swing.GroupLayout(jPanel54);
+        jPanel54.setLayout(jPanel54Layout);
+        jPanel54Layout.setHorizontalGroup(
+            jPanel54Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel54Layout.createSequentialGroup()
+                .addContainerGap(211, Short.MAX_VALUE)
+                .addComponent(cbCianosisPres)
+                .addGap(92, 92, 92)
+                .addComponent(cbCianosisAus)
+                .addGap(84, 84, 84))
+        );
+        jPanel54Layout.setVerticalGroup(
+            jPanel54Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel54Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addComponent(cbCianosisAus)
+                .addComponent(cbCianosisPres))
+        );
+
+        jPanel55.setBorder(javax.swing.BorderFactory.createTitledBorder("Soplo mitral "));
+
+        cbSoploMitralPres.setText("Presente");
+        cbSoploMitralPres.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cbSoploMitralPresActionPerformed(evt);
+            }
+        });
+
+        cbSoploMitralAus.setSelected(true);
+        cbSoploMitralAus.setText("Ausente");
+        cbSoploMitralAus.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cbSoploMitralAusActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel55Layout = new javax.swing.GroupLayout(jPanel55);
+        jPanel55.setLayout(jPanel55Layout);
+        jPanel55Layout.setHorizontalGroup(
+            jPanel55Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel55Layout.createSequentialGroup()
+                .addContainerGap(208, Short.MAX_VALUE)
+                .addComponent(cbSoploMitralPres)
+                .addGap(95, 95, 95)
+                .addComponent(cbSoploMitralAus)
+                .addGap(84, 84, 84))
+        );
+        jPanel55Layout.setVerticalGroup(
+            jPanel55Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel55Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addComponent(cbSoploMitralPres)
+                .addComponent(cbSoploMitralAus))
+        );
+
+        javax.swing.GroupLayout jPanel41Layout = new javax.swing.GroupLayout(jPanel41);
+        jPanel41.setLayout(jPanel41Layout);
+        jPanel41Layout.setHorizontalGroup(
+            jPanel41Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel41Layout.createSequentialGroup()
+                .addGap(43, 43, 43)
+                .addGroup(jPanel41Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(jPanel41Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                        .addComponent(jPanel53, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jPanel55, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jPanel54, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel41Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                        .addComponent(jPanel50, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jPanel51, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jPanel52, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel41Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                        .addComponent(jPanel48, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jPanel47, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel41Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addComponent(jPanel45, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jPanel46, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(jPanel41Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addComponent(jPanel42, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jPanel49, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jPanel43, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                .addContainerGap(81, Short.MAX_VALUE))
+        );
+        jPanel41Layout.setVerticalGroup(
+            jPanel41Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel41Layout.createSequentialGroup()
+                .addGap(22, 22, 22)
+                .addComponent(jPanel49, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jPanel43, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jPanel42, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jPanel45, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jPanel46, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jPanel47, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jPanel48, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jPanel52, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jPanel51, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jPanel50, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jPanel54, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jPanel55, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jPanel53, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        jScrollPane4.setViewportView(jPanel41);
+
+        jTabbedPane1.addTab("Sistema Cardiovascular", jScrollPane4);
+
+        jButton1.setText("Aceptar");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+
+        jButton2.setText("Cancelar");
+
+        jLabel1.setFont(new java.awt.Font("Vijaya", 1, 36));
+        jLabel1.setText("SINTOMAS PRESENTES");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -972,15 +1899,28 @@ public class VtnConsulta extends javax.swing.JDialog {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jTabbedPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 654, Short.MAX_VALUE)
-                .addGap(37, 37, 37))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jTabbedPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 681, Short.MAX_VALUE)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(231, 231, 231)
+                        .addComponent(jButton1)
+                        .addGap(76, 76, 76)
+                        .addComponent(jButton2))
+                    .addComponent(jLabel1))
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 729, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(116, 116, 116))
+                .addContainerGap()
+                .addComponent(jLabel1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 14, Short.MAX_VALUE)
+                .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 491, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButton2)
+                    .addComponent(jButton1))
+                .addContainerGap())
         );
 
         pack();
@@ -1105,94 +2045,342 @@ public class VtnConsulta extends javax.swing.JDialog {
 }//GEN-LAST:event_cbSonidoAfonicoPresActionPerformed
 
     private void cbDiarreaPresActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbDiarreaPresActionPerformed
-        // TODO add your handling code here:
+        cbDiarreaAus.setSelected(false);
+        cbDiarreaPres.setSelected(true);
     }//GEN-LAST:event_cbDiarreaPresActionPerformed
 
     private void cbDiarreaAusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbDiarreaAusActionPerformed
-        // TODO add your handling code here:
+        cbDiarreaAus.setSelected(true);
+        cbDiarreaPres.setSelected(false);
     }//GEN-LAST:event_cbDiarreaAusActionPerformed
 
     private void cbRegurtigacionPresActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbRegurtigacionPresActionPerformed
-        // TODO add your handling code here:
+        cbRegurtigacionAus.setSelected(false);
+        cbRegurtigacionPres.setSelected(true);
     }//GEN-LAST:event_cbRegurtigacionPresActionPerformed
 
     private void cbRegurtigacionAusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbRegurtigacionAusActionPerformed
-        // TODO add your handling code here:
+        cbRegurtigacionAus.setSelected(true);
+        cbRegurtigacionPres.setSelected(false);
     }//GEN-LAST:event_cbRegurtigacionAusActionPerformed
 
     private void cbDeshidratacionPresActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbDeshidratacionPresActionPerformed
-        // TODO add your handling code here:
+        cbDeshidratacionAus.setSelected(false);
+        cbDeshidratacionPres.setSelected(true);
     }//GEN-LAST:event_cbDeshidratacionPresActionPerformed
 
     private void cbDeshidratacionAusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbDeshidratacionAusActionPerformed
-        // TODO add your handling code here:
+        cbDeshidratacionAus.setSelected(true);
+        cbDeshidratacionPres.setSelected(false);
     }//GEN-LAST:event_cbDeshidratacionAusActionPerformed
 
     private void cbDolorAbdominalPresActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbDolorAbdominalPresActionPerformed
-        // TODO add your handling code here:
+        cbDolorAbdominalAus.setSelected(false);
+        cbDolorAbdominalPres.setSelected(true);
     }//GEN-LAST:event_cbDolorAbdominalPresActionPerformed
 
     private void cbDolorAbdominalAusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbDolorAbdominalAusActionPerformed
-        // TODO add your handling code here:
+        cbDolorAbdominalAus.setSelected(true);
+        cbDolorAbdominalPres.setSelected(false);
     }//GEN-LAST:event_cbDolorAbdominalAusActionPerformed
 
     private void cbHuevosParasitosPresActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbHuevosParasitosPresActionPerformed
-        // TODO add your handling code here:
+        cbHuevosParasitosAus.setSelected(false);
+        cbHuevosParasitosPres.setSelected(true);
     }//GEN-LAST:event_cbHuevosParasitosPresActionPerformed
 
     private void cbHuevosParasitosAusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbHuevosParasitosAusActionPerformed
-        // TODO add your handling code here:
+        cbHuevosParasitosAus.setSelected(true);
+        cbHuevosParasitosPres.setSelected(false);
     }//GEN-LAST:event_cbHuevosParasitosAusActionPerformed
 
     private void cbHepatomegaliaPresActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbHepatomegaliaPresActionPerformed
-        // TODO add your handling code here:
+        cbHepatomegaliaAus.setSelected(false);
+        cbHepatomegaliaPres.setSelected(true);
     }//GEN-LAST:event_cbHepatomegaliaPresActionPerformed
 
     private void cbHepatomegaliaAusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbHepatomegaliaAusActionPerformed
-        // TODO add your handling code here:
+        cbHepatomegaliaAus.setSelected(true);
+        cbHepatomegaliaPres.setSelected(false);
     }//GEN-LAST:event_cbHepatomegaliaAusActionPerformed
 
     private void cbHepatodiniaPresActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbHepatodiniaPresActionPerformed
-        // TODO add your handling code here:
+        cbHepatodiniaAus.setSelected(false);
+        cbHepatodiniaPres.setSelected(true);
     }//GEN-LAST:event_cbHepatodiniaPresActionPerformed
 
     private void cbHepatodiniaAusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbHepatodiniaAusActionPerformed
-        // TODO add your handling code here:
+        cbHepatodiniaAus.setSelected(true);
+        cbHepatodiniaPres.setSelected(false);
     }//GEN-LAST:event_cbHepatodiniaAusActionPerformed
 
     private void cbVomitoPresActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbVomitoPresActionPerformed
-            cbVomitoAus.setSelected(false);
-            cbVomitoPres.setSelected(true);
+        cbVomitoAus.setSelected(false);
+        cbVomitoPres.setSelected(true);
     }//GEN-LAST:event_cbVomitoPresActionPerformed
 
     private void cbVomitoAusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbVomitoAusActionPerformed
-cbVomitoAus.setSelected(true);
-            cbVomitoPres.setSelected(false);
+        cbVomitoAus.setSelected(true);
+        cbVomitoPres.setSelected(false);
     }//GEN-LAST:event_cbVomitoAusActionPerformed
 
     private void cbAusenciaContracUterinasPresActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbAusenciaContracUterinasPresActionPerformed
-        // TODO add your handling code here:
+        cbAusenciaContracUterinasAus.setSelected(false);
+        cbAusenciaContracUterinasPres.setSelected(true);
     }//GEN-LAST:event_cbAusenciaContracUterinasPresActionPerformed
 
     private void cbAusenciaContracUterinasAusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbAusenciaContracUterinasAusActionPerformed
-        // TODO add your handling code here:
+        cbAusenciaContracUterinasAus.setSelected(true);
+        cbAusenciaContracUterinasPres.setSelected(false);
     }//GEN-LAST:event_cbAusenciaContracUterinasAusActionPerformed
 
     private void cbDemoraPartoPresActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbDemoraPartoPresActionPerformed
-        // TODO add your handling code here:
+        cbDemoraPartoAus.setSelected(false);
+        cbDemoraPartoPres.setSelected(true);
     }//GEN-LAST:event_cbDemoraPartoPresActionPerformed
 
     private void cbDemoraPartoAusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbDemoraPartoAusActionPerformed
-        // TODO add your handling code here:
+        cbDemoraPartoAus.setSelected(true);
+        cbDemoraPartoPres.setSelected(false);
     }//GEN-LAST:event_cbDemoraPartoAusActionPerformed
 
     private void cbSecrecionVerdosaVulvaPresActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbSecrecionVerdosaVulvaPresActionPerformed
-        // TODO add your handling code here:
+        cbSecrecionVerdosaVulvaAus.setSelected(false);
+        cbSecrecionVerdosaVulvaPres.setSelected(true);
     }//GEN-LAST:event_cbSecrecionVerdosaVulvaPresActionPerformed
 
     private void cbSecrecionVerdosaVulvaAusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbSecrecionVerdosaVulvaAusActionPerformed
-        // TODO add your handling code here:
+        cbSecrecionVerdosaVulvaAus.setSelected(true);
+        cbSecrecionVerdosaVulvaPres.setSelected(false);
     }//GEN-LAST:event_cbSecrecionVerdosaVulvaAusActionPerformed
+
+    private void cbPruritoPresActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbPruritoPresActionPerformed
+        cbPruritoAus.setSelected(false);
+        cbPruritoPres.setSelected(true);
+    }//GEN-LAST:event_cbPruritoPresActionPerformed
+
+    private void cbPruritoAusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbPruritoAusActionPerformed
+        cbPruritoAus.setSelected(true);
+        cbPruritoPres.setSelected(false);
+    }//GEN-LAST:event_cbPruritoAusActionPerformed
+
+    private void cbSeborreaPresActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbSeborreaPresActionPerformed
+        cbSeborreaAus.setSelected(false);
+        cbSeborreaPres.setSelected(true);
+    }//GEN-LAST:event_cbSeborreaPresActionPerformed
+
+    private void cbSeborreaAusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbSeborreaAusActionPerformed
+        cbSeborreaAus.setSelected(true);
+        cbSeborreaPres.setSelected(false);
+    }//GEN-LAST:event_cbSeborreaAusActionPerformed
+
+    private void cbMalOlorPelajePresActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbMalOlorPelajePresActionPerformed
+        cbMalOlorPelajeAus.setSelected(false);
+        cbMalOlorPelajePres.setSelected(true);
+    }//GEN-LAST:event_cbMalOlorPelajePresActionPerformed
+
+    private void cbMalOlorPelajeAusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbMalOlorPelajeAusActionPerformed
+        cbMalOlorPelajeAus.setSelected(true);
+        cbMalOlorPelajePres.setSelected(false);
+    }//GEN-LAST:event_cbMalOlorPelajeAusActionPerformed
+
+    private void cbSecrecionPurulentaPresActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbSecrecionPurulentaPresActionPerformed
+        cbSecrecionPurulentaAus.setSelected(false);
+        cbSecrecionPurulentaPres.setSelected(true);
+    }//GEN-LAST:event_cbSecrecionPurulentaPresActionPerformed
+
+    private void cbSecrecionPurulentaAusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbSecrecionPurulentaAusActionPerformed
+        cbSecrecionPurulentaAus.setSelected(true);
+        cbSecrecionPurulentaPres.setSelected(false);
+    }//GEN-LAST:event_cbSecrecionPurulentaAusActionPerformed
+
+    private void cbCostrasPresActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbCostrasPresActionPerformed
+        cbCostrasAus.setSelected(false);
+        cbCostrasPres.setSelected(true);
+    }//GEN-LAST:event_cbCostrasPresActionPerformed
+
+    private void cbCostrasAusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbCostrasAusActionPerformed
+        cbCostrasAus.setSelected(true);
+        cbCostrasPres.setSelected(false);
+    }//GEN-LAST:event_cbCostrasAusActionPerformed
+
+    private void cbCambioColoracionPelajePresActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbCambioColoracionPelajePresActionPerformed
+        cbCambioColoracionPelajeAus.setSelected(false);
+        cbCambioColoracionPelajePres.setSelected(true);
+    }//GEN-LAST:event_cbCambioColoracionPelajePresActionPerformed
+
+    private void cbCambioColoracionPelajeAusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbCambioColoracionPelajeAusActionPerformed
+        cbCambioColoracionPelajeAus.setSelected(true);
+        cbCambioColoracionPelajePres.setSelected(false);
+    }//GEN-LAST:event_cbCambioColoracionPelajeAusActionPerformed
+
+    private void cbEritemaPresActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbEritemaPresActionPerformed
+        cbEritemaAus.setSelected(false);
+        cbEritemaPres.setSelected(true);
+    }//GEN-LAST:event_cbEritemaPresActionPerformed
+
+    private void cbEritemaAusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbEritemaAusActionPerformed
+        cbEritemaAus.setSelected(true);
+        cbEritemaPres.setSelected(false);
+    }//GEN-LAST:event_cbEritemaAusActionPerformed
+
+    private void cbUlceraAusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbUlceraAusActionPerformed
+        cbUlceraAus.setSelected(true);
+        cbUlceraPres.setSelected(false);
+}//GEN-LAST:event_cbUlceraAusActionPerformed
+
+    private void cbUlceraPresActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbUlceraPresActionPerformed
+        cbUlceraAus.setSelected(false);
+        cbUlceraPres.setSelected(true);
+}//GEN-LAST:event_cbUlceraPresActionPerformed
+
+    private void cbEdemaPerifericoPresActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbEdemaPerifericoPresActionPerformed
+        cbEdemaPerifericoAus.setSelected(false);
+        cbEdemaPerifericoPres.setSelected(true);
+    }//GEN-LAST:event_cbEdemaPerifericoPresActionPerformed
+
+    private void cbEdemaPerifericoAusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbEdemaPerifericoAusActionPerformed
+        cbEdemaPerifericoAus.setSelected(true);
+        cbEdemaPerifericoPres.setSelected(false);
+    }//GEN-LAST:event_cbEdemaPerifericoAusActionPerformed
+
+    private void cbEdemaPulmonarPresActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbEdemaPulmonarPresActionPerformed
+        cbEdemaPulmonarAus.setSelected(false);
+        cbEdemaPulmonarPres.setSelected(true);
+    }//GEN-LAST:event_cbEdemaPulmonarPresActionPerformed
+
+    private void cbEdemaPulmonarAusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbEdemaPulmonarAusActionPerformed
+        cbEdemaPulmonarAus.setSelected(true);
+        cbEdemaPulmonarPres.setSelected(false);
+    }//GEN-LAST:event_cbEdemaPulmonarAusActionPerformed
+
+    private void cbResistenciaEjercicioPresActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbResistenciaEjercicioPresActionPerformed
+        cbResistenciaEjercicioAus.setSelected(false);
+        cbResistenciaEjercicioPres.setSelected(true);
+    }//GEN-LAST:event_cbResistenciaEjercicioPresActionPerformed
+
+    private void cbResistenciaEjercicioAusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbResistenciaEjercicioAusActionPerformed
+        cbResistenciaEjercicioAus.setSelected(true);
+        cbResistenciaEjercicioPres.setSelected(false);
+    }//GEN-LAST:event_cbResistenciaEjercicioAusActionPerformed
+
+    private void cbDesmayoPresActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbDesmayoPresActionPerformed
+        cbDesmayoAus.setSelected(false);
+        cbDesmayoPres.setSelected(true);
+    }//GEN-LAST:event_cbDesmayoPresActionPerformed
+
+    private void cbDesmayoAusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbDesmayoAusActionPerformed
+        cbDesmayoAus.setSelected(true);
+        cbDesmayoPres.setSelected(false);
+    }//GEN-LAST:event_cbDesmayoAusActionPerformed
+
+    private void cbMucosasCianoticaPresActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbMucosasCianoticaPresActionPerformed
+        cbMucosasCianoticaAus.setSelected(false);
+        cbMucosasCianoticaPres.setSelected(true);
+
+    }//GEN-LAST:event_cbMucosasCianoticaPresActionPerformed
+
+    private void cbMucosasCianoticaAusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbMucosasCianoticaAusActionPerformed
+        cbMucosasCianoticaAus.setSelected(true);
+        cbMucosasCianoticaPres.setSelected(false);
+    }//GEN-LAST:event_cbMucosasCianoticaAusActionPerformed
+
+    private void cbPresionArterialDisminuidaPresActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbPresionArterialDisminuidaPresActionPerformed
+        cbPresionArterialDisminuidaAus.setSelected(false);
+        cbPresionArterialDisminuidaPres.setSelected(true);
+    }//GEN-LAST:event_cbPresionArterialDisminuidaPresActionPerformed
+
+    private void cbPresionArterialDisminuidaAusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbPresionArterialDisminuidaAusActionPerformed
+        cbPresionArterialDisminuidaAus.setSelected(true);
+        cbPresionArterialDisminuidaPres.setSelected(false);
+    }//GEN-LAST:event_cbPresionArterialDisminuidaAusActionPerformed
+
+    private void cbAscitisPresActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbAscitisPresActionPerformed
+        cbAscitisAus.setSelected(false);
+        cbAscitisPres.setSelected(true);
+    }//GEN-LAST:event_cbAscitisPresActionPerformed
+
+    private void cbAscitisAusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbAscitisAusActionPerformed
+        cbAscitisAus.setSelected(true);
+        cbAscitisPres.setSelected(false);
+    }//GEN-LAST:event_cbAscitisAusActionPerformed
+
+    private void cbBradicardiasPresActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbBradicardiasPresActionPerformed
+        cbBradicardiasAus.setSelected(false);
+        cbBradicardiasPres.setSelected(true);
+    }//GEN-LAST:event_cbBradicardiasPresActionPerformed
+
+    private void cbBradicardiasAusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbBradicardiasAusActionPerformed
+        cbBradicardiasAus.setSelected(true);
+        cbBradicardiasPres.setSelected(false);
+    }//GEN-LAST:event_cbBradicardiasAusActionPerformed
+
+    private void cbTaquicardiaPresActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbTaquicardiaPresActionPerformed
+        cbTaquicardiaAus.setSelected(false);
+        cbTaquicardiaPres.setSelected(true);
+    }//GEN-LAST:event_cbTaquicardiaPresActionPerformed
+
+    private void cbTaquicardiaAusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbTaquicardiaAusActionPerformed
+        cbTaquicardiaAus.setSelected(true);
+        cbTaquicardiaPres.setSelected(false);
+    }//GEN-LAST:event_cbTaquicardiaAusActionPerformed
+
+    private void cbPresenciaSoploCardiacoPresActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbPresenciaSoploCardiacoPresActionPerformed
+        cbPresenciaSoploCardiacoAus.setSelected(false);
+        cbPresenciaSoploCardiacoPres.setSelected(true);
+    }//GEN-LAST:event_cbPresenciaSoploCardiacoPresActionPerformed
+
+    private void cbPresenciaSoploCardiacoAusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbPresenciaSoploCardiacoAusActionPerformed
+        cbPresenciaSoploCardiacoAus.setSelected(true);
+        cbPresenciaSoploCardiacoPres.setSelected(false);
+
+    }//GEN-LAST:event_cbPresenciaSoploCardiacoAusActionPerformed
+
+    private void cbDerramePleuralPresActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbDerramePleuralPresActionPerformed
+        cbDerramePleuralAus.setSelected(false);
+        cbDerramePleuralPres.setSelected(true);
+    }//GEN-LAST:event_cbDerramePleuralPresActionPerformed
+
+    private void cbDerramePleuralAusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbDerramePleuralAusActionPerformed
+        cbDerramePleuralAus.setSelected(true);
+        cbDerramePleuralPres.setSelected(false);
+    }//GEN-LAST:event_cbDerramePleuralAusActionPerformed
+
+    private void cbCianosisPresActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbCianosisPresActionPerformed
+        cbCianosisAus.setSelected(false);
+        cbCianosisPres.setSelected(true);
+    }//GEN-LAST:event_cbCianosisPresActionPerformed
+
+    private void cbCianosisAusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbCianosisAusActionPerformed
+        cbCianosisAus.setSelected(true);
+        cbCianosisPres.setSelected(false);
+    }//GEN-LAST:event_cbCianosisAusActionPerformed
+
+    private void cbSoploMitralPresActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbSoploMitralPresActionPerformed
+        cbSoploMitralAus.setSelected(false);
+        cbSoploMitralPres.setSelected(true);
+    }//GEN-LAST:event_cbSoploMitralPresActionPerformed
+
+    private void cbSoploMitralAusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbSoploMitralAusActionPerformed
+        cbSoploMitralAus.setSelected(true);
+        cbSoploMitralPres.setSelected(false);
+    }//GEN-LAST:event_cbSoploMitralAusActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        int tos;
+        if (cbTosNoProductiva.isSelected()) {
+            tos = Sintoma.TOS_NO_PRODUCTIVA;
+        } else if (cbTosProductiva.isSelected()) {
+            tos = Sintoma.TOS_PRODUCTIVA;
+        } else if (cbTosParoxistica.isSelected()) {
+            tos = Sintoma.TOS_PAROXÍSTICA;
+        } else {
+            tos = Sintoma.TOS_AUSENTE;
+        }
+        String s=Sintoma.sistemaRespiratorio(tos,cbReflejoTusPres.isSelected(),cbSonidoAfonicoPres.isSelected(), cbSecrecionNasalPres.isSelected(),cbSecrecionOcularPres.isSelected(), cbDistressRespiratorioPres.isSelected(), cbCrepitacionesPres.isSelected(), cbAnorexiaPres.isSelected(),cbDisneaRespiratoriaPres.isSelected(), cbFiebrePres.isSelected());
+        System.out.println(s);
+
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -1215,14 +2403,28 @@ cbVomitoAus.setSelected(true);
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JCheckBox cbAnorexiaAus;
     private javax.swing.JCheckBox cbAnorexiaPres;
+    private javax.swing.JCheckBox cbAscitisAus;
+    private javax.swing.JCheckBox cbAscitisPres;
     private javax.swing.JCheckBox cbAusenciaContracUterinasAus;
     private javax.swing.JCheckBox cbAusenciaContracUterinasPres;
+    private javax.swing.JCheckBox cbBradicardiasAus;
+    private javax.swing.JCheckBox cbBradicardiasPres;
+    private javax.swing.JCheckBox cbCambioColoracionPelajeAus;
+    private javax.swing.JCheckBox cbCambioColoracionPelajePres;
+    private javax.swing.JCheckBox cbCianosisAus;
+    private javax.swing.JCheckBox cbCianosisPres;
+    private javax.swing.JCheckBox cbCostrasAus;
+    private javax.swing.JCheckBox cbCostrasPres;
     private javax.swing.JCheckBox cbCrepitacionesAus;
     private javax.swing.JCheckBox cbCrepitacionesPres;
     private javax.swing.JCheckBox cbDemoraPartoAus;
     private javax.swing.JCheckBox cbDemoraPartoPres;
+    private javax.swing.JCheckBox cbDerramePleuralAus;
+    private javax.swing.JCheckBox cbDerramePleuralPres;
     private javax.swing.JCheckBox cbDeshidratacionAus;
     private javax.swing.JCheckBox cbDeshidratacionPres;
+    private javax.swing.JCheckBox cbDesmayoAus;
+    private javax.swing.JCheckBox cbDesmayoPres;
     private javax.swing.JCheckBox cbDiarreaAus;
     private javax.swing.JCheckBox cbDiarreaPres;
     private javax.swing.JCheckBox cbDisneaRespiratoriaAus;
@@ -1231,6 +2433,12 @@ cbVomitoAus.setSelected(true);
     private javax.swing.JCheckBox cbDistressRespiratorioPres;
     private javax.swing.JCheckBox cbDolorAbdominalAus;
     private javax.swing.JCheckBox cbDolorAbdominalPres;
+    private javax.swing.JCheckBox cbEdemaPerifericoAus;
+    private javax.swing.JCheckBox cbEdemaPerifericoPres;
+    private javax.swing.JCheckBox cbEdemaPulmonarAus;
+    private javax.swing.JCheckBox cbEdemaPulmonarPres;
+    private javax.swing.JCheckBox cbEritemaAus;
+    private javax.swing.JCheckBox cbEritemaPres;
     private javax.swing.JCheckBox cbFiebreAus;
     private javax.swing.JCheckBox cbFiebrePres;
     private javax.swing.JCheckBox cbHepatodiniaAus;
@@ -1239,26 +2447,49 @@ cbVomitoAus.setSelected(true);
     private javax.swing.JCheckBox cbHepatomegaliaPres;
     private javax.swing.JCheckBox cbHuevosParasitosAus;
     private javax.swing.JCheckBox cbHuevosParasitosPres;
+    private javax.swing.JCheckBox cbMalOlorPelajeAus;
+    private javax.swing.JCheckBox cbMalOlorPelajePres;
+    private javax.swing.JCheckBox cbMucosasCianoticaAus;
+    private javax.swing.JCheckBox cbMucosasCianoticaPres;
+    private javax.swing.JCheckBox cbPresenciaSoploCardiacoAus;
+    private javax.swing.JCheckBox cbPresenciaSoploCardiacoPres;
+    private javax.swing.JCheckBox cbPresionArterialDisminuidaAus;
+    private javax.swing.JCheckBox cbPresionArterialDisminuidaPres;
+    private javax.swing.JCheckBox cbPruritoAus;
+    private javax.swing.JCheckBox cbPruritoPres;
     private javax.swing.JCheckBox cbReflejoTusAus;
     private javax.swing.JCheckBox cbReflejoTusPres;
     private javax.swing.JCheckBox cbRegurtigacionAus;
     private javax.swing.JCheckBox cbRegurtigacionPres;
+    private javax.swing.JCheckBox cbResistenciaEjercicioAus;
+    private javax.swing.JCheckBox cbResistenciaEjercicioPres;
+    private javax.swing.JCheckBox cbSeborreaAus;
+    private javax.swing.JCheckBox cbSeborreaPres;
     private javax.swing.JCheckBox cbSecrecionNasalAus;
     private javax.swing.JCheckBox cbSecrecionNasalPres;
     private javax.swing.JCheckBox cbSecrecionOcularAus;
     private javax.swing.JCheckBox cbSecrecionOcularPres;
+    private javax.swing.JCheckBox cbSecrecionPurulentaAus;
+    private javax.swing.JCheckBox cbSecrecionPurulentaPres;
     private javax.swing.JCheckBox cbSecrecionVerdosaVulvaAus;
     private javax.swing.JCheckBox cbSecrecionVerdosaVulvaPres;
     private javax.swing.JCheckBox cbSonidoAfonicoAus;
     private javax.swing.JCheckBox cbSonidoAfonicoPres;
+    private javax.swing.JCheckBox cbSoploMitralAus;
+    private javax.swing.JCheckBox cbSoploMitralPres;
+    private javax.swing.JCheckBox cbTaquicardiaAus;
+    private javax.swing.JCheckBox cbTaquicardiaPres;
     private javax.swing.JCheckBox cbTosAusente;
     private javax.swing.JCheckBox cbTosNoProductiva;
     private javax.swing.JCheckBox cbTosParoxistica;
     private javax.swing.JCheckBox cbTosProductiva;
+    private javax.swing.JCheckBox cbUlceraAus;
+    private javax.swing.JCheckBox cbUlceraPres;
     private javax.swing.JCheckBox cbVomitoAus;
     private javax.swing.JCheckBox cbVomitoPres;
-    private javax.swing.JCheckBox jCheckBox6;
-    private javax.swing.JCheckBox jCheckBox9;
+    private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel10;
     private javax.swing.JPanel jPanel11;
     private javax.swing.JPanel jPanel12;
@@ -1270,20 +2501,45 @@ cbVomitoAus.setSelected(true);
     private javax.swing.JPanel jPanel18;
     private javax.swing.JPanel jPanel19;
     private javax.swing.JPanel jPanel20;
+    private javax.swing.JPanel jPanel21;
     private javax.swing.JPanel jPanel22;
     private javax.swing.JPanel jPanel23;
     private javax.swing.JPanel jPanel24;
     private javax.swing.JPanel jPanel25;
     private javax.swing.JPanel jPanel26;
     private javax.swing.JPanel jPanel27;
+    private javax.swing.JPanel jPanel28;
     private javax.swing.JPanel jPanel29;
     private javax.swing.JPanel jPanel30;
     private javax.swing.JPanel jPanel31;
     private javax.swing.JPanel jPanel32;
     private javax.swing.JPanel jPanel33;
-    private javax.swing.JPanel jPanel5;
+    private javax.swing.JPanel jPanel34;
+    private javax.swing.JPanel jPanel35;
+    private javax.swing.JPanel jPanel36;
+    private javax.swing.JPanel jPanel37;
+    private javax.swing.JPanel jPanel38;
+    private javax.swing.JPanel jPanel39;
+    private javax.swing.JPanel jPanel40;
+    private javax.swing.JPanel jPanel41;
+    private javax.swing.JPanel jPanel42;
+    private javax.swing.JPanel jPanel43;
+    private javax.swing.JPanel jPanel45;
+    private javax.swing.JPanel jPanel46;
+    private javax.swing.JPanel jPanel47;
+    private javax.swing.JPanel jPanel48;
+    private javax.swing.JPanel jPanel49;
+    private javax.swing.JPanel jPanel50;
+    private javax.swing.JPanel jPanel51;
+    private javax.swing.JPanel jPanel52;
+    private javax.swing.JPanel jPanel53;
+    private javax.swing.JPanel jPanel54;
+    private javax.swing.JPanel jPanel55;
     private javax.swing.JPanel jPanel9;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JScrollPane jScrollPane3;
+    private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JTabbedPane jTabbedPane1;
     // End of variables declaration//GEN-END:variables
 }
