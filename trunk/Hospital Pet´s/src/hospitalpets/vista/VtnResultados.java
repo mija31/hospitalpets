@@ -8,8 +8,11 @@
  *
  * Created on 23/07/2011, 11:16:49 PM
  */
-
 package hospitalpets.vista;
+
+import hospitalpets.modelo.Consulta;
+import hospitalpets.modelo.Enfermedad;
+import java.util.ArrayList;
 
 /**
  *
@@ -19,6 +22,11 @@ public class VtnResultados extends javax.swing.JDialog {
 
     /** Creates new form VtnResultados */
     public VtnResultados(java.awt.Frame parent, boolean modal) {
+        super(parent, modal);
+        initComponents();
+    }
+
+    public VtnResultados(Consulta consulta,java.awt.Frame parent, boolean modal) {
         super(parent, modal);
         initComponents();
     }
@@ -132,13 +140,15 @@ public class VtnResultados extends javax.swing.JDialog {
     }// </editor-fold>//GEN-END:initComponents
 
     /**
-    * @param args the command line arguments
-    */
+     * @param args the command line arguments
+     */
     public static void main(String args[]) {
         java.awt.EventQueue.invokeLater(new Runnable() {
+
             public void run() {
                 VtnResultados dialog = new VtnResultados(new javax.swing.JFrame(), true);
                 dialog.addWindowListener(new java.awt.event.WindowAdapter() {
+
                     public void windowClosing(java.awt.event.WindowEvent e) {
                         System.exit(0);
                     }
@@ -147,7 +157,6 @@ public class VtnResultados extends javax.swing.JDialog {
             }
         });
     }
-
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel4;
@@ -158,5 +167,4 @@ public class VtnResultados extends javax.swing.JDialog {
     private javax.swing.JTextArea jTextArea1;
     private javax.swing.JTextArea jTextArea2;
     // End of variables declaration//GEN-END:variables
-
 }
