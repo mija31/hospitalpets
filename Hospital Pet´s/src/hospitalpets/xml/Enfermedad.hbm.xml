@@ -2,12 +2,13 @@
 <!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 <hibernate-mapping package="hospitalpets.modelo">
   <class name="hospitalpets.modelo.Enfermedad" table="enfermedad">
-    <id column="idEnfermedad" name="idEnfermedad">
-      <generator class="increment"/>
+    <id column="idEnfermedad" name="idEnfermedad" type="integer" >
+        <generator class="assigned"/>
     </id>
-    <property column="nombre" name="nombre"/>
-    <property column="diagnostico" name="diagnostico"/>
-    <property column="tratamiento" name="tratamiento"/>
+    <property column="nombre" name="nombre" not-null="true"/>
+    <property column="descripcion" name="descripcion" not-null="true"/>
+    <property column="tratamiento" name="tratamiento" not-null="true"/>
+    <property column="foto" name="foto" not-null="false"/>
     <list cascade="all-delete-orphan" name="sintomas">
       <key column="idEnfermedad"/>
       <index column="ORDEN"/>

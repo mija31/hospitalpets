@@ -213,7 +213,7 @@ public class VtnPrincipal extends javax.swing.JFrame {
         jMenuItem4.setText("Realizar Consulta");
         jMenuItem4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem4ActionPerformed(evt);
+                jMenuItem4ActionPerformed1(evt);
             }
         });
         jMenu4.add(jMenuItem4);
@@ -319,6 +319,10 @@ try {
         jCheckBoxMenuItem1.setSelected(true);
         jCheckBoxMenuItem2.setSelected(false);         // TODO add your handling code here:
     }//GEN-LAST:event_jCheckBoxMenuItem1ActionPerformed
+
+    private void jMenuItem4ActionPerformed1(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem4ActionPerformed1
+        new VtnConsulta(this, true).setVisible(true);
+    }//GEN-LAST:event_jMenuItem4ActionPerformed1
 
     private void datosGenerales() {
     }
