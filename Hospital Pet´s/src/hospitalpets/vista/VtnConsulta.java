@@ -10,10 +10,14 @@
  */
 package hospitalpets.vista;
 
+import hospitalpets.control.admin.ControlAdministraMedico;
 import hospitalpets.control.admin.ControlAdministraPaciente;
+import hospitalpets.modelo.Paciente;
 import hospitalpets.modelo.Sintoma;
+import java.util.ArrayList;
 import java.util.Vector;
 import javax.swing.DefaultComboBoxModel;
+import javax.swing.JOptionPane;
 
 /**
  *
@@ -1870,6 +1874,7 @@ public class VtnConsulta extends javax.swing.JDialog {
 
         jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/hospitalpets/imagenes/aceptar.png"))); // NOI18N
         jButton1.setText("Diagnosticar");
+        jButton1.setEnabled(false);
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
@@ -1969,7 +1974,8 @@ public class VtnConsulta extends javax.swing.JDialog {
                 .addContainerGap())
         );
 
-        pack();
+        java.awt.Dimension screenSize = java.awt.Toolkit.getDefaultToolkit().getScreenSize();
+        setBounds((screenSize.width-717)/2, (screenSize.height-749)/2, 717, 749);
     }// </editor-fold>//GEN-END:initComponents
 
     private void cbFiebreAusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbFiebreAusActionPerformed
@@ -2420,7 +2426,13 @@ public class VtnConsulta extends javax.swing.JDialog {
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void txtcedulaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtcedulaActionPerformed
-        jComboBox1.setModel(new DefaultComboBoxModel(new Vector(ControlAdministraPaciente.cargarPacientes(txtcedula.getText()))));
+        ArrayList<Paciente> pacientes = ControlAdministraPaciente.cargarPacientes(txtcedula.getText());
+        if (pacientes.isEmpty()) {
+            JOptionPane.showMessageDialog(this, "El usuario ingresado no tiene mascotas", "Mensaje de Informacion", JOptionPane.INFORMATION_MESSAGE);
+        } else {
+            jComboBox1.setModel(new DefaultComboBoxModel(new Vector(pacientes)));
+
+        }
 
     }//GEN-LAST:event_txtcedulaActionPerformed
 
