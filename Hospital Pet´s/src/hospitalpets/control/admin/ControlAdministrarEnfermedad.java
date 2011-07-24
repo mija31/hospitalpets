@@ -34,7 +34,7 @@ public class ControlAdministrarEnfermedad {
         return ope.mt_guardar(m);
     }
 
-    public static Enfermedad cargarPropietario(int id){
+    public static Enfermedad cargarEnfermedad(int id){
         return (Enfermedad) ope.cargarObjeto(new Enfermedad(),"enfermedad","idEnfermedad",""+id);
     }
 

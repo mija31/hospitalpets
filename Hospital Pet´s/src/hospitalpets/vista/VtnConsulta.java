@@ -10,14 +10,20 @@
  */
 package hospitalpets.vista;
 
+import hospitalpets.control.admin.ControlAdministraConsulta;
 import hospitalpets.control.admin.ControlAdministraMedico;
 import hospitalpets.control.admin.ControlAdministraPaciente;
+import hospitalpets.control.admin.ControlAdministrarEnfermedad;
+import hospitalpets.modelo.Consulta;
+import hospitalpets.modelo.Enfermedad;
 import hospitalpets.modelo.Paciente;
 import hospitalpets.modelo.Persona;
 import hospitalpets.modelo.Sintoma;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.Vector;
 import javax.swing.DefaultComboBoxModel;
+import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 
 /**
@@ -182,7 +188,7 @@ public class VtnConsulta extends javax.swing.JDialog {
         jPanel1 = new javax.swing.JPanel();
         txtcedula = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
-        jComboBox1 = new javax.swing.JComboBox();
+        cbxPaciente = new javax.swing.JComboBox();
         jLabel2 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
 
@@ -1912,7 +1918,7 @@ public class VtnConsulta extends javax.swing.JDialog {
                 .addGap(18, 18, 18)
                 .addComponent(jLabel3)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(cbxPaciente, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
@@ -1923,7 +1929,7 @@ public class VtnConsulta extends javax.swing.JDialog {
                     .addComponent(jLabel2)
                     .addComponent(txtcedula, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel3)
-                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(cbxPaciente, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -2400,40 +2406,62 @@ public class VtnConsulta extends javax.swing.JDialog {
     }//GEN-LAST:event_cbSoploMitralAusActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        ArrayList<Enfermedad> enfermedades = new ArrayList<Enfermedad>();
+        Enfermedad enfemedad = new Enfermedad();
 
-        String s = Sintoma.sistemaRespiratorio(cbTosPres.isSelected(), cbReflejoTusPres.isSelected(),
+        int deteccion = Sintoma.sistemaRespiratorio(cbTosPres.isSelected(), cbReflejoTusPres.isSelected(),
                 cbSonidoAfonicoPres.isSelected(), cbSecrecionNasalPres.isSelected(), cbSecrecionOcularPres.isSelected(),
                 cbDistressRespiratorioPres.isSelected(), cbCrepitacionesPres.isSelected(), cbAnorexiaPres.isSelected(),
                 cbDisneaRespiratoriaPres.isSelected(), cbFiebrePres.isSelected());
-        System.out.println(s);
 
-        Sintoma.sistemaDigestivo(cbVomitoPres.isSelected(), cbRegurtigacionPres.isSelected(), cbAnorexiaPres.isSelected(),
+        enfemedad = ControlAdministrarEnfermedad.cargarEnfermedad(deteccion);
+        enfermedades.add(enfemedad);
+
+        deteccion = Sintoma.sistemaDigestivo(cbVomitoPres.isSelected(), cbRegurtigacionPres.isSelected(), cbAnorexiaPres.isSelected(),
                 cbDiarreaPres.isSelected(), cbDeshidratacionPres.isSelected(), cbDolorAbdominalPres.isSelected(),
                 cbHuevosParasitosPres.isSelected(), cbHepatomegaliaPres.isSelected(), cbHepatodiniaPres.isSelected(),
                 cbSecrecionVerdosaVulvaPres.isSelected(), cbDemoraPartoPres.isSelected(),
                 cbAusenciaContracUterinasPres.isSelected());
+        enfemedad = ControlAdministrarEnfermedad.cargarEnfermedad(deteccion);
+        enfermedades.add(enfemedad);
 
-        Sintoma.sistemaDermatologico(cbEritemaPres.isSelected(), cbPruritoPres.isSelected(), cbUlceraPres.isSelected(),
+        deteccion = Sintoma.sistemaDermatologico(cbEritemaPres.isSelected(), cbPruritoPres.isSelected(), cbUlceraPres.isSelected(),
                 cbSeborreaPres.isSelected(), cbMalOlorPelajePres.isSelected(), cbSecrecionPurulentaPres.isSelected(),
                 cbCostrasPres.isSelected(), cbCambioColoracionPelajePres.isSelected());
 
-        Sintoma.sistemaCardiovascular(cbAscitisPres.isSelected(), cbEdemaPulmonarPres.isSelected(), cbEdemaPerifericoPres.isSelected(),
+        enfemedad = ControlAdministrarEnfermedad.cargarEnfermedad(deteccion);
+        enfermedades.add(enfemedad);
+
+        deteccion = Sintoma.sistemaCardiovascular(cbAscitisPres.isSelected(), cbEdemaPulmonarPres.isSelected(), cbEdemaPerifericoPres.isSelected(),
                 cbReflejoTusPres.isSelected(), cbTosPres.isSelected(), cbResistenciaEjercicioPres.isSelected(), cbDesmayoPres.isSelected(),
                 cbMucosasCianoticaPres.isSelected(), cbPresionArterialDisminuidaPres.isSelected(), cbPresenciaSoploCardiacoPres.isSelected(),
                 cbTaquicardiaPres.isSelected(), cbDistressRespiratorioPres.isSelected(), cbBradicardiasPres.isSelected(),
                 cbCianosisPres.isSelected(), cbSoploMitralPres.isSelected(), cbDerramePleuralPres.isSelected());
+
+        enfemedad = ControlAdministrarEnfermedad.cargarEnfermedad(deteccion);
+        enfermedades.add(enfemedad);
+
+        Consulta consulta = new Consulta();
+        consulta.setPaciente(pacientes.get(cbxPaciente.getSelectedIndex()));
+        consulta.setEnfermedad(enfermedades);
+        consulta.setFecha(new Date());
+
+        ControlAdministraConsulta.crearConsulta(consulta);
+        new VtnResultados(consulta, (JFrame) this.getParent(), true).setVisible(true);
+        dispose();
+
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void txtcedulaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtcedulaActionPerformed
-        if(Persona.validarCedula(txtcedula.getText())){
+        if (Persona.validarCedula(txtcedula.getText())) {
 
-        ArrayList<Paciente> pacientes = ControlAdministraPaciente.cargarPacientes(txtcedula.getText());
-        if (pacientes.isEmpty()) {
-            JOptionPane.showMessageDialog(this, "El usuario ingresado no tiene mascotas", "Mensaje de Informacion", JOptionPane.INFORMATION_MESSAGE);
+            pacientes = ControlAdministraPaciente.cargarPacientes(txtcedula.getText());
+            if (pacientes.isEmpty()) {
+                JOptionPane.showMessageDialog(this, "El usuario ingresado no tiene mascotas", "Mensaje de Informacion", JOptionPane.INFORMATION_MESSAGE);
+            } else {
+                cbxPaciente.setModel(new DefaultComboBoxModel(new Vector(pacientes)));
+            }
         } else {
-            jComboBox1.setModel(new DefaultComboBoxModel(new Vector(pacientes)));
-        }
-        }else{
             JOptionPane.showMessageDialog(this, "El número de cedula ingresado no es valido ", "Mensaje de Error", JOptionPane.ERROR_MESSAGE);
 
         }
@@ -2543,9 +2571,9 @@ public class VtnConsulta extends javax.swing.JDialog {
     private javax.swing.JCheckBox cbUlceraPres;
     private javax.swing.JCheckBox cbVomitoAus;
     private javax.swing.JCheckBox cbVomitoPres;
+    private javax.swing.JComboBox cbxPaciente;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
-    private javax.swing.JComboBox jComboBox1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -2604,4 +2632,5 @@ public class VtnConsulta extends javax.swing.JDialog {
     private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JTextField txtcedula;
     // End of variables declaration//GEN-END:variables
+    private ArrayList<Paciente> pacientes;
 }

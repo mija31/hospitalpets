@@ -23,24 +23,22 @@ public class ControlAdministraConsulta {
     public ControlAdministraConsulta() {
     }
 
-    public void crearConsulta(Date fecha, int numConsul, Paciente paciente) {
-        c = new Consulta();
-        c.setFecha(fecha);
-        c.setNumConsulta(numConsul);
-        c.setPaciente(paciente);
-        ope.mt_guardar(c);
+    public static boolean  crearConsulta(Consulta consulta) {
+        c = consulta;
+
+        return ope.mt_guardar(c);
     }
 
-    public Vector<Consulta> cargarConsultas() {
+    public static  Vector<Consulta> cargarConsultas() {
         return (Vector<Consulta>)ope.cargar(new Consulta(), "consulta");
     }
 
-    public void elimminarConsulta(Consulta c) {
-        ope.mt_eliminar(c);
+    public boolean  elimminarConsulta(Consulta c) {
+        return ope.mt_eliminar(c);
     }
 
-    public void modificarConsulta(Consulta c) {
-        ope.mt_modificar(c);
+    public boolean  modificarConsulta(Consulta c) {
+        return ope.mt_modificar(c);
     }
 
     //    public Vector buscar(String criterio, String busca, int id){
