@@ -8,12 +8,14 @@
  *
  * Created on 24/07/2011, 01:51:15 AM
  */
-
 package hospitalpets.vista;
 
+import com.nilo.plaf.nimrod.NimRODLookAndFeel;
+import com.nilo.plaf.nimrod.NimRODTheme;
 import hospitalpets.control.CrearBaseDeDatos;
 import hospitalpets.control.admin.ControlAdministraMedico;
 import hospitalpets.modelo.Medico;
+import java.awt.Color;
 import java.util.Date;
 import java.util.Vector;
 import javax.swing.JDialog;
@@ -21,21 +23,52 @@ import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 import javax.swing.SwingUtilities;
 import javax.swing.UIManager;
+import javax.swing.UnsupportedLookAndFeelException;
 
 /**
  *
  * @author EDU
  */
-public class VtnIngreso extends javax.swing.JFrame implements Runnable{
-        static Vector<Medico> usuarios;
-        static ControlAdministraMedico uccUsuario;
-        public Date fechita;
-	public Thread relo=new Thread(this);
+public class VtnIngreso extends javax.swing.JFrame implements Runnable {
+
+    static Vector<Medico> usuarios;
+    static ControlAdministraMedico uccUsuario;
+    public Date fechita;
+    public Thread relo = new Thread(this);
 
     /** Creates new form VtnIngreso */
-    public VtnIngreso() {
+    public VtnIngreso() throws UnsupportedLookAndFeelException {
+        trans();
         initComponents();
         relo.start();
+    }
+
+    public void trans() throws UnsupportedLookAndFeelException {
+        try {
+            UIManager.setLookAndFeel("com.nilo.plaf.nimrod.NimRODLookAndFeel");
+            NimRODTheme nt = new NimRODTheme();
+            nt.setPrimary1(Color.GREEN);
+            nt.setPrimary2(Color.GREEN);
+            nt.setPrimary3(Color.GREEN);
+            nt.setOpacity(0);
+            nt.setFrameOpacity(0);
+            NimRODLookAndFeel NimRODLF = new NimRODLookAndFeel();
+            NimRODLookAndFeel.setCurrentTheme(nt);
+            UIManager.setLookAndFeel(NimRODLF);
+            SwingUtilities.updateComponentTreeUI(VtnIngreso.this);
+        } catch (ClassNotFoundException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        } catch (InstantiationException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        } catch (IllegalAccessException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        } catch (UnsupportedLookAndFeelException e) {
+            // TODO Auto-generated catch block
+            e.printStackTrace();
+        }
     }
 
     /** This method is called from within the constructor to
@@ -47,33 +80,26 @@ public class VtnIngreso extends javax.swing.JFrame implements Runnable{
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        txtUsuario = new javax.swing.JTextField();
-        txtClave = new javax.swing.JPasswordField();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         lblFecha = new javax.swing.JLabel();
+        jPanel1 = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
+        txtUsuario = new javax.swing.JTextField();
+        jLabel2 = new javax.swing.JLabel();
+        txtClave = new javax.swing.JPasswordField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        jLabel1.setText("Usuario:");
-
-        jLabel2.setText("Clave:");
-
-        txtClave.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                txtClaveActionPerformed(evt);
-            }
-        });
-
-        jButton1.setText("Aceptar");
+        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/hospitalpets/imagenes/lookP.png"))); // NOI18N
+        jButton1.setText("Ingresar");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton1ActionPerformed(evt);
             }
         });
 
+        jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/hospitalpets/imagenes/eliminar.png"))); // NOI18N
         jButton2.setText("Cancelar");
         jButton2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -81,77 +107,109 @@ public class VtnIngreso extends javax.swing.JFrame implements Runnable{
             }
         });
 
-        lblFecha.setText("jLabel1");
+        lblFecha.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
+        lblFecha.setForeground(new java.awt.Color(102, 102, 0));
+        lblFecha.setText("INGRESO AL SISTEMA");
+
+        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(153, 102, 0)), "Datos Obligatorios", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 11), new java.awt.Color(153, 102, 0))); // NOI18N
+
+        jLabel1.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel1.setText("Usuario:");
+
+        jLabel2.setFont(new java.awt.Font("Tahoma", 1, 12)); // NOI18N
+        jLabel2.setText("Contraseña:");
+
+        txtClave.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtClaveActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel2)
+                    .addComponent(jLabel1))
+                .addGap(38, 38, 38)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(txtUsuario)
+                    .addComponent(txtClave, javax.swing.GroupLayout.PREFERRED_SIZE, 126, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel1)
+                    .addComponent(txtUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(txtClave, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel2))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(128, 128, 128)
-                        .addComponent(jButton1)
-                        .addGap(31, 31, 31)
-                        .addComponent(jButton2))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(108, 108, 108)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel2)
-                            .addComponent(jLabel1))
-                        .addGap(38, 38, 38)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(txtUsuario)
-                            .addComponent(txtClave, javax.swing.GroupLayout.DEFAULT_SIZE, 126, Short.MAX_VALUE)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(178, 178, 178)
-                        .addComponent(lblFecha)))
-                .addContainerGap(88, Short.MAX_VALUE))
+                .addGap(30, 30, 30)
+                .addComponent(jButton1)
+                .addGap(18, 18, 18)
+                .addComponent(jButton2)
+                .addGap(34, 34, 34))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(31, 31, 31)
+                .addComponent(lblFecha))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(27, 27, 27)
+                .addContainerGap()
                 .addComponent(lblFecha)
-                .addGap(39, 39, 39)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel1)
-                    .addComponent(txtUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(txtClave, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel2))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 48, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton1)
                     .addComponent(jButton2))
-                .addGap(31, 31, 31))
+                .addContainerGap())
         );
 
         java.awt.Dimension screenSize = java.awt.Toolkit.getDefaultToolkit().getScreenSize();
-        setBounds((screenSize.width-416)/2, (screenSize.height-278)/2, 416, 278);
+        setBounds((screenSize.width-302)/2, (screenSize.height-236)/2, 302, 236);
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-            System.exit(0);
+        System.exit(0);
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-@Deprecated
-        String pass=txtClave.getText();
-         String nick=txtUsuario.getText();
-         boolean nohay=false;
-             for (int i = 0; i < usuarios.size(); i++) {
-                 if(usuarios.get(i).getNombre().equals(nick)&&usuarios.get(i).getClave().equals(pass)){
-                     nohay=true;
-                     new VtnPrincipal().setVisible(true);
-                 }
-             }
-         if(nohay==false){
-             JOptionPane.showMessageDialog(this, "Password o Usuario Incorrectos ." +"Ingrese de nuevo sus Datos.","Mensaje de Error",JOptionPane.ERROR_MESSAGE);
-             txtClave.setText("");
-             txtUsuario.setText("");
-         }
+        @Deprecated
+        String pass = txtClave.getText();
+        String nick = txtUsuario.getText();
+        boolean nohay = false;
+        for (int i = 0; i < usuarios.size(); i++) {
+            if (usuarios.get(i).getNombre().equals(nick) && usuarios.get(i).getClave().equals(pass)) {
+                nohay = true;
+                new VtnPrincipal().setVisible(true);
+            }
+        }
+        if (nohay == false) {
+            JOptionPane.showMessageDialog(this, "Password o Usuario Incorrectos ." + "Ingrese de nuevo sus Datos.", "Mensaje de Error", JOptionPane.ERROR_MESSAGE);
+            txtClave.setText("");
+            txtUsuario.setText("");
+        }
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void txtClaveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtClaveActionPerformed
@@ -159,58 +217,56 @@ public class VtnIngreso extends javax.swing.JFrame implements Runnable{
     }//GEN-LAST:event_txtClaveActionPerformed
 
     /**
-    * @param args the command line arguments
-    */
-    public static void main(String args[]) {
+     * @param args the command line arguments
+     */
+    public static void main(String args[]) throws UnsupportedLookAndFeelException {
         new CrearBaseDeDatos();
-        uccUsuario=new ControlAdministraMedico();
-        usuarios=ControlAdministraMedico.cargarMedicos();
+        uccUsuario = new ControlAdministraMedico();
+        usuarios = ControlAdministraMedico.cargarMedicos();
         final JFrame frame = new VtnIngreso();
-        try{
-                    java.lang.reflect.Method method =JFrame.class.getMethod("setDefaultLookAndFeelDecorated",new Class[] { boolean.class });
-                    method.invoke(null, new Object[] { Boolean.TRUE });
-                    method = JDialog.class.getMethod("setDefaultLookAndFeelDecorated",new Class[] { boolean.class });
-                    method.invoke(null, new Object[] { Boolean.TRUE });
-                    UIManager.setLookAndFeel("com.birosoft.liquid.LiquidLookAndFeel");
-                    SwingUtilities.updateComponentTreeUI(frame);
-        }catch(Exception e){
-                System.out.println(e);
+        try {
+            java.lang.reflect.Method method = JFrame.class.getMethod("setDefaultLookAndFeelDecorated", new Class[]{boolean.class});
+            method.invoke(null, new Object[]{Boolean.TRUE});
+            method = JDialog.class.getMethod("setDefaultLookAndFeelDecorated", new Class[]{boolean.class});
+            method.invoke(null, new Object[]{Boolean.TRUE});
+            UIManager.setLookAndFeel("com.birosoft.liquid.LiquidLookAndFeel");
+            SwingUtilities.updateComponentTreeUI(frame);
+        } catch (Exception e) {
+            System.out.println(e);
 
         }
 
-        if(usuarios.isEmpty()){
-                    JOptionPane.showMessageDialog(null, "No existe ningun Usuario registrado\nSe iniciara secion como Administrador","Mensaje de Advertencia",JOptionPane.WARNING_MESSAGE);
-                    uccUsuario.crearMedico("admin", "1000000000","admin","admin");
-                    VtnPrincipal principal=new  VtnPrincipal();
-                    SwingUtilities.updateComponentTreeUI(principal);
-                    principal.setVisible(true);
+        if (usuarios.isEmpty()) {
+            JOptionPane.showMessageDialog(null, "No existe ningun Usuario registrado\nSe iniciara secion como Administrador", "Mensaje de Advertencia", JOptionPane.WARNING_MESSAGE);
+            uccUsuario.crearMedico("admin", "1000000000", "admin", "admin");
+            VtnPrincipal principal = new VtnPrincipal();
+            SwingUtilities.updateComponentTreeUI(principal);
+            principal.setVisible(true);
 
-        }else{
+        } else {
             frame.setVisible(true);
         }
 
     }
-
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JPanel jPanel1;
     private javax.swing.JLabel lblFecha;
     private javax.swing.JPasswordField txtClave;
     private javax.swing.JTextField txtUsuario;
     // End of variables declaration//GEN-END:variables
 
     public void run() {
-        while(true){
-            try{
+        while (true) {
+            try {
                 Thread.sleep(10);
-                fechita=new Date();
+                fechita = new Date();
                 lblFecha.setText(fechita.toLocaleString());
-            }catch(Exception rel){
-
+            } catch (Exception rel) {
             }
         }
     }
-
 }

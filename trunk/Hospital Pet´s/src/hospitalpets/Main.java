@@ -10,6 +10,7 @@ import hospitalpets.vista.VtnIngreso;
 import hospitalpets.vista.VtnPrincipal;
 import java.util.ArrayList;
 import java.util.List;
+import javax.swing.UnsupportedLookAndFeelException;
 
 /**
  *
@@ -20,7 +21,7 @@ public class Main {
     /**
      * @param args the command line arguments
      */
-    public static void main(String[] args) {
+    public static void main(String[] args) throws UnsupportedLookAndFeelException {
         // TODO code application logic here
 
         List<Sintoma> ss = new ArrayList<Sintoma>();
