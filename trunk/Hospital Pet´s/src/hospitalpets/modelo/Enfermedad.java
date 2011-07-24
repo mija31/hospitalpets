@@ -13,17 +13,10 @@ import java.util.List;
  */
 public class Enfermedad {
     private int idEnfermedad;
-
-    public int getIdEnfermedad() {
-        return idEnfermedad;
-    }
-
-    public void setIdEnfermedad(int idEnfermedad) {
-        this.idEnfermedad = idEnfermedad;
-    }
     private String nombre;
     private String tratamiento;
-    private String diagnostico;
+    private String descripcion;
+    private String foto;
     private List<Sintoma> sintomas;
 
     public List<Sintoma> getSintomas() {
@@ -39,13 +32,6 @@ public class Enfermedad {
         sintomas=new ArrayList<Sintoma>();
     }
 
-    public String getDiagnostico() {
-        return diagnostico;
-    }
-
-    public void setDiagnostico(String diagnostico) {
-        this.diagnostico = diagnostico;
-    }
 
     public String getNombre() {
         return nombre;
@@ -62,6 +48,28 @@ public class Enfermedad {
 
     public void setTratamiento(String tratamiento) {
         this.tratamiento = tratamiento;
+    }
+    public String getDescripcion() {
+        return descripcion;
+    }
+
+    public void setDescripcion(String descripcion) {
+        this.descripcion = descripcion;
+    }
+
+    public String getFoto() {
+        return foto;
+    }
+
+    public void setFoto(String foto) {
+        this.foto = foto;
+    }
+    public int getIdEnfermedad() {
+        return idEnfermedad;
+    }
+
+    public void setIdEnfermedad(int idEnfermedad) {
+        this.idEnfermedad = idEnfermedad;
     }
 
 

@@ -10,76 +10,94 @@ public class Sintoma {
 
     private String nombre;
     private String idSintoma;
-    //Constantes tipos de TOS
-    public static final int TOS_NO_PRODUCTIVA = -1;
-    public static final int TOS_PAROXÍSTICA = -2;
-    public static final int TOS_PRODUCTIVA = -3;
-    public static final int TOS_AUSENTE = -4;
-    //contatantes sisntomas de enfermedades positivas
-    public static final boolean[] FARINGITIS = {true, true, true, false, false, false, false, false, false, false, false, false};
-    public static final boolean[] TRAQUEO_BRONQUITIS = {true, true, true, true, true, true, true, false, false, false, false, false};
-    public static final boolean[] BRONCONEUMONIA = {false, false, false, true, false, true, true, true, false, false, false, false};
-    public static final boolean[] NEUMONIA = {true, false, false, false, true, true, true, true, true, true, false, false};
-    public static final boolean[] LARINGITIS = {true, true, true, false, false, false, false, false, false, true, false, false};
-    public static final boolean[] SINUSITIS = {true, true, true, false, false, false, false, false, false, false, false, false};
-    public static ArrayList<boolean[]> sistemaRespiratorio;
-    public static final String[] enfermedadRespiratoria = {"Faringitis", "Traqueo bronquitis", "Bronconeumonía", "Neumonía", "Laringitis", "Sinusitis"};
 
-    public static String sistemaRespiratorio(int tos, boolean reflejoTusígenoPositivo, boolean sonidosAfónicos,
+    //contatantes sintomas de enfermedades Sistema respiratoria positivas
+    public static final boolean[] FARINGITIS = {true, true, true, false, false, false, false, false, false, false};
+    public static final boolean[] TRAQUEO_BRONQUITIS = {true, true, true, true, true, false, false, false, false, false};
+    public static final boolean[] BRONCONEUMONIA = {false, false, false, true, true, true, false, false, false, false};
+    public static final boolean[] NEUMONIA = {true, false, false, true, true, true, true, true, false, false};
+    public static final boolean[] LARINGITIS = {true, true, true, false, false, false, false, true, false, false};
+    public static final boolean[] SINUSITIS = {false, false, false, true, false, false, false, false, true, true};
+
+
+    //contatantes sintomas de enfermedades sistema digestivo positivas
+    public static final boolean[] OBSTRUCCION = {true, true, true, false, false, false, false, false, false, false, false, false};
+    public static final boolean[] GASTROENTERITIS_ALIMENTARIA = {true,false, true, true, true, true, false, false, false, false, false, false};
+    public static final boolean[] GASTROENTERITIS_PARASITARIA = {true, false, true, true, true,false, true, false, false, false, false, false};
+    public static final boolean[] HEPATOPATIA_HIGADO = {true, false, true, false, false, false, false, true, true, false, false, false};
+    public static final boolean[] OBSTRUCCION_CUERPO_EXTRAÑO = {true, true, true, false, true, true, false, false, false, false, false, false};
+    public static final boolean[] ABORTOS = {false, false, false, false, false, false, false, false, false, true, true, true};
+
+    public static ArrayList<boolean[]> enfermedades;
+    public static final String[] enfermedadRespiratoria = {"Faringitis", "Traqueo bronquitis", "Bronconeumonía", "Neumonía", "Laringitis", "Sinusitis"};
+    public static final String[] enfermedadDigestiva = {"Obstrucción por cuerpo extraño y esófago","Gastroenteritis alimentaria",
+    "Gastroenteritis parasitaria","Hepatopatía (hígado)","Obstrucción por cuerpo extraño","Abortos"};
+
+    public static String sistemaRespiratorio(boolean tos, boolean reflejoTusígenoPositivo, boolean sonidosAfónicos,
             boolean secreciónNasal, boolean secreciónOcular, boolean distressRespiratorio,
             boolean crepitaciones, boolean anorexia, boolean disneaRespiratoria, boolean pirexiaFiebre) {
-        boolean tosProductiva = false, tosNoProductiva = false, tosParoxistica = false;
-        switch (tos) {
-            case -1:
-                tosProductiva = false;
-                tosNoProductiva = true;
-                tosParoxistica = false;
-                break;
-            case -2:
-                tosProductiva = false;
-                tosNoProductiva = false;
-                tosParoxistica = true;
-                break;
-            case -3:
-                tosProductiva = true;
-                tosNoProductiva = false;
-                tosParoxistica = false;
-                break;
-            case -4:
-                tosProductiva = false;
-                tosNoProductiva = false;
-                tosParoxistica = false;
-            default:
-        }
-
-        boolean[] sistom = {tosNoProductiva, reflejoTusígenoPositivo, sonidosAfónicos, tosParoxistica,
-            tosProductiva, secreciónNasal, secreciónOcular, distressRespiratorio, crepitaciones,
+        boolean[] sistom = {tos, reflejoTusígenoPositivo, sonidosAfónicos,
+            secreciónNasal, secreciónOcular, distressRespiratorio, crepitaciones,
             anorexia, disneaRespiratoria, pirexiaFiebre};
 
-        sistemaRespiratorio = new ArrayList<boolean[]>();
-        sistemaRespiratorio.add(FARINGITIS);
-        sistemaRespiratorio.add(TRAQUEO_BRONQUITIS);
-        sistemaRespiratorio.add(BRONCONEUMONIA);
-        sistemaRespiratorio.add(NEUMONIA);
-        sistemaRespiratorio.add(LARINGITIS);
-        sistemaRespiratorio.add(SINUSITIS);
+        enfermedades = new ArrayList<boolean[]>();
+        enfermedades.add(FARINGITIS);
+        enfermedades.add(TRAQUEO_BRONQUITIS);
+        enfermedades.add(BRONCONEUMONIA);
+        enfermedades.add(NEUMONIA);
+        enfermedades.add(LARINGITIS);
+        enfermedades.add(SINUSITIS);
 
         int deteccion = 0;
         int conAct = 0;
         int cont = 0;
-        for (int i = 0; i < sistemaRespiratorio.size(); i++) {
+        for (int i = 0; i < enfermedades.size(); i++) {
             for (int j = 0; j < sistom.length; j++) {
-                if (sistom[j] == sistemaRespiratorio.get(i)[j]) {
+                if (sistom[j] == enfermedades.get(i)[j]) {
                     cont++;
                 }
             }
             if (conAct < cont) {
                 conAct = cont;
                 deteccion = i;
-                cont=0;
             }
+            cont = 0;
         }
+        return enfermedadRespiratoria[deteccion];
+    }
 
+
+        public static String sistemaDigestivo(boolean vomito, boolean regurgitacion, boolean anorexiaa,
+            boolean diarrea, boolean deshidratacion, boolean dolorAbdominal,
+            boolean huevosParasitos, boolean hepatomegalia,boolean hepatodinia, boolean secresionVerdosaVulva,
+            boolean demoraPeriodoParto,boolean ausenciaContraccionesUterinas) {
+        boolean[] sistom = {vomito, regurgitacion, anorexiaa,
+            diarrea, deshidratacion, dolorAbdominal, huevosParasitos,
+            hepatomegalia,hepatodinia, secresionVerdosaVulva, demoraPeriodoParto,ausenciaContraccionesUterinas};
+
+        enfermedades = new ArrayList<boolean[]>();
+        enfermedades.add(OBSTRUCCION);
+        enfermedades.add(GASTROENTERITIS_ALIMENTARIA);
+        enfermedades.add(GASTROENTERITIS_PARASITARIA);
+        enfermedades.add(HEPATOPATIA_HIGADO);
+        enfermedades.add(OBSTRUCCION_CUERPO_EXTRAÑO);
+        enfermedades.add(ABORTOS);
+
+        int deteccion = 0;
+        int conAct = 0;
+        int cont = 0;
+        for (int i = 0; i < enfermedades.size(); i++) {
+            for (int j = 0; j < sistom.length; j++) {
+                if (sistom[j] == enfermedades.get(i)[j]) {
+                    cont++;
+                }
+            }
+            if (conAct < cont) {
+                conAct = cont;
+                deteccion = i;
+            }
+            cont = 0;
+        }
         return enfermedadRespiratoria[deteccion];
     }
 

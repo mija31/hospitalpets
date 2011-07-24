@@ -46,10 +46,8 @@ public class VtnConsulta extends javax.swing.JDialog {
         cbReflejoTusPres = new javax.swing.JCheckBox();
         cbReflejoTusAus = new javax.swing.JCheckBox();
         jPanel13 = new javax.swing.JPanel();
-        cbTosParoxistica = new javax.swing.JCheckBox();
-        cbTosNoProductiva = new javax.swing.JCheckBox();
-        cbTosProductiva = new javax.swing.JCheckBox();
-        cbTosAusente = new javax.swing.JCheckBox();
+        cbTosPres = new javax.swing.JCheckBox();
+        cbTosAus = new javax.swing.JCheckBox();
         jPanel14 = new javax.swing.JPanel();
         cbSecrecionOcularPres = new javax.swing.JCheckBox();
         cbSecrecionOcularAus = new javax.swing.JCheckBox();
@@ -173,6 +171,12 @@ public class VtnConsulta extends javax.swing.JDialog {
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
+        jPanel1 = new javax.swing.JPanel();
+        jTextField1 = new javax.swing.JTextField();
+        jLabel3 = new javax.swing.JLabel();
+        jComboBox1 = new javax.swing.JComboBox();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
@@ -281,34 +285,20 @@ public class VtnConsulta extends javax.swing.JDialog {
                 .addComponent(cbReflejoTusPres))
         );
 
-        jPanel13.setBorder(javax.swing.BorderFactory.createTitledBorder("Tipo de tos que presenta"));
+        jPanel13.setBorder(javax.swing.BorderFactory.createTitledBorder("Tos"));
 
-        cbTosParoxistica.setText("Paroxística");
-        cbTosParoxistica.addActionListener(new java.awt.event.ActionListener() {
+        cbTosPres.setText("Presente");
+        cbTosPres.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cbTosParoxisticaActionPerformed(evt);
+                cbTosPresActionPerformed(evt);
             }
         });
 
-        cbTosNoProductiva.setText("No Productiva");
-        cbTosNoProductiva.addActionListener(new java.awt.event.ActionListener() {
+        cbTosAus.setSelected(true);
+        cbTosAus.setText("Ausente");
+        cbTosAus.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cbTosNoProductivaActionPerformed(evt);
-            }
-        });
-
-        cbTosProductiva.setText("Productiva");
-        cbTosProductiva.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cbTosProductivaActionPerformed(evt);
-            }
-        });
-
-        cbTosAusente.setSelected(true);
-        cbTosAusente.setText("Ausente");
-        cbTosAusente.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cbTosAusenteActionPerformed(evt);
+                cbTosAusActionPerformed(evt);
             }
         });
 
@@ -316,26 +306,20 @@ public class VtnConsulta extends javax.swing.JDialog {
         jPanel13.setLayout(jPanel13Layout);
         jPanel13Layout.setHorizontalGroup(
             jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel13Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(cbTosProductiva)
-                .addGap(43, 43, 43)
-                .addComponent(cbTosNoProductiva)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 58, Short.MAX_VALUE)
-                .addComponent(cbTosParoxistica)
-                .addGap(45, 45, 45)
-                .addComponent(cbTosAusente)
-                .addGap(25, 25, 25))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel13Layout.createSequentialGroup()
+                .addContainerGap(180, Short.MAX_VALUE)
+                .addComponent(cbTosPres)
+                .addGap(91, 91, 91)
+                .addComponent(cbTosAus)
+                .addGap(84, 84, 84))
         );
         jPanel13Layout.setVerticalGroup(
             jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel13Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(cbTosProductiva)
-                    .addComponent(cbTosNoProductiva)
-                    .addComponent(cbTosAusente)
-                    .addComponent(cbTosParoxistica))
+                    .addComponent(cbTosPres)
+                    .addComponent(cbTosAus))
                 .addContainerGap())
         );
 
@@ -1893,28 +1877,77 @@ public class VtnConsulta extends javax.swing.JDialog {
         jLabel1.setFont(new java.awt.Font("Vijaya", 1, 36));
         jLabel1.setText("SINTOMAS PRESENTES");
 
+        jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder("Seleccionar Paciente"));
+
+        jLabel3.setText("Paciente:");
+
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+
+        jLabel2.setText("Cedula del propietario:");
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel2)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel3)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel2)
+                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel3)
+                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        jLabel4.setFont(new java.awt.Font("Vijaya", 1, 36));
+        jLabel4.setText("CONSULTA");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jTabbedPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 681, Short.MAX_VALUE)
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(231, 231, 231)
-                        .addComponent(jButton1)
-                        .addGap(76, 76, 76)
-                        .addComponent(jButton2))
-                    .addComponent(jLabel1))
+                        .addContainerGap()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jTabbedPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 681, Short.MAX_VALUE)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(231, 231, 231)
+                                .addComponent(jButton1)
+                                .addGap(76, 76, 76)
+                                .addComponent(jButton2))
+                            .addComponent(jLabel1)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(250, 250, 250)
+                        .addComponent(jLabel4))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(23, 23, 23)
+                        .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap()
+                .addComponent(jLabel4)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 14, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 491, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -1986,33 +2019,15 @@ public class VtnConsulta extends javax.swing.JDialog {
         cbSecrecionOcularPres.setSelected(true);
 }//GEN-LAST:event_cbSecrecionOcularPresActionPerformed
 
-    private void cbTosAusenteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbTosAusenteActionPerformed
-        cbTosProductiva.setSelected(false);
-        cbTosNoProductiva.setSelected(false);
-        cbTosParoxistica.setSelected(false);
-        cbTosAusente.setSelected(true);
-}//GEN-LAST:event_cbTosAusenteActionPerformed
+    private void cbTosAusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbTosAusActionPerformed
+        cbTosPres.setSelected(false);
+        cbTosAus.setSelected(true);
+}//GEN-LAST:event_cbTosAusActionPerformed
 
-    private void cbTosProductivaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbTosProductivaActionPerformed
-        cbTosAusente.setSelected(false);
-        cbTosNoProductiva.setSelected(false);
-        cbTosParoxistica.setSelected(false);
-        cbTosProductiva.setSelected(true);
-}//GEN-LAST:event_cbTosProductivaActionPerformed
-
-    private void cbTosNoProductivaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbTosNoProductivaActionPerformed
-        cbTosAusente.setSelected(false);
-        cbTosProductiva.setSelected(false);
-        cbTosParoxistica.setSelected(false);
-        cbTosNoProductiva.setSelected(true);
-}//GEN-LAST:event_cbTosNoProductivaActionPerformed
-
-    private void cbTosParoxisticaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbTosParoxisticaActionPerformed
-        cbTosAusente.setSelected(false);
-        cbTosNoProductiva.setSelected(false);
-        cbTosProductiva.setSelected(false);
-        cbTosParoxistica.setSelected(true);
-}//GEN-LAST:event_cbTosParoxisticaActionPerformed
+    private void cbTosPresActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbTosPresActionPerformed
+        cbTosAus.setSelected(false);
+        cbTosPres.setSelected(true);
+}//GEN-LAST:event_cbTosPresActionPerformed
 
     private void cbReflejoTusAusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbReflejoTusAusActionPerformed
         cbReflejoTusAus.setSelected(true);
@@ -2367,17 +2382,9 @@ public class VtnConsulta extends javax.swing.JDialog {
     }//GEN-LAST:event_cbSoploMitralAusActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        int tos;
-        if (cbTosNoProductiva.isSelected()) {
-            tos = Sintoma.TOS_NO_PRODUCTIVA;
-        } else if (cbTosProductiva.isSelected()) {
-            tos = Sintoma.TOS_PRODUCTIVA;
-        } else if (cbTosParoxistica.isSelected()) {
-            tos = Sintoma.TOS_PAROXÍSTICA;
-        } else {
-            tos = Sintoma.TOS_AUSENTE;
-        }
-        String s=Sintoma.sistemaRespiratorio(tos,cbReflejoTusPres.isSelected(),cbSonidoAfonicoPres.isSelected(), cbSecrecionNasalPres.isSelected(),cbSecrecionOcularPres.isSelected(), cbDistressRespiratorioPres.isSelected(), cbCrepitacionesPres.isSelected(), cbAnorexiaPres.isSelected(),cbDisneaRespiratoriaPres.isSelected(), cbFiebrePres.isSelected());
+
+        String s = Sintoma.sistemaRespiratorio(cbTosPres.isSelected(), cbReflejoTusPres.isSelected(), cbSonidoAfonicoPres.isSelected(), cbSecrecionNasalPres.isSelected(), cbSecrecionOcularPres.isSelected(),
+                cbDistressRespiratorioPres.isSelected(), cbCrepitacionesPres.isSelected(), cbAnorexiaPres.isSelected(), cbDisneaRespiratoriaPres.isSelected(), cbFiebrePres.isSelected());
         System.out.println(s);
 
     }//GEN-LAST:event_jButton1ActionPerformed
@@ -2479,17 +2486,20 @@ public class VtnConsulta extends javax.swing.JDialog {
     private javax.swing.JCheckBox cbSoploMitralPres;
     private javax.swing.JCheckBox cbTaquicardiaAus;
     private javax.swing.JCheckBox cbTaquicardiaPres;
-    private javax.swing.JCheckBox cbTosAusente;
-    private javax.swing.JCheckBox cbTosNoProductiva;
-    private javax.swing.JCheckBox cbTosParoxistica;
-    private javax.swing.JCheckBox cbTosProductiva;
+    private javax.swing.JCheckBox cbTosAus;
+    private javax.swing.JCheckBox cbTosPres;
     private javax.swing.JCheckBox cbUlceraAus;
     private javax.swing.JCheckBox cbUlceraPres;
     private javax.swing.JCheckBox cbVomitoAus;
     private javax.swing.JCheckBox cbVomitoPres;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
+    private javax.swing.JComboBox jComboBox1;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel10;
     private javax.swing.JPanel jPanel11;
     private javax.swing.JPanel jPanel12;
@@ -2541,5 +2551,6 @@ public class VtnConsulta extends javax.swing.JDialog {
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JTabbedPane jTabbedPane1;
+    private javax.swing.JTextField jTextField1;
     // End of variables declaration//GEN-END:variables
 }

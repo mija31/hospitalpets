@@ -3,16 +3,15 @@
 <hibernate-mapping package="hospitalpets.modelo">
   <class name="hospitalpets.modelo.Enfermedad" table="enfermedad">
     <id column="idEnfermedad" name="idEnfermedad">
-        <generator class="increment"/>
+      <generator class="increment"/>
     </id>
     <property column="nombre" name="nombre"/>
     <property column="diagnostico" name="diagnostico"/>
     <property column="tratamiento" name="tratamiento"/>
-    
     <list cascade="all-delete-orphan" name="sintomas">
       <key column="idEnfermedad"/>
       <index column="ORDEN"/>
       <one-to-many class="hospitalpets.modelo.Sintoma"/>
     </list>
-    </class>
+  </class>
 </hibernate-mapping>

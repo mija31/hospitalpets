@@ -23,12 +23,14 @@ public class ControlAdministrarEnfermedad {
     public ControlAdministrarEnfermedad() {
     }
 
-    public static boolean crearEnfermedad(String nombre,List<Sintoma> sintoma,String diagnostico,String tratamiento) {
+    public static boolean crearEnfermedad(int Codigo,String nombre,List<Sintoma> sintoma,String descripcion,String tratamiento,String foto) {
         m = new Enfermedad();
-        m.setDiagnostico(diagnostico);
+        m.setDescripcion(descripcion);
         m.setTratamiento(tratamiento);
         m.setNombre(nombre);
         m.setSintomas(sintoma);
+        m.setFoto(foto);
+        m.setIdEnfermedad(Codigo);
         return ope.mt_guardar(m);
     }
 

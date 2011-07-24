@@ -33,7 +33,10 @@ public class Main {
         sintoma = new Sintoma();
         sintoma.setNombre("Sonidos afónicos");
         ss.add(sintoma);
-        ControlAdministrarEnfermedad.crearEnfermedad("Faringitis", ss, "dtfghj", "Butorfanol\t0,5 mg/kg V.O c/6-12 h\nAmoxilina mas acido clabulanico\t12,5 mg/kg V.O c/12h\nHistamil\t1mg/kg c/12h");
+        ControlAdministrarEnfermedad.crearEnfermedad(1,"Faringitis",ss,"Descripcion", "Butorfanol\t0,5 mg/kg V.O c/6-12 h"
+                + "\nAmoxilina mas acido clabulanico\t12,5 mg/kg V.O c/12h\nHistamil\t1mg/kg c/12h","foto");
+
+
 
         ss = new ArrayList<Sintoma>();
         sintoma = new Sintoma();
@@ -57,7 +60,8 @@ public class Main {
         sintoma = new Sintoma();
         sintoma.setNombre("Rara secreción mucopurolenta");
         ss.add(sintoma);
-        ControlAdministrarEnfermedad.crearEnfermedad("Traqueo bronquitis", ss, "dtfghj", "Amoxilina mas acido clabulanico\t12,5 mg/kg V.O c/12h\nPrednifin\t1mg/kg c/12h\nButorfanol\t0,5 mg/kg V.O c/6-12 h");
+        ControlAdministrarEnfermedad.crearEnfermedad(1,"Faringitis",ss,"Descripcion", "Butorfanol\t0,5 mg/kg V.O c/6-12 h"
+                + "\nAmoxilina mas acido clabulanico\t12,5 mg/kg V.O c/12h\nHistamil\t1mg/kg c/12h","foto");
 
 
 
