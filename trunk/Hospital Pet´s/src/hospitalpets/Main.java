@@ -6,6 +6,7 @@ package hospitalpets;
 
 import hospitalpets.control.admin.ControlAdministrarEnfermedad;
 import hospitalpets.modelo.Sintoma;
+import hospitalpets.vista.VtnIngreso;
 import hospitalpets.vista.VtnPrincipal;
 import java.util.ArrayList;
 import java.util.List;
@@ -59,7 +60,7 @@ public class Main {
         ss.add(sintoma);
         ControlAdministrarEnfermedad.crearEnfermedad(2,"Faringitis",ss,"Descripcion", "Butorfanol\t0,5 mg/kg V.O c/6-12 h"
                 + "\nAmoxilina mas acido clabulanico\t12,5 mg/kg V.O c/12h\nHistamil\t1mg/kg c/12h","foto");
-        new VtnPrincipal().setVisible(true);
+        new VtnIngreso().setVisible(true);
 
     }
 }
