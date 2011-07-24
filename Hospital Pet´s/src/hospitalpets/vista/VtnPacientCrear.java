@@ -52,9 +52,6 @@ public class VtnPacientCrear extends javax.swing.JDialog {
 
         pnlDatosPaciente = new javax.swing.JPanel();
         jLabel12 = new javax.swing.JLabel();
-        btnNuevo = new javax.swing.JButton();
-        btnGuardar = new javax.swing.JButton();
-        btnsalir = new javax.swing.JButton();
         jPanel1 = new javax.swing.JPanel();
         jLabel4 = new javax.swing.JLabel();
         txtEspecie = new javax.swing.JTextField();
@@ -96,6 +93,10 @@ public class VtnPacientCrear extends javax.swing.JDialog {
         jPanel5 = new javax.swing.JPanel();
         jLabel19 = new javax.swing.JLabel();
         pswPasswordDoc = new javax.swing.JPasswordField();
+        jPanel6 = new javax.swing.JPanel();
+        btnNuevo = new javax.swing.JButton();
+        btnGuardar = new javax.swing.JButton();
+        btnsalir = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
@@ -106,25 +107,6 @@ public class VtnPacientCrear extends javax.swing.JDialog {
         jLabel12.setFont(new java.awt.Font("Tahoma", 1, 18));
         jLabel12.setForeground(new java.awt.Color(0, 153, 102));
         jLabel12.setText("Datos del Paciente");
-
-        btnNuevo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/hospitalpets/imagenes/nuevo.png"))); // NOI18N
-        btnNuevo.setText("Nuevo");
-
-        btnGuardar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/hospitalpets/imagenes/guardar.png"))); // NOI18N
-        btnGuardar.setText("Guardar");
-        btnGuardar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnGuardarActionPerformed(evt);
-            }
-        });
-
-        btnsalir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/hospitalpets/imagenes/eliminar.png"))); // NOI18N
-        btnsalir.setText("Salir");
-        btnsalir.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnsalirActionPerformed(evt);
-            }
-        });
 
         jPanel1.setBackground(new java.awt.Color(204, 255, 204));
         jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(0, 204, 102)), "Datos Obligatorios", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 0, 11), new java.awt.Color(0, 204, 102))); // NOI18N
@@ -201,12 +183,12 @@ public class VtnPacientCrear extends javax.swing.JDialog {
                 .addContainerGap()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel1)
-                    .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, 111, Short.MAX_VALUE)
+                    .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, 154, Short.MAX_VALUE)
                     .addComponent(jLabel7))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addComponent(txtEdad, javax.swing.GroupLayout.DEFAULT_SIZE, 142, Short.MAX_VALUE)
+                        .addComponent(txtEdad, javax.swing.GroupLayout.DEFAULT_SIZE, 184, Short.MAX_VALUE)
                         .addGap(18, 18, 18)
                         .addComponent(jLabel8)
                         .addGap(17, 17, 17)
@@ -311,7 +293,7 @@ public class VtnPacientCrear extends javax.swing.JDialog {
                 .addContainerGap()
                 .addComponent(jLabel14)
                 .addGap(30, 30, 30)
-                .addComponent(txtCedulaProp, javax.swing.GroupLayout.DEFAULT_SIZE, 158, Short.MAX_VALUE)
+                .addComponent(txtCedulaProp, javax.swing.GroupLayout.DEFAULT_SIZE, 176, Short.MAX_VALUE)
                 .addContainerGap())
         );
         jPanel3Layout.setVerticalGroup(
@@ -343,13 +325,13 @@ public class VtnPacientCrear extends javax.swing.JDialog {
                             .addComponent(jLabel10))
                         .addGap(18, 18, 18)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(txtDireccionProp, javax.swing.GroupLayout.DEFAULT_SIZE, 210, Short.MAX_VALUE)
-                            .addComponent(txtApellidoProp, javax.swing.GroupLayout.DEFAULT_SIZE, 210, Short.MAX_VALUE)
-                            .addComponent(txtNombreProp, javax.swing.GroupLayout.DEFAULT_SIZE, 210, Short.MAX_VALUE)))
+                            .addComponent(txtDireccionProp, javax.swing.GroupLayout.DEFAULT_SIZE, 228, Short.MAX_VALUE)
+                            .addComponent(txtApellidoProp, javax.swing.GroupLayout.DEFAULT_SIZE, 228, Short.MAX_VALUE)
+                            .addComponent(txtNombreProp, javax.swing.GroupLayout.DEFAULT_SIZE, 228, Short.MAX_VALUE)))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addComponent(jLabel15)
                         .addGap(18, 18, 18)
-                        .addComponent(txttelefonoProp, javax.swing.GroupLayout.DEFAULT_SIZE, 211, Short.MAX_VALUE)))
+                        .addComponent(txttelefonoProp, javax.swing.GroupLayout.DEFAULT_SIZE, 229, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         jPanel2Layout.setVerticalGroup(
@@ -441,9 +423,9 @@ public class VtnPacientCrear extends javax.swing.JDialog {
                             .addComponent(jLabel16))
                         .addGap(18, 18, 18)
                         .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(txtNombreDoc, javax.swing.GroupLayout.DEFAULT_SIZE, 260, Short.MAX_VALUE)
-                            .addComponent(txtCedulaDoc, javax.swing.GroupLayout.DEFAULT_SIZE, 260, Short.MAX_VALUE)
-                            .addComponent(txtApellidoDoc, javax.swing.GroupLayout.DEFAULT_SIZE, 260, Short.MAX_VALUE))))
+                            .addComponent(txtNombreDoc, javax.swing.GroupLayout.DEFAULT_SIZE, 327, Short.MAX_VALUE)
+                            .addComponent(txtCedulaDoc, javax.swing.GroupLayout.DEFAULT_SIZE, 327, Short.MAX_VALUE)
+                            .addComponent(txtApellidoDoc, javax.swing.GroupLayout.DEFAULT_SIZE, 327, Short.MAX_VALUE))))
                 .addContainerGap())
         );
         jPanel4Layout.setVerticalGroup(
@@ -466,6 +448,50 @@ public class VtnPacientCrear extends javax.swing.JDialog {
                 .addGap(25, 25, 25))
         );
 
+        jPanel6.setBackground(new java.awt.Color(204, 255, 204));
+
+        btnNuevo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/hospitalpets/imagenes/nuevo.png"))); // NOI18N
+        btnNuevo.setText("Nuevo");
+
+        btnGuardar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/hospitalpets/imagenes/guardar.png"))); // NOI18N
+        btnGuardar.setText("Guardar");
+        btnGuardar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnGuardarActionPerformed(evt);
+            }
+        });
+
+        btnsalir.setIcon(new javax.swing.ImageIcon(getClass().getResource("/hospitalpets/imagenes/eliminar.png"))); // NOI18N
+        btnsalir.setText("Salir");
+        btnsalir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnsalirActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
+        jPanel6.setLayout(jPanel6Layout);
+        jPanel6Layout.setHorizontalGroup(
+            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel6Layout.createSequentialGroup()
+                .addGap(163, 163, 163)
+                .addComponent(btnNuevo)
+                .addGap(51, 51, 51)
+                .addComponent(btnGuardar)
+                .addGap(48, 48, 48)
+                .addComponent(btnsalir)
+                .addContainerGap(230, Short.MAX_VALUE))
+        );
+        jPanel6Layout.setVerticalGroup(
+            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel6Layout.createSequentialGroup()
+                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(btnsalir, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnNuevo)
+                    .addComponent(btnGuardar, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
         javax.swing.GroupLayout pnlDatosPacienteLayout = new javax.swing.GroupLayout(pnlDatosPaciente);
         pnlDatosPaciente.setLayout(pnlDatosPacienteLayout);
         pnlDatosPacienteLayout.setHorizontalGroup(
@@ -474,26 +500,19 @@ public class VtnPacientCrear extends javax.swing.JDialog {
                 .addGroup(pnlDatosPacienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(pnlDatosPacienteLayout.createSequentialGroup()
                         .addContainerGap()
-                        .addGroup(pnlDatosPacienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, pnlDatosPacienteLayout.createSequentialGroup()
-                                .addGap(256, 256, 256)
-                                .addComponent(jLabel12))
-                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, pnlDatosPacienteLayout.createSequentialGroup()
-                                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(24, 24, 24)
-                                .addGroup(pnlDatosPacienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(pnlDatosPacienteLayout.createSequentialGroup()
-                                        .addComponent(btnGuardar)
-                                        .addGap(48, 48, 48)
-                                        .addComponent(btnsalir))
-                                    .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))))
-                    .addGroup(pnlDatosPacienteLayout.createSequentialGroup()
-                        .addGap(189, 189, 189)
-                        .addComponent(btnNuevo))
+                        .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(pnlDatosPacienteLayout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                .addGap(25, 25, 25))
+                        .addGroup(pnlDatosPacienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jPanel6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addGroup(pnlDatosPacienteLayout.createSequentialGroup()
+                                .addGap(256, 256, 256)
+                                .addComponent(jLabel12))
+                            .addGroup(pnlDatosPacienteLayout.createSequentialGroup()
+                                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(24, 24, 24)
+                                .addComponent(jPanel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))))
+                .addContainerGap())
         );
         pnlDatosPacienteLayout.setVerticalGroup(
             pnlDatosPacienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -507,11 +526,8 @@ public class VtnPacientCrear extends javax.swing.JDialog {
                     .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jPanel4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(pnlDatosPacienteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(btnGuardar, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(btnNuevo)
-                    .addComponent(btnsalir, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(23, Short.MAX_VALUE))
+                .addComponent(jPanel6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(12, Short.MAX_VALUE))
         );
 
         getContentPane().add(pnlDatosPaciente, java.awt.BorderLayout.PAGE_END);
@@ -645,6 +661,7 @@ public class VtnPacientCrear extends javax.swing.JDialog {
     private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
+    private javax.swing.JPanel jPanel6;
     private javax.swing.JPanel pnlDatosPaciente;
     private javax.swing.JPasswordField pswPasswordDoc;
     private javax.swing.JTextField txtApellidoDoc;
