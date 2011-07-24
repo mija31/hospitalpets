@@ -124,7 +124,7 @@ public class VtnPrincipal extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Hospital Pet´s Beta");
 
-        panelImage1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/hospitalpets/imagenes/hp112.gif"))); // NOI18N
+        panelImage1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/hospitalpets/imagenes/hp113.gif"))); // NOI18N
 
         javax.swing.GroupLayout panelImage1Layout = new javax.swing.GroupLayout(panelImage1);
         panelImage1.setLayout(panelImage1Layout);
@@ -134,7 +134,7 @@ public class VtnPrincipal extends javax.swing.JFrame {
         );
         panelImage1Layout.setVerticalGroup(
             panelImage1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 578, Short.MAX_VALUE)
+            .addGap(0, 657, Short.MAX_VALUE)
         );
 
         getContentPane().add(panelImage1, java.awt.BorderLayout.CENTER);
@@ -159,7 +159,7 @@ public class VtnPrincipal extends javax.swing.JFrame {
                 .addComponent(jButton3)
                 .addGap(91, 91, 91)
                 .addComponent(jButton4)
-                .addContainerGap(142, Short.MAX_VALUE))
+                .addContainerGap(136, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
