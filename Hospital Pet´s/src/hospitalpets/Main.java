@@ -7,7 +7,6 @@ package hospitalpets;
 import hospitalpets.control.admin.ControlAdministrarEnfermedad;
 import hospitalpets.modelo.Sintoma;
 import hospitalpets.vista.VtnIngreso;
-import hospitalpets.vista.VtnPrincipal;
 import java.util.ArrayList;
 import java.util.List;
 import javax.swing.UnsupportedLookAndFeelException;
