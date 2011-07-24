@@ -8,6 +8,7 @@ import hospitalpets.modelo.Propietario;
 import hospitalpets.control.dao.OperacionDAO;
 import hospitalpets.modelo.Medico;
 import hospitalpets.modelo.Paciente;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.Vector;
 
@@ -41,8 +42,8 @@ public class ControlAdministraPaciente {
         return ope.mt_guardar(p);
     }
 
-    public static Vector<Paciente> cargarPacientes() {
-        return (Vector<Paciente>) ope.cargar(new Paciente(), "paciente");
+    public static ArrayList<Paciente> cargarPacientes(String cedula) {
+        return (ArrayList<Paciente>) ope.cargarPacientes(new Paciente(), "paciente","propietario",cedula);
     }
 
     public static boolean  elimminarPaciente(Paciente c) {

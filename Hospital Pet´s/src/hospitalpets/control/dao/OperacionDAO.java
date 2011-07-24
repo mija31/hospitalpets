@@ -9,6 +9,7 @@
 package hospitalpets.control.dao;
 
 import hospitalpets.control.Configuracion;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Vector;
 import org.hibernate.Hibernate;
@@ -123,6 +124,33 @@ public class OperacionDAO {
         return esp;
     }
 
+    public List cargarPacientes(Object object, String tabla,String columna, String cedula) {
+//        List esp = new ArrayList<Object>();
+        List especi = null;
+        Session session = config.currentSession();
+        Transaction tx = session.beginTransaction();
+        System.err.println("me mori");
+        try {
+            if (!tx.isActive()) {
+                tx.begin();
+            }
+                especi =(ArrayList) session.createSQLQuery("select * from " + tabla + " where " + columna + " = '" + cedula + "'").addEntity(tabla, object.getClass()).setMaxResults(100).list();
+            //System.err.println(especi.get(0));
+            tx.commit();
+            Configuracion.closeSession();
+        } catch (HibernateException he) {
+            System.err.println("es fatal");
+            return null;
+        }
+//        for (int i = 0; i < especi.size(); i++) {
+//            esp.add(especi.get(i));
+//        }
+        return especi;
+    }
+
+
+
+
     public Vector cargarPorId(String consul, String consul2, String tabla, int id) {
         Vector esp = new Vector();
 
@@ -224,4 +252,8 @@ public class OperacionDAO {
         }
         return esp;
     }
+
+
+
+
 }
