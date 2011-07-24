@@ -24,15 +24,16 @@ public class Enfermedad {
     private String nombre;
     private String tratamiento;
     private String diagnostico;
-    private List sintomas;
+    private List<Sintoma> sintomas;
 
-    public List getSintomas() {
+    public List<Sintoma> getSintomas() {
         return sintomas;
     }
 
-    public void setSintomas(List sintomas) {
+    public void setSintomas(List<Sintoma> sintomas) {
         this.sintomas = sintomas;
     }
+
 
     public Enfermedad(){
         sintomas=new ArrayList<Sintoma>();
