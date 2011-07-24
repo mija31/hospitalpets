@@ -28,6 +28,13 @@ public class Paciente {
     public final static int HEMBRA=1;
     public enum RAZAS{BOXER,CHIHAUHAU};
 
+    @Override
+    public String toString(){
+        String str="";
+        str+=getPaciente()+" ("+getRaza()+")";
+        return str;
+    }
+
     public String getBarrio() {
         return barrio;
     }

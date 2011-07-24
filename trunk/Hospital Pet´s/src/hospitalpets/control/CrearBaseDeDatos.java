@@ -23,10 +23,9 @@ public class CrearBaseDeDatos {
 		conectar = null;
 		try{
 			Class.forName("com.mysql.jdbc.Driver").newInstance();
-
-                        conectar = DriverManager.getConnection("jdbc:mysql://localhost:3306/?",nombre_usuario,"");
+//"jdbc:mysql://localhost/?user=root&password=rootpassword"
+                        conectar = DriverManager.getConnection("jdbc:mysql://localhost:3306/?",nombre_usuario,contrasenia);
 			sentencia = conectar.createStatement();
-
                         sentencia.executeUpdate("CREATE DATABASE IF NOT EXISTS "+dataBase);
                         sentencia.executeUpdate("USE "+dataBase);
 		}catch(Exception e){
