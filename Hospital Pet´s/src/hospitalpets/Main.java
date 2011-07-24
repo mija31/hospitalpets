@@ -5,7 +5,6 @@
 package hospitalpets;
 
 import hospitalpets.control.admin.ControlAdministrarEnfermedad;
-import hospitalpets.control.admin.ControlAdministrarSintoma;
 import hospitalpets.modelo.Sintoma;
 import hospitalpets.vista.VtnPrincipal;
 import java.util.ArrayList;
@@ -58,11 +57,8 @@ public class Main {
         sintoma = new Sintoma();
         sintoma.setNombre("Rara secreción mucopurolenta");
         ss.add(sintoma);
-        ControlAdministrarEnfermedad.crearEnfermedad(1,"Faringitis",ss,"Descripcion", "Butorfanol\t0,5 mg/kg V.O c/6-12 h"
+        ControlAdministrarEnfermedad.crearEnfermedad(2,"Faringitis",ss,"Descripcion", "Butorfanol\t0,5 mg/kg V.O c/6-12 h"
                 + "\nAmoxilina mas acido clabulanico\t12,5 mg/kg V.O c/12h\nHistamil\t1mg/kg c/12h","foto");
-
-
-
         new VtnPrincipal().setVisible(true);
 
     }
