@@ -216,11 +216,10 @@ public class OperacionDAO {
                 tx.begin();
             }
             esp = session.createSQLQuery("select * from " + tabla + " where " + columna + " = '" + id + "'").addEntity(tabla, object.getClass()).uniqueResult();
-
             tx.commit();
             Configuracion.closeSession();
         } catch (HibernateException he) {
-            System.err.println("es fatal x id");
+            System.err.println("es fatal x id bb");
             return null;
         }
         return esp;
