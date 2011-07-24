@@ -16,6 +16,7 @@ import hospitalpets.control.admin.ControlAdministraPropietario;
 import hospitalpets.modelo.Medico;
 import hospitalpets.modelo.Paciente;
 import hospitalpets.modelo.Paciente.RAZAS;
+import hospitalpets.modelo.Persona;
 import hospitalpets.modelo.Propietario;
 import java.util.Date;
 import java.util.Vector;
@@ -36,9 +37,18 @@ public class VtnPacientCrear extends javax.swing.JDialog {
         medico = new Medico();
         Vector<Paciente.RAZAS> d = new Vector<RAZAS>();
         d.add(Paciente.RAZAS.BOXER);
-        d.add(Paciente.RAZAS.CHIHAUHAU);
+        d.add(Paciente.RAZAS.CHIHUAHUA);
+        d.add(Paciente.RAZAS.DALMATA);
+        d.add(Paciente.RAZAS.DOVERMAN);
+        d.add(Paciente.RAZAS.GRAN_DANES);
+        d.add(Paciente.RAZAS.LABRADOR);
+        d.add(Paciente.RAZAS.PASTOR_ALEMAN);
+        d.add(Paciente.RAZAS.PITBULL);
+        d.add(Paciente.RAZAS.POODLE);
+        d.add(Paciente.RAZAS.ROTTWEILER);
+        d.add(Paciente.RAZAS.SAN_BERNARDO);
+        d.add(Paciente.RAZAS.SHAR_PEI);
         cbxRaza.setModel(new DefaultComboBoxModel(d));
-
     }
 
     /** This method is called from within the constructor to
@@ -71,6 +81,7 @@ public class VtnPacientCrear extends javax.swing.JDialog {
         cbxRaza = new javax.swing.JComboBox();
         cbxSexo = new javax.swing.JComboBox();
         jLabel20 = new javax.swing.JLabel();
+        fechaNacimiento = new com.toedter.calendar.JDateChooser();
         jPanel2 = new javax.swing.JPanel();
         txtApellidoProp = new javax.swing.JTextField();
         jLabel10 = new javax.swing.JLabel();
@@ -187,7 +198,7 @@ public class VtnPacientCrear extends javax.swing.JDialog {
                     .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, 117, Short.MAX_VALUE)
                     .addComponent(jLabel7))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(jPanel1Layout.createSequentialGroup()
@@ -200,6 +211,8 @@ public class VtnPacientCrear extends javax.swing.JDialog {
                                 .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                        .addComponent(fechaNacimiento, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addGap(18, 18, 18)
                         .addComponent(jLabel8)
                         .addGap(13, 13, 13)))
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -252,11 +265,13 @@ public class VtnPacientCrear extends javax.swing.JDialog {
                             .addComponent(jLabel4)
                             .addComponent(jLabel5))
                         .addGap(18, 18, 18)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(txtPeso, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel7)
-                            .addComponent(jLabel8)
-                            .addComponent(jLabel20))))
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addComponent(txtPeso, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jLabel7)
+                                .addComponent(jLabel8)
+                                .addComponent(jLabel20))
+                            .addComponent(fechaNacimiento, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addContainerGap())
         );
 
@@ -303,10 +318,10 @@ public class VtnPacientCrear extends javax.swing.JDialog {
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txtCedulaProp, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel14)))
+                    .addComponent(jLabel14))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         txttelefonoProp.setEnabled(false);
@@ -456,6 +471,11 @@ public class VtnPacientCrear extends javax.swing.JDialog {
 
         btnNuevo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/hospitalpets/imagenes/nuevo.png"))); // NOI18N
         btnNuevo.setText("Nuevo");
+        btnNuevo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnNuevoActionPerformed(evt);
+            }
+        });
 
         btnGuardar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/hospitalpets/imagenes/guardar.png"))); // NOI18N
         btnGuardar.setText("Guardar");
@@ -537,6 +557,7 @@ public class VtnPacientCrear extends javax.swing.JDialog {
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnsalirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnsalirActionPerformed
+        dispose();
 }//GEN-LAST:event_btnsalirActionPerformed
 
     private void txtProcedenciaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtProcedenciaActionPerformed
@@ -564,18 +585,23 @@ public class VtnPacientCrear extends javax.swing.JDialog {
     }//GEN-LAST:event_txtPesoActionPerformed
 
     private void txtCedulaPropActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtCedulaPropActionPerformed
-        propietario = ControlAdministraPropietario.cargarPropietario(txtCedulaProp.getText());
-        if (propietario != null) {
-            txtApellidoProp.setText(propietario.getApellido());
-            txtDireccionProp.setText(propietario.getDireccion());
-            txtNombreProp.setText(propietario.getNombre());
-            txttelefonoProp.setText(propietario.getTelefono());
+        if (!Persona.validarCedula(txtCedulaProp.getText())) {
+            JOptionPane.showMessageDialog(this, "El número de cedula ingresado no es valido ", "Mensaje de Error", JOptionPane.ERROR_MESSAGE);
+            txtCedulaProp.setText("");
         } else {
-            txtApellidoProp.setText("");
-            txtNombreProp.setText("");
-            txttelefonoProp.setText("");
-            txtDireccionProp.setText("");
-            JOptionPane.showMessageDialog(this, "El propietario no existe");
+            propietario = ControlAdministraPropietario.cargarPropietario(txtCedulaProp.getText());
+            if (propietario != null) {
+                txtApellidoProp.setText(propietario.getApellido());
+                txtDireccionProp.setText(propietario.getDireccion());
+                txtNombreProp.setText(propietario.getNombre());
+                txttelefonoProp.setText(propietario.getTelefono());
+            } else {
+                txtApellidoProp.setText("");
+                txtNombreProp.setText("");
+                txttelefonoProp.setText("");
+                txtDireccionProp.setText("");
+                JOptionPane.showMessageDialog(this, "El propietario no existe");
+            }
         }
 }//GEN-LAST:event_txtCedulaPropActionPerformed
 
@@ -595,7 +621,9 @@ public class VtnPacientCrear extends javax.swing.JDialog {
     private void btnGuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuardarActionPerformed
         if (medico != null) {
             if (propietario != null) {
-                if (ControlAdministraPaciente.crearPaciente(txtPaciente.getText(), (Paciente.RAZAS) cbxRaza.getSelectedItem(), new Date(), medico, propietario, txtProcedencia.getText(), txtParroquia.getText(), txtBarrio.getText(), Double.parseDouble(txtPeso.getText()), cbxSexo.getSelectedIndex())) {
+                if (ControlAdministraPaciente.crearPaciente(txtPaciente.getText(), (Paciente.RAZAS) cbxRaza.getSelectedItem(),
+                        fechaNacimiento.getDate(), medico, propietario, txtProcedencia.getText(), txtParroquia.getText(),
+                        txtBarrio.getText(), Double.parseDouble(txtPeso.getText()), cbxSexo.getSelectedIndex())) {
                     JOptionPane.showMessageDialog(this, "Los datos se guardaron correctamente");
                 } else {
                     JOptionPane.showMessageDialog(this, "Error al intentar guardar los datos");
@@ -612,6 +640,27 @@ public class VtnPacientCrear extends javax.swing.JDialog {
     private void cbxSexoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbxSexoActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_cbxSexoActionPerformed
+
+    private void btnNuevoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnNuevoActionPerformed
+           txtApellidoDoc.setText("");
+           txtApellidoProp.setText("");
+           txtBarrio.setText("");
+           txtCedulaDoc.setText("");
+           txtCedulaProp.setText("");
+           txtDireccionProp.setText("");
+           txtEspecie.setText("");
+           txtNombreDoc.setText("");
+           txtNombreProp.setText("");
+           txtPaciente.setText("");
+           txtPeso.setText("");
+           txtParroquia.setText("");
+           txtProcedencia.setText("");
+           txttelefonoProp.setText("");
+           cbxRaza.setSelectedIndex(0);
+           cbxSexo.setSelectedIndex(0);
+           fechaNacimiento.setDate(null);
+           pswPasswordDoc.setText("");
+    }//GEN-LAST:event_btnNuevoActionPerformed
 
     /**
      * @param args the command line arguments
@@ -637,6 +686,7 @@ public class VtnPacientCrear extends javax.swing.JDialog {
     private javax.swing.JButton btnsalir;
     private javax.swing.JComboBox cbxRaza;
     private javax.swing.JComboBox cbxSexo;
+    private com.toedter.calendar.JDateChooser fechaNacimiento;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;

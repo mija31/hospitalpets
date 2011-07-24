@@ -13,6 +13,7 @@ import java.util.Date;
  */
 public class Paciente {
 
+    private int idPaciente;
     private String procedencia;
     private String barrio;
     private String parroquia;
@@ -26,7 +27,8 @@ public class Paciente {
 
     public final static int MACHO=0;
     public final static int HEMBRA=1;
-    public enum RAZAS{BOXER,CHIHAUHAU};
+    public enum RAZAS{BOXER,CHIHUAHUA,SAN_BERNARDO,GRAN_DANES,ROTTWEILER,PASTOR_ALEMAN,DALMATA,SHAR_PEI,PITBULL,
+    DOVERMAN,POODLE,LABRADOR};
 
     @Override
     public String toString(){
@@ -114,6 +116,12 @@ public class Paciente {
     public void setSexo(int sexo) {
         this.sexo = sexo;
     }
+    public int getIdPaciente() {
+        return idPaciente;
+    }
 
+    public void setIdPaciente(int idPaciente) {
+        this.idPaciente = idPaciente;
+    }
 
 }

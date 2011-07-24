@@ -11,6 +11,7 @@
 package hospitalpets.vista;
 
 import hospitalpets.control.admin.ControlAdministraPropietario;
+import hospitalpets.modelo.Persona;
 import hospitalpets.modelo.Propietario;
 import javax.swing.JOptionPane;
 
@@ -212,18 +213,24 @@ public class VtnPropietarioEliminar extends javax.swing.JDialog {
 }//GEN-LAST:event_btneliminarActionPerformed
 
     private void txtCedulaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtCedulaActionPerformed
-        propietario = ControlAdministraPropietario.cargarPropietario(txtCedula.getText());
-        if (propietario != null) {
-            txtApellido.setText(propietario.getApellido());
-            txtDireccion.setText(propietario.getDireccion());
-            txtNombre.setText(propietario.getNombre());
-            txttelefono.setText(propietario.getTelefono());
+        if (!Persona.validarCedula(txtCedula.getText())) {
+            JOptionPane.showMessageDialog(this, "El número de cedula ingresado no es valido ", "Mensaje de Error", JOptionPane.ERROR_MESSAGE);
+
         } else {
-            txtApellido.setText("");
-            txtNombre.setText("");
-            txttelefono.setText("");
-            txtDireccion.setText("");
-            JOptionPane.showMessageDialog(this, "El propietario no existe");
+
+            propietario = ControlAdministraPropietario.cargarPropietario(txtCedula.getText());
+            if (propietario != null) {
+                txtApellido.setText(propietario.getApellido());
+                txtDireccion.setText(propietario.getDireccion());
+                txtNombre.setText(propietario.getNombre());
+                txttelefono.setText(propietario.getTelefono());
+            } else {
+                txtApellido.setText("");
+                txtNombre.setText("");
+                txttelefono.setText("");
+                txtDireccion.setText("");
+                JOptionPane.showMessageDialog(this, "El propietario no existe","Error",JOptionPane.ERROR_MESSAGE);
+            }
         }
 }//GEN-LAST:event_txtCedulaActionPerformed
 

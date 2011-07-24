@@ -13,6 +13,7 @@ package hospitalpets.vista;
 import hospitalpets.control.admin.ControlAdministraMedico;
 import hospitalpets.control.admin.ControlAdministraPaciente;
 import hospitalpets.modelo.Paciente;
+import hospitalpets.modelo.Persona;
 import hospitalpets.modelo.Sintoma;
 import java.util.ArrayList;
 import java.util.Vector;
@@ -1897,8 +1898,6 @@ public class VtnConsulta extends javax.swing.JDialog {
 
         jLabel3.setText("Paciente:");
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-
         jLabel2.setText("Cedula del propietario:");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -1940,7 +1939,7 @@ public class VtnConsulta extends javax.swing.JDialog {
                     .addGroup(layout.createSequentialGroup()
                         .addContainerGap()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jTabbedPane1)
+                            .addComponent(jTabbedPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 681, Short.MAX_VALUE)
                             .addGroup(layout.createSequentialGroup()
                                 .addGap(161, 161, 161)
                                 .addComponent(jButton1)
@@ -2426,11 +2425,16 @@ public class VtnConsulta extends javax.swing.JDialog {
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void txtcedulaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtcedulaActionPerformed
+        if(Persona.validarCedula(txtcedula.getText())){
+
         ArrayList<Paciente> pacientes = ControlAdministraPaciente.cargarPacientes(txtcedula.getText());
         if (pacientes.isEmpty()) {
             JOptionPane.showMessageDialog(this, "El usuario ingresado no tiene mascotas", "Mensaje de Informacion", JOptionPane.INFORMATION_MESSAGE);
         } else {
             jComboBox1.setModel(new DefaultComboBoxModel(new Vector(pacientes)));
+        }
+        }else{
+            JOptionPane.showMessageDialog(this, "El número de cedula ingresado no es valido ", "Mensaje de Error", JOptionPane.ERROR_MESSAGE);
 
         }
 

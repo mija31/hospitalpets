@@ -8,10 +8,10 @@
  *
  * Created on 09/07/2011, 05:30:03 PM
  */
-
 package hospitalpets.vista;
 
 import hospitalpets.control.admin.ControlAdministraPropietario;
+import hospitalpets.modelo.Persona;
 import javax.swing.JOptionPane;
 
 /**
@@ -63,6 +63,12 @@ public class VtnPropietarioCrear extends javax.swing.JDialog {
         });
 
         jLabel3.setText("Apellido:");
+
+        txtCedula.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtCedulaActionPerformed(evt);
+            }
+        });
 
         jLabel1.setText("Nro Cedula:");
 
@@ -158,7 +164,7 @@ public class VtnPropietarioCrear extends javax.swing.JDialog {
         getContentPane().add(jPanel1, java.awt.BorderLayout.CENTER);
 
         java.awt.Dimension screenSize = java.awt.Toolkit.getDefaultToolkit().getScreenSize();
-        setBounds((screenSize.width-350)/2, (screenSize.height-231)/2, 350, 231);
+        setBounds((screenSize.width-350)/2, (screenSize.height-234)/2, 350, 234);
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelarActionPerformed
@@ -166,11 +172,16 @@ public class VtnPropietarioCrear extends javax.swing.JDialog {
 }//GEN-LAST:event_btnCancelarActionPerformed
 
     private void btnGuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuardarActionPerformed
-        if(ControlAdministraPropietario.crearPropietario(txtNombre.getText(), txtApellido.getText()
-                , txtCedula.getText(), txtTelefono.getText(),txtDireccion.getText()))
-            JOptionPane.showMessageDialog(this , "Los datos se grabaron correctamente");
-        else
-            JOptionPane.showMessageDialog(this , "Error al grabar los datos");
+        if (!Persona.validarCedula(txtCedula.getText())) {
+            JOptionPane.showMessageDialog(this, "El número de cedula ingresado no es valido ", "Mensaje de Error", JOptionPane.ERROR_MESSAGE);
+
+        } else {
+            if (ControlAdministraPropietario.crearPropietario(txtNombre.getText(), txtApellido.getText(), txtCedula.getText(), txtTelefono.getText(), txtDireccion.getText())) {
+                JOptionPane.showMessageDialog(this, "Los datos se grabaron correctamente");
+            } else {
+                JOptionPane.showMessageDialog(this, "Error al grabar los datos");
+            }
+        }
     }//GEN-LAST:event_btnGuardarActionPerformed
 
     private void btnCancelar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelar1ActionPerformed
@@ -186,14 +197,23 @@ public class VtnPropietarioCrear extends javax.swing.JDialog {
         // TODO add your handling code here:
     }//GEN-LAST:event_txtTelefonoActionPerformed
 
+    private void txtCedulaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtCedulaActionPerformed
+        if (!Persona.validarCedula(txtCedula.getText())) {
+            JOptionPane.showMessageDialog(this, "El número de cedula ingresado no es valido ", "Mensaje de Error", JOptionPane.ERROR_MESSAGE);
+
+        }
+    }//GEN-LAST:event_txtCedulaActionPerformed
+
     /**
-    * @param args the command line arguments
-    */
+     * @param args the command line arguments
+     */
     public static void main(String args[]) {
         java.awt.EventQueue.invokeLater(new Runnable() {
+
             public void run() {
                 VtnPropietarioCrear dialog = new VtnPropietarioCrear(new javax.swing.JFrame(), true);
                 dialog.addWindowListener(new java.awt.event.WindowAdapter() {
+
                     public void windowClosing(java.awt.event.WindowEvent e) {
                         System.exit(0);
                     }
@@ -202,7 +222,6 @@ public class VtnPropietarioCrear extends javax.swing.JDialog {
             }
         });
     }
-
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnCancelar;
     private javax.swing.JButton btnCancelar1;
@@ -219,5 +238,4 @@ public class VtnPropietarioCrear extends javax.swing.JDialog {
     private javax.swing.JTextField txtNombre;
     private javax.swing.JTextField txtTelefono;
     // End of variables declaration//GEN-END:variables
-
 }

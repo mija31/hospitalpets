@@ -11,6 +11,7 @@
 package hospitalpets.vista;
 
 import hospitalpets.control.admin.ControlAdministraPropietario;
+import hospitalpets.modelo.Persona;
 import hospitalpets.modelo.Propietario;
 import javax.swing.JOptionPane;
 
@@ -122,23 +123,20 @@ public class VtnPropietarioModificar extends javax.swing.JDialog {
                         .addComponent(btnCancelar))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addContainerGap()
+                        .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addContainerGap()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel1)
                             .addComponent(jLabel2)
-                            .addComponent(jLabel3))
+                            .addComponent(jLabel3)
+                            .addComponent(jLabel5))
                         .addGap(55, 55, 55)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(txttelefono, javax.swing.GroupLayout.DEFAULT_SIZE, 177, Short.MAX_VALUE)
+                            .addComponent(txtDireccion, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 177, Short.MAX_VALUE)
                             .addComponent(txtApellido, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 177, Short.MAX_VALUE)
-                            .addComponent(txtDireccion, javax.swing.GroupLayout.DEFAULT_SIZE, 177, Short.MAX_VALUE)
-                            .addComponent(txtNombre, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 177, Short.MAX_VALUE)))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jLabel5)
-                        .addGap(55, 55, 55)
-                        .addComponent(txttelefono, javax.swing.GroupLayout.DEFAULT_SIZE, 178, Short.MAX_VALUE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                            .addComponent(txtNombre, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 177, Short.MAX_VALUE))))
                 .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
@@ -196,18 +194,23 @@ public class VtnPropietarioModificar extends javax.swing.JDialog {
     }//GEN-LAST:event_btnModificarActionPerformed
 
     private void txtCedulaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtCedulaActionPerformed
-        propietario = ControlAdministraPropietario.cargarPropietario(txtCedula.getText());
-        if (propietario != null) {
-            txtApellido.setText(propietario.getApellido());
-            txtDireccion.setText(propietario.getDireccion());
-            txtNombre.setText(propietario.getNombre());
-            txttelefono.setText(propietario.getTelefono());
+        if (!Persona.validarCedula(txtCedula.getText())) {
+            JOptionPane.showMessageDialog(this, "El número de cedula ingresado no es valido ", "Mensaje de Error", JOptionPane.ERROR_MESSAGE);
+
         } else {
-            txtApellido.setText("");
-            txtNombre.setText("");
-            txttelefono.setText("");
-            txtDireccion.setText("");
-            JOptionPane.showMessageDialog(this, "El propietario no existe");
+            propietario = ControlAdministraPropietario.cargarPropietario(txtCedula.getText());
+            if (propietario != null) {
+                txtApellido.setText(propietario.getApellido());
+                txtDireccion.setText(propietario.getDireccion());
+                txtNombre.setText(propietario.getNombre());
+                txttelefono.setText(propietario.getTelefono());
+            } else {
+                txtApellido.setText("");
+                txtNombre.setText("");
+                txttelefono.setText("");
+                txtDireccion.setText("");
+                JOptionPane.showMessageDialog(this, "El propietario no existe","Datos no encontrados",JOptionPane.ERROR_MESSAGE);
+            }
         }
     }//GEN-LAST:event_txtCedulaActionPerformed
 

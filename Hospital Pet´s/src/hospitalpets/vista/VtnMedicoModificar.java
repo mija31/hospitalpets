@@ -160,7 +160,7 @@ public class VtnMedicoModificar extends javax.swing.JDialog {
         getContentPane().add(jPanel1, java.awt.BorderLayout.CENTER);
 
         java.awt.Dimension screenSize = java.awt.Toolkit.getDefaultToolkit().getScreenSize();
-        setBounds((screenSize.width-339)/2, (screenSize.height-267)/2, 339, 267);
+        setBounds((screenSize.width-339)/2, (screenSize.height-277)/2, 339, 277);
     }// </editor-fold>//GEN-END:initComponents
 
     private void btnCancelarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelarActionPerformed
