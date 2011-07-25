@@ -114,6 +114,7 @@ public class VtnPacienteModificar extends javax.swing.JDialog {
         jLabel26 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setTitle("Modificar Paciente");
 
         pnlDatosPaciente.setBackground(new java.awt.Color(204, 255, 204));
         pnlDatosPaciente.setMinimumSize(new java.awt.Dimension(620, 450));
@@ -777,8 +778,6 @@ public class VtnPacienteModificar extends javax.swing.JDialog {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnModificar;
     private javax.swing.JButton btnsalir;
-    private javax.swing.JComboBox cbxPaciente;
-    private javax.swing.JComboBox cbxPaciente1;
     private javax.swing.JComboBox cbxPaciente2;
     private javax.swing.JComboBox cbxRaza;
     private javax.swing.JComboBox cbxSexo;
@@ -796,10 +795,6 @@ public class VtnPacienteModificar extends javax.swing.JDialog {
     private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel20;
-    private javax.swing.JLabel jLabel21;
-    private javax.swing.JLabel jLabel22;
-    private javax.swing.JLabel jLabel23;
-    private javax.swing.JLabel jLabel24;
     private javax.swing.JLabel jLabel25;
     private javax.swing.JLabel jLabel26;
     private javax.swing.JLabel jLabel3;
@@ -815,8 +810,6 @@ public class VtnPacienteModificar extends javax.swing.JDialog {
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel6;
-    private javax.swing.JPanel jPanel7;
-    private javax.swing.JPanel jPanel8;
     private javax.swing.JPanel jPanel9;
     private javax.swing.JPanel pnlDatosPaciente;
     private javax.swing.JPasswordField pswPasswordDoc;
@@ -833,8 +826,6 @@ public class VtnPacienteModificar extends javax.swing.JDialog {
     private javax.swing.JTextField txtParroquia;
     private javax.swing.JTextField txtPeso;
     private javax.swing.JTextField txtProcedencia;
-    private javax.swing.JTextField txtcedula;
-    private javax.swing.JTextField txtcedula1;
     private javax.swing.JTextField txtcedula2;
     private javax.swing.JTextField txttelefonoProp;
     // End of variables declaration//GEN-END:variables

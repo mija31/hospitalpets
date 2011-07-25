@@ -50,6 +50,7 @@ public class VtnMedicoEliminar extends javax.swing.JDialog {
         pswPassword = new javax.swing.JPasswordField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setTitle("Eliminar Medico");
 
         jPanel1.setBackground(new java.awt.Color(204, 255, 204));
 

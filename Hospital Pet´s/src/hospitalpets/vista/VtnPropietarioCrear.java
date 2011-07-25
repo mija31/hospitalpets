@@ -51,6 +51,7 @@ public class VtnPropietarioCrear extends javax.swing.JDialog {
         txtTelefono = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setTitle("Crear Propietario");
 
         jPanel1.setBackground(new java.awt.Color(204, 255, 204));
 

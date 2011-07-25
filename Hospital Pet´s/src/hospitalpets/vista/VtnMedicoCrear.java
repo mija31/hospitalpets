@@ -51,6 +51,7 @@ public class VtnMedicoCrear extends javax.swing.JDialog {
         btnCancelar1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setTitle("Crear Medico");
 
         jPanel1.setBackground(new java.awt.Color(204, 255, 204));
 
