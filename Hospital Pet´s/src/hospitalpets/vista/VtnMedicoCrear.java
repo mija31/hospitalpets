@@ -81,6 +81,12 @@ public class VtnMedicoCrear extends javax.swing.JDialog {
             }
         });
 
+        pswPassword2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                pswPassword2ActionPerformed(evt);
+            }
+        });
+
         btnCancelar1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/hospitalpets/imagenes/nuevo.png"))); // NOI18N
         btnCancelar1.setText("Nuevo");
         btnCancelar1.addActionListener(new java.awt.event.ActionListener() {
@@ -161,12 +167,15 @@ public class VtnMedicoCrear extends javax.swing.JDialog {
     }//GEN-LAST:event_btnCancelarActionPerformed
 
     private void btnGuardarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnGuardarActionPerformed
+            if(!pswPassword.getText().equals(pswPassword2.getText())){
+                JOptionPane.showMessageDialog(this, "Error en conformación de password","Error",JOptionPane.ERROR_MESSAGE);
+            }else{
         if(ControlAdministraMedico.crearMedico(pswPassword.getText(), txtCedula.getText()
                 , txtApellido.getText(), txtNombre.getText()))
             JOptionPane.showMessageDialog(this , "Los datos se grabaron correctamente");
         else
             JOptionPane.showMessageDialog(this , "Error al grabar los datos");
-        
+        }
 }//GEN-LAST:event_btnGuardarActionPerformed
 
     private void btnCancelar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelar1ActionPerformed
@@ -177,6 +186,12 @@ public class VtnMedicoCrear extends javax.swing.JDialog {
         pswPassword2.setText("");
         txtNombre.transferFocusBackward();
     }//GEN-LAST:event_btnCancelar1ActionPerformed
+
+    private void pswPassword2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_pswPassword2ActionPerformed
+            if(!pswPassword.getText().equals(pswPassword2.getText())){
+                JOptionPane.showMessageDialog(this, "Error en conformación de password","Error",JOptionPane.ERROR_MESSAGE);
+            }
+    }//GEN-LAST:event_pswPassword2ActionPerformed
 
     /**
     * @param args the command line arguments

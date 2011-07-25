@@ -172,6 +172,9 @@
         <Component class="javax.swing.JPasswordField" name="pswPassword">
         </Component>
         <Component class="javax.swing.JPasswordField" name="pswPassword2">
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="pswPassword2ActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="btnCancelar1">
           <Properties>
