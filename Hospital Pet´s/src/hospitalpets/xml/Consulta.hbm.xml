@@ -17,10 +17,12 @@
     </property>
     
    <many-to-one class="hospitalpets.modelo.Paciente" column="paciente" name="paciente" not-null="true"/>
+<many-to-one class="hospitalpets.modelo.Enfermedad" column="enfermedad" name="enfermedad" not-null="true"/>
 
-   <set name="enfermedad" table="Consul_Enfer">
+
+   <!--<set name="enfermedad" table="Consul_Enfer">
       <key column="idConsulta"/>
       <many-to-many class="hospitalpets.modelo.Enfermedad" column="idEnfermedad"/>
-    </set>
+    </set>-->
   </class>
 </hibernate-mapping>

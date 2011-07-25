@@ -6,7 +6,6 @@
 package hospitalpets.modelo;
 
 import java.util.Date;
-import java.util.List;
 
 /**
  *
@@ -17,15 +16,16 @@ public class Consulta {
     private int numConsulta;
     private Date fecha;
     private Paciente paciente;
-    private List<Enfermedad> enfermedad;
+    private Enfermedad enfermedad;
 
-    public List<Enfermedad> getEnfermedad() {
+    public Enfermedad getEnfermedad() {
         return enfermedad;
     }
 
-    public void setEnfermedad(List<Enfermedad> enfermedad) {
+    public void setEnfermedad(Enfermedad enfermedad) {
         this.enfermedad = enfermedad;
     }
+
 
     public Date getFecha() {
         return fecha;
