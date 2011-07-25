@@ -182,7 +182,7 @@ public class VtnConsulta extends javax.swing.JDialog {
         jPanel55 = new javax.swing.JPanel();
         cbSoploMitralPres = new javax.swing.JCheckBox();
         cbSoploMitralAus = new javax.swing.JCheckBox();
-        jButton1 = new javax.swing.JButton();
+        btnAceptar = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
@@ -1879,12 +1879,12 @@ public class VtnConsulta extends javax.swing.JDialog {
 
         jTabbedPane1.addTab("Sistema Cardiovascular", jScrollPane4);
 
-        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/hospitalpets/imagenes/aceptar.png"))); // NOI18N
-        jButton1.setText("Diagnosticar");
-        jButton1.setEnabled(false);
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        btnAceptar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/hospitalpets/imagenes/aceptar.png"))); // NOI18N
+        btnAceptar.setText("Diagnosticar");
+        btnAceptar.setEnabled(false);
+        btnAceptar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                btnAceptarActionPerformed(evt);
             }
         });
 
@@ -1948,7 +1948,7 @@ public class VtnConsulta extends javax.swing.JDialog {
                             .addComponent(jTabbedPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 681, Short.MAX_VALUE)
                             .addGroup(layout.createSequentialGroup()
                                 .addGap(161, 161, 161)
-                                .addComponent(jButton1)
+                                .addComponent(btnAceptar)
                                 .addGap(110, 110, 110)
                                 .addComponent(jButton2))))
                     .addGroup(layout.createSequentialGroup()
@@ -1975,7 +1975,7 @@ public class VtnConsulta extends javax.swing.JDialog {
                 .addGap(18, 18, 18)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton2)
-                    .addComponent(jButton1))
+                    .addComponent(btnAceptar))
                 .addContainerGap())
         );
 
@@ -2405,7 +2405,7 @@ public class VtnConsulta extends javax.swing.JDialog {
         cbSoploMitralPres.setSelected(false);
     }//GEN-LAST:event_cbSoploMitralAusActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void btnAceptarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAceptarActionPerformed
         ArrayList<Enfermedad> enfermedades = new ArrayList<Enfermedad>();
         Enfermedad enfemedad = new Enfermedad();
 
@@ -2450,7 +2450,7 @@ public class VtnConsulta extends javax.swing.JDialog {
         new VtnResultados(consulta, (JFrame) this.getParent(), true).setVisible(true);
         dispose();
 
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_btnAceptarActionPerformed
 
     private void txtcedulaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtcedulaActionPerformed
         if (Persona.validarCedula(txtcedula.getText())) {
@@ -2460,6 +2460,8 @@ public class VtnConsulta extends javax.swing.JDialog {
                 JOptionPane.showMessageDialog(this, "El usuario ingresado no tiene mascotas", "Mensaje de Informacion", JOptionPane.INFORMATION_MESSAGE);
             } else {
                 cbxPaciente.setModel(new DefaultComboBoxModel(new Vector(pacientes)));
+                cbxPaciente.setSelectedIndex(0);
+                btnAceptar.setEnabled(true);
             }
         } else {
             JOptionPane.showMessageDialog(this, "El número de cedula ingresado no es valido ", "Mensaje de Error", JOptionPane.ERROR_MESSAGE);
@@ -2487,6 +2489,7 @@ public class VtnConsulta extends javax.swing.JDialog {
         });
     }
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnAceptar;
     private javax.swing.JCheckBox cbAnorexiaAus;
     private javax.swing.JCheckBox cbAnorexiaPres;
     private javax.swing.JCheckBox cbAscitisAus;
@@ -2572,7 +2575,6 @@ public class VtnConsulta extends javax.swing.JDialog {
     private javax.swing.JCheckBox cbVomitoAus;
     private javax.swing.JCheckBox cbVomitoPres;
     private javax.swing.JComboBox cbxPaciente;
-    private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
