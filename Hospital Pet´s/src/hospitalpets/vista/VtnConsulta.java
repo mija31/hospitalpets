@@ -2442,7 +2442,9 @@ public class VtnConsulta extends javax.swing.JDialog {
         enfermedades.add(enfemedad);
 
         Consulta consulta = new Consulta();
-        consulta.setPaciente(pacientes.get(cbxPaciente.getSelectedIndex()));
+
+        int num=pacientes.get(cbxPaciente.getSelectedIndex()).getIdPaciente();
+        consulta.setPaciente(ControlAdministraPaciente.cargarPacient(num));
         consulta.setEnfermedad(enfermedades);
         consulta.setFecha(new Date());
 

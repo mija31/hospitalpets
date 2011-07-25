@@ -370,6 +370,11 @@ public class VtnPrincipal extends javax.swing.JFrame {
         jMenu2.add(jMenuItem1);
 
         jMenuItem9.setText("Modificar Paciente");
+        jMenuItem9.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem9ActionPerformed(evt);
+            }
+        });
         jMenu2.add(jMenuItem9);
 
         jMenuItem3.setText("Eliminar Paciente");
@@ -553,6 +558,10 @@ try {
     private void jMenuItem13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem13ActionPerformed
         new   AcercaDe().setVisible(true);
     }//GEN-LAST:event_jMenuItem13ActionPerformed
+
+    private void jMenuItem9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem9ActionPerformed
+        new VtnPacienteModificar(this, true).setVisible(true);
+    }//GEN-LAST:event_jMenuItem9ActionPerformed
 
     private void datosGenerales() {
     }

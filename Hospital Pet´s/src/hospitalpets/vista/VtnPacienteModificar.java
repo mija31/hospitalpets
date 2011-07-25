@@ -32,6 +32,23 @@ public class VtnPacienteModificar extends javax.swing.JDialog {
     public VtnPacienteModificar(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
         initComponents();
+                propietario = new Propietario();
+        medico = new Medico();
+        Vector<Paciente.RAZAS> d = new Vector<Paciente.RAZAS>();
+        d.add(Paciente.RAZAS.BOXER);
+        d.add(Paciente.RAZAS.CHIHUAHUA);
+        d.add(Paciente.RAZAS.DALMATA);
+        d.add(Paciente.RAZAS.DOVERMAN);
+        d.add(Paciente.RAZAS.GRAN_DANES);
+        d.add(Paciente.RAZAS.LABRADOR);
+        d.add(Paciente.RAZAS.PASTOR_ALEMAN);
+        d.add(Paciente.RAZAS.PITBULL);
+        d.add(Paciente.RAZAS.POODLE);
+        d.add(Paciente.RAZAS.ROTTWEILER);
+        d.add(Paciente.RAZAS.SAN_BERNARDO);
+        d.add(Paciente.RAZAS.SHAR_PEI);
+        cbxRaza.setModel(new DefaultComboBoxModel(d));
+
     }
 
     /** This method is called from within the constructor to
@@ -505,6 +522,14 @@ public class VtnPacienteModificar extends javax.swing.JDialog {
 
         jLabel25.setText("Paciente:");
 
+        cbxPaciente2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                cbxPaciente2MouseClicked(evt);
+            }
+            public void mousePressed(java.awt.event.MouseEvent evt) {
+                cbxPaciente2MousePressed(evt);
+            }
+        });
         cbxPaciente2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cbxPaciente2ActionPerformed(evt);
@@ -583,7 +608,8 @@ public class VtnPacienteModificar extends javax.swing.JDialog {
 
         getContentPane().add(pnlDatosPaciente, java.awt.BorderLayout.CENTER);
 
-        pack();
+        java.awt.Dimension screenSize = java.awt.Toolkit.getDefaultToolkit().getScreenSize();
+        setBounds((screenSize.width-739)/2, (screenSize.height-551)/2, 739, 551);
     }// </editor-fold>//GEN-END:initComponents
 
     private void txtEspecieActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtEspecieActionPerformed
@@ -651,12 +677,22 @@ public class VtnPacienteModificar extends javax.swing.JDialog {
     private void btnModificarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnModificarActionPerformed
         if (medico != null) {
             if (propietario != null) {
-                if (ControlAdministraPaciente.crearPaciente(txtPaciente.getText(), (Paciente.RAZAS) cbxRaza.getSelectedItem(),
-                        fechaNacimiento.getDate(), medico, propietario, txtProcedencia.getText(), txtParroquia.getText(),
-                        txtBarrio.getText(), Double.parseDouble(txtPeso.getText()), cbxSexo.getSelectedIndex())) {
+
+                pacient.setPaciente(txtPaciente.getText());
+                pacient.setRaza((Paciente.RAZAS) cbxRaza.getSelectedItem());
+                pacient.setFechaNacim(fechaNacimiento.getDate());
+                pacient.setMedico(medico);
+                pacient.setPropietario(propietario);
+                pacient.setProcedencia(txtProcedencia.getText());
+                pacient.setParroquia(txtParroquia.getText());
+                pacient.setBarrio(txtBarrio.getText());
+                pacient.setPeso(Double.parseDouble(txtPeso.getText()));
+                pacient.setSexo(cbxSexo.getSelectedIndex());
+
+                if (ControlAdministraPaciente.modificarPaciente(pacient)) {
                     JOptionPane.showMessageDialog(this, "Los datos se guardaron correctamente");
                 } else {
-                    JOptionPane.showMessageDialog(this, "Error al intentar guardar los datos");
+                    JOptionPane.showMessageDialog(this, "Error al intentar modificar los datos");
                 }
             } else {
                 JOptionPane.showMessageDialog(this, "Debe ingresar un propietario primero");
@@ -688,28 +724,37 @@ public class VtnPacienteModificar extends javax.swing.JDialog {
     }//GEN-LAST:event_txtcedula2ActionPerformed
 
     private void cbxPaciente2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbxPaciente2ActionPerformed
-        Paciente pacient = pacientes.get(cbxPaciente2.getSelectedIndex());
+        pacient = (Paciente) cbxPaciente2.getSelectedItem();
+        propietario = ControlAdministraPropietario.cargarPropietario(pacient.getPropietario().getCedula());
+        medico = ControlAdministraMedico.cargarMedico(pacient.getMedico().getClave());
 
-        txtApellidoDoc.setText(pacient.getMedico().getApellido());
-        txtApellidoProp.setText(pacient.getPropietario().getApellido());
+        txtApellidoDoc.setText(medico.getApellido());
+        txtApellidoProp.setText(propietario.getApellido());
         txtBarrio.setText(pacient.getBarrio());
-        txtCedulaDoc.setText(pacient.getMedico().getCedula());
-        txtCedulaProp.setText(pacient.getPropietario().getCedula());
-        txtDireccionProp.setText(pacient.getPropietario().getDireccion());
-        txtNombreDoc.setText(pacient.getMedico().getNombre());
-        txtNombreProp.setText(pacient.getPropietario().getNombre());
+        txtCedulaDoc.setText(medico.getCedula());
+        txtCedulaProp.setText(propietario.getCedula());
+        txtDireccionProp.setText(propietario.getDireccion());
+        txtNombreDoc.setText(medico.getNombre());
+        txtNombreProp.setText(propietario.getNombre());
         txtPaciente.setText(pacient.getPaciente());
-        txtPeso.setText(""+pacient.getPeso());
+        txtPeso.setText("" + pacient.getPeso());
         txtParroquia.setText(pacient.getParroquia());
         txtProcedencia.setText(pacient.getProcedencia());
-        txttelefonoProp.setText(pacient.getPropietario().getTelefono());
+        txttelefonoProp.setText(propietario.getTelefono());
         cbxRaza.setSelectedItem(pacient.getRaza());
         cbxSexo.setSelectedIndex(pacient.getSexo());
         fechaNacimiento.setDate(pacient.getFechaNacim());
-        pswPasswordDoc.setText(pacient.getMedico().getClave());
-        propietario=pacient.getPropietario();
-        medico=pacient.getMedico();
+        pswPasswordDoc.setText(medico.getClave());
+
     }//GEN-LAST:event_cbxPaciente2ActionPerformed
+
+    private void cbxPaciente2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_cbxPaciente2MouseClicked
+
+    }//GEN-LAST:event_cbxPaciente2MouseClicked
+
+    private void cbxPaciente2MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_cbxPaciente2MousePressed
+
+    }//GEN-LAST:event_cbxPaciente2MousePressed
 
     /**
      * @param args the command line arguments
@@ -796,4 +841,5 @@ public class VtnPacienteModificar extends javax.swing.JDialog {
     private ArrayList<Paciente> pacientes;
     private Propietario propietario;
     private Medico medico;
+    private Paciente pacient;
 }
