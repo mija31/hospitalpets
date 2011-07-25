@@ -46,6 +46,10 @@ public class ControlAdministraPaciente {
         return (ArrayList<Paciente>) ope.cargarPacientes(new Paciente(), "paciente","propietario",cedula);
     }
 
+        public static Paciente cargarPacient(int idPaciente) {
+        return  (Paciente)ope.cargarObjeto(new Paciente(), "paciente","idPaciente",""+idPaciente);
+    }
+
     public static boolean  elimminarPaciente(Paciente c) {
         return ope.mt_eliminar(c);
     }

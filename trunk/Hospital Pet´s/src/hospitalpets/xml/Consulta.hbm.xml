@@ -15,8 +15,10 @@
     <property column="fecha" name="fecha">
       <type name="date"/>
     </property>
-    <one-to-one cascade="persist,delete" name="paciente"/>
-    <set name="enfermedad" table="Consul_Enfer">
+    
+   <many-to-one class="hospitalpets.modelo.Paciente" column="paciente" name="paciente" not-null="true"/>
+
+   <set name="enfermedad" table="Consul_Enfer">
       <key column="idConsulta"/>
       <many-to-many class="hospitalpets.modelo.Enfermedad" column="idEnfermedad"/>
     </set>
