@@ -27,15 +27,14 @@ public class VtnResultados extends javax.swing.JDialog {
     public VtnResultados(Consulta consulta,java.awt.Frame parent, boolean modal) {
         super(parent, modal);
         initComponents();
-        for(int i=0;i<consulta.getEnfermedad().size();i++){
-            txtDiagnostico.append(consulta.getEnfermedad().get(i).getNombre()+"\n");
-                        txtDiagnostico.append(consulta.getEnfermedad().get(i).getDescripcion()+"\n");
-                        txtTratamiento.append(consulta.getEnfermedad().get(i).getNombre()+"\n");
-                        txtTratamiento.append(consulta.getEnfermedad().get(i).getTratamiento()+"\n");
+            txtDiagnostico.append(consulta.getEnfermedad().getNombre()+"\n\n");
+                        txtDiagnostico.append(consulta.getEnfermedad().getDescripcion()+"\n\n\n\n");
+                        txtTratamiento.append(consulta.getEnfermedad().getNombre()+"\n\n");
+                        txtTratamiento.append(consulta.getEnfermedad().getTratamiento()+"\n\n\n\n");
 
-        }
+        
 
-                pnlImagen.setIcon(new javax.swing.ImageIcon(getClass().getResource(consulta.getEnfermedad().get(0).getFoto())));
+             pnlImagen.setIcon(new javax.swing.ImageIcon(getClass().getResource(consulta.getEnfermedad().getFoto())));
 
     }
 
@@ -66,6 +65,7 @@ public class VtnResultados extends javax.swing.JDialog {
         jPanel1.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Tratamiento", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 1, 11))); // NOI18N
 
         txtTratamiento.setColumns(20);
+        txtTratamiento.setFont(new java.awt.Font("Monospaced", 1, 14)); // NOI18N
         txtTratamiento.setRows(5);
         jScrollPane1.setViewportView(txtTratamiento);
 
@@ -89,6 +89,7 @@ public class VtnResultados extends javax.swing.JDialog {
         jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Diagnostico", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Tahoma", 1, 11))); // NOI18N
 
         txtDiagnostico.setColumns(20);
+        txtDiagnostico.setFont(new java.awt.Font("Monospaced", 1, 14)); // NOI18N
         txtDiagnostico.setRows(5);
         jScrollPane2.setViewportView(txtDiagnostico);
 
@@ -110,12 +111,17 @@ public class VtnResultados extends javax.swing.JDialog {
         );
 
         jButton1.setText("Aceptar");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout pnlImagenLayout = new javax.swing.GroupLayout(pnlImagen);
         pnlImagen.setLayout(pnlImagenLayout);
         pnlImagenLayout.setHorizontalGroup(
             pnlImagenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 179, Short.MAX_VALUE)
+            .addGap(0, 188, Short.MAX_VALUE)
         );
         pnlImagenLayout.setVerticalGroup(
             pnlImagenLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -132,17 +138,18 @@ public class VtnResultados extends javax.swing.JDialog {
                         .addContainerGap()
                         .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(321, 321, 321)
-                        .addComponent(jButton1))
-                    .addGroup(layout.createSequentialGroup()
                         .addGap(258, 258, 258)
                         .addComponent(jLabel4))
                     .addGroup(layout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(pnlImagen, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(pnlImagen, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                 .addContainerGap())
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(345, Short.MAX_VALUE)
+                .addComponent(jButton1)
+                .addGap(302, 302, 302))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -160,11 +167,16 @@ public class VtnResultados extends javax.swing.JDialog {
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jButton1)
-                .addGap(11, 11, 11))
+                .addContainerGap())
         );
 
-        pack();
+        java.awt.Dimension screenSize = java.awt.Toolkit.getDefaultToolkit().getScreenSize();
+        setBounds((screenSize.width-734)/2, (screenSize.height-573)/2, 734, 573);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        dispose();
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments

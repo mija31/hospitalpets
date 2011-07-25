@@ -21,6 +21,7 @@ import hospitalpets.modelo.Persona;
 import hospitalpets.modelo.Sintoma;
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 import java.util.Vector;
 import javax.swing.DefaultComboBoxModel;
 import javax.swing.JFrame;
@@ -35,7 +36,11 @@ public class VtnConsulta extends javax.swing.JDialog {
     /** Creates new form VtnConsulta */
     public VtnConsulta(java.awt.Frame parent, boolean modal) {
         super(parent, modal);
+
         initComponents();
+        jTabbedPane1.setEnabled(false);
+        cbSistemaRespiratorio.setSelected(true);
+        jTabbedPane1.setSelectedIndex(0);
     }
 
     /** This method is called from within the constructor to
@@ -49,7 +54,7 @@ public class VtnConsulta extends javax.swing.JDialog {
 
         jTabbedPane1 = new javax.swing.JTabbedPane();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jPanel9 = new javax.swing.JPanel();
+        pnlSistemaRespiratorio = new javax.swing.JPanel();
         jPanel10 = new javax.swing.JPanel();
         cbSonidoAfonicoPres = new javax.swing.JCheckBox();
         cbSonidoAfonicoAus = new javax.swing.JCheckBox();
@@ -81,7 +86,7 @@ public class VtnConsulta extends javax.swing.JDialog {
         cbFiebrePres = new javax.swing.JCheckBox();
         cbFiebreAus = new javax.swing.JCheckBox();
         jScrollPane2 = new javax.swing.JScrollPane();
-        jPanel20 = new javax.swing.JPanel();
+        pnlSistemaDigestivo = new javax.swing.JPanel();
         jPanel22 = new javax.swing.JPanel();
         cbDiarreaPres = new javax.swing.JCheckBox();
         cbDiarreaAus = new javax.swing.JCheckBox();
@@ -116,7 +121,7 @@ public class VtnConsulta extends javax.swing.JDialog {
         cbSecrecionVerdosaVulvaPres = new javax.swing.JCheckBox();
         cbSecrecionVerdosaVulvaAus = new javax.swing.JCheckBox();
         jScrollPane3 = new javax.swing.JScrollPane();
-        jPanel21 = new javax.swing.JPanel();
+        pnlDermatologia = new javax.swing.JPanel();
         jPanel28 = new javax.swing.JPanel();
         cbUlceraPres = new javax.swing.JCheckBox();
         cbUlceraAus = new javax.swing.JCheckBox();
@@ -142,7 +147,7 @@ public class VtnConsulta extends javax.swing.JDialog {
         cbEritemaPres = new javax.swing.JCheckBox();
         cbEritemaAus = new javax.swing.JCheckBox();
         jScrollPane4 = new javax.swing.JScrollPane();
-        jPanel41 = new javax.swing.JPanel();
+        pnlSistemaCardio = new javax.swing.JPanel();
         jPanel42 = new javax.swing.JPanel();
         cbEdemaPerifericoPres = new javax.swing.JCheckBox();
         cbEdemaPerifericoAus = new javax.swing.JCheckBox();
@@ -191,6 +196,11 @@ public class VtnConsulta extends javax.swing.JDialog {
         cbxPaciente = new javax.swing.JComboBox();
         jLabel2 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
+        jPanel2 = new javax.swing.JPanel();
+        cbSistemaCardiovascular = new javax.swing.JCheckBox();
+        cbSistemaDigestivo = new javax.swing.JCheckBox();
+        cbDermatologia = new javax.swing.JCheckBox();
+        cbSistemaRespiratorio = new javax.swing.JCheckBox();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
@@ -547,17 +557,17 @@ public class VtnConsulta extends javax.swing.JDialog {
                 .addComponent(cbFiebreAus))
         );
 
-        javax.swing.GroupLayout jPanel9Layout = new javax.swing.GroupLayout(jPanel9);
-        jPanel9.setLayout(jPanel9Layout);
-        jPanel9Layout.setHorizontalGroup(
-            jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel9Layout.createSequentialGroup()
-                .addGap(60, 60, 60)
-                .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        javax.swing.GroupLayout pnlSistemaRespiratorioLayout = new javax.swing.GroupLayout(pnlSistemaRespiratorio);
+        pnlSistemaRespiratorio.setLayout(pnlSistemaRespiratorioLayout);
+        pnlSistemaRespiratorioLayout.setHorizontalGroup(
+            pnlSistemaRespiratorioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlSistemaRespiratorioLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(pnlSistemaRespiratorioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jPanel10, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(pnlSistemaRespiratorioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addComponent(jPanel11, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGroup(jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addGroup(pnlSistemaRespiratorioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(jPanel14, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(jPanel19, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(jPanel18, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -565,13 +575,13 @@ public class VtnConsulta extends javax.swing.JDialog {
                             .addComponent(jPanel15, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(jPanel16, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(jPanel12, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jPanel13, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
-                .addContainerGap(96, Short.MAX_VALUE))
+                            .addComponent(jPanel13, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                .addContainerGap(75, Short.MAX_VALUE))
         );
-        jPanel9Layout.setVerticalGroup(
-            jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel9Layout.createSequentialGroup()
-                .addGap(21, 21, 21)
+        pnlSistemaRespiratorioLayout.setVerticalGroup(
+            pnlSistemaRespiratorioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlSistemaRespiratorioLayout.createSequentialGroup()
+                .addContainerGap()
                 .addComponent(jPanel13, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPanel12, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -591,10 +601,10 @@ public class VtnConsulta extends javax.swing.JDialog {
                 .addComponent(jPanel18, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPanel19, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(21, Short.MAX_VALUE))
         );
 
-        jScrollPane1.setViewportView(jPanel9);
+        jScrollPane1.setViewportView(pnlSistemaRespiratorio);
 
         jTabbedPane1.addTab("Sistema Respiratorio", jScrollPane1);
 
@@ -983,33 +993,33 @@ public class VtnConsulta extends javax.swing.JDialog {
                 .addComponent(cbSecrecionVerdosaVulvaPres))
         );
 
-        javax.swing.GroupLayout jPanel20Layout = new javax.swing.GroupLayout(jPanel20);
-        jPanel20.setLayout(jPanel20Layout);
-        jPanel20Layout.setHorizontalGroup(
-            jPanel20Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel20Layout.createSequentialGroup()
-                .addGap(43, 43, 43)
-                .addGroup(jPanel20Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(jPanel20Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+        javax.swing.GroupLayout pnlSistemaDigestivoLayout = new javax.swing.GroupLayout(pnlSistemaDigestivo);
+        pnlSistemaDigestivo.setLayout(pnlSistemaDigestivoLayout);
+        pnlSistemaDigestivoLayout.setHorizontalGroup(
+            pnlSistemaDigestivoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlSistemaDigestivoLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(pnlSistemaDigestivoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(pnlSistemaDigestivoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                         .addComponent(jPanel31, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jPanel32, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jPanel33, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel20Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addGroup(pnlSistemaDigestivoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                         .addComponent(jPanel30, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jPanel29, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(jPanel20Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addComponent(jPanel29, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(pnlSistemaDigestivoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                         .addComponent(jPanel25, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jPanel26, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jPanel27, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jPanel22, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(jPanel24, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jPanel23, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                .addContainerGap(81, Short.MAX_VALUE))
+                        .addComponent(jPanel23, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(43, Short.MAX_VALUE))
         );
-        jPanel20Layout.setVerticalGroup(
-            jPanel20Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel20Layout.createSequentialGroup()
-                .addGap(22, 22, 22)
+        pnlSistemaDigestivoLayout.setVerticalGroup(
+            pnlSistemaDigestivoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlSistemaDigestivoLayout.createSequentialGroup()
+                .addContainerGap()
                 .addComponent(jPanel24, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPanel23, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -1031,12 +1041,15 @@ public class VtnConsulta extends javax.swing.JDialog {
                 .addComponent(jPanel32, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPanel31, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap(22, Short.MAX_VALUE))
         );
 
-        jScrollPane2.setViewportView(jPanel20);
+        jScrollPane2.setViewportView(pnlSistemaDigestivo);
 
         jTabbedPane1.addTab("Sistema Digestivo", jScrollPane2);
+
+        pnlDermatologia.setEnabled(false);
+        pnlDermatologia.setFocusable(false);
 
         jPanel28.setBorder(javax.swing.BorderFactory.createTitledBorder("Ulceras "));
 
@@ -1060,7 +1073,7 @@ public class VtnConsulta extends javax.swing.JDialog {
         jPanel28Layout.setHorizontalGroup(
             jPanel28Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel28Layout.createSequentialGroup()
-                .addContainerGap(233, Short.MAX_VALUE)
+                .addContainerGap(244, Short.MAX_VALUE)
                 .addComponent(cbUlceraPres)
                 .addGap(92, 92, 92)
                 .addComponent(cbUlceraAus)
@@ -1095,7 +1108,7 @@ public class VtnConsulta extends javax.swing.JDialog {
         jPanel34Layout.setHorizontalGroup(
             jPanel34Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel34Layout.createSequentialGroup()
-                .addContainerGap(233, Short.MAX_VALUE)
+                .addContainerGap(244, Short.MAX_VALUE)
                 .addComponent(cbPruritoPres)
                 .addGap(92, 92, 92)
                 .addComponent(cbPruritoAus)
@@ -1305,7 +1318,7 @@ public class VtnConsulta extends javax.swing.JDialog {
         jPanel40Layout.setHorizontalGroup(
             jPanel40Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel40Layout.createSequentialGroup()
-                .addContainerGap(233, Short.MAX_VALUE)
+                .addContainerGap(244, Short.MAX_VALUE)
                 .addComponent(cbEritemaPres)
                 .addGap(92, 92, 92)
                 .addComponent(cbEritemaAus)
@@ -1318,26 +1331,31 @@ public class VtnConsulta extends javax.swing.JDialog {
                 .addComponent(cbEritemaPres))
         );
 
-        javax.swing.GroupLayout jPanel21Layout = new javax.swing.GroupLayout(jPanel21);
-        jPanel21.setLayout(jPanel21Layout);
-        jPanel21Layout.setHorizontalGroup(
-            jPanel21Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel21Layout.createSequentialGroup()
-                .addGap(43, 43, 43)
-                .addGroup(jPanel21Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                    .addComponent(jPanel35, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jPanel36, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jPanel37, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jPanel40, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jPanel34, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jPanel28, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jPanel38, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jPanel39, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(59, Short.MAX_VALUE))
+        javax.swing.GroupLayout pnlDermatologiaLayout = new javax.swing.GroupLayout(pnlDermatologia);
+        pnlDermatologia.setLayout(pnlDermatologiaLayout);
+        pnlDermatologiaLayout.setHorizontalGroup(
+            pnlDermatologiaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlDermatologiaLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(pnlDermatologiaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlDermatologiaLayout.createSequentialGroup()
+                        .addGroup(pnlDermatologiaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jPanel28, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jPanel34, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jPanel40, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addContainerGap())
+                    .addGroup(pnlDermatologiaLayout.createSequentialGroup()
+                        .addGroup(pnlDermatologiaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addComponent(jPanel35, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jPanel36, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jPanel37, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jPanel38, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(jPanel39, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addContainerGap(21, Short.MAX_VALUE))))
         );
-        jPanel21Layout.setVerticalGroup(
-            jPanel21Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel21Layout.createSequentialGroup()
+        pnlDermatologiaLayout.setVerticalGroup(
+            pnlDermatologiaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlDermatologiaLayout.createSequentialGroup()
                 .addGap(22, 22, 22)
                 .addComponent(jPanel40, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -1357,7 +1375,7 @@ public class VtnConsulta extends javax.swing.JDialog {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jScrollPane3.setViewportView(jPanel21);
+        jScrollPane3.setViewportView(pnlDermatologia);
 
         jTabbedPane1.addTab("Dermatologia", jScrollPane3);
 
@@ -1816,36 +1834,36 @@ public class VtnConsulta extends javax.swing.JDialog {
                 .addComponent(cbSoploMitralAus))
         );
 
-        javax.swing.GroupLayout jPanel41Layout = new javax.swing.GroupLayout(jPanel41);
-        jPanel41.setLayout(jPanel41Layout);
-        jPanel41Layout.setHorizontalGroup(
-            jPanel41Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel41Layout.createSequentialGroup()
+        javax.swing.GroupLayout pnlSistemaCardioLayout = new javax.swing.GroupLayout(pnlSistemaCardio);
+        pnlSistemaCardio.setLayout(pnlSistemaCardioLayout);
+        pnlSistemaCardioLayout.setHorizontalGroup(
+            pnlSistemaCardioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlSistemaCardioLayout.createSequentialGroup()
                 .addGap(43, 43, 43)
-                .addGroup(jPanel41Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(jPanel41Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                .addGroup(pnlSistemaCardioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(pnlSistemaCardioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                         .addComponent(jPanel53, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jPanel55, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jPanel54, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel41Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addGroup(pnlSistemaCardioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                         .addComponent(jPanel50, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jPanel51, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jPanel52, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel41Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                    .addGroup(pnlSistemaCardioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                         .addComponent(jPanel48, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jPanel47, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel41Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(pnlSistemaCardioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                         .addComponent(jPanel45, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jPanel46, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(jPanel41Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(pnlSistemaCardioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                         .addComponent(jPanel42, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addComponent(jPanel49, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jPanel43, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                .addContainerGap(81, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
-        jPanel41Layout.setVerticalGroup(
-            jPanel41Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel41Layout.createSequentialGroup()
+        pnlSistemaCardioLayout.setVerticalGroup(
+            pnlSistemaCardioLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pnlSistemaCardioLayout.createSequentialGroup()
                 .addGap(22, 22, 22)
                 .addComponent(jPanel49, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -1875,7 +1893,7 @@ public class VtnConsulta extends javax.swing.JDialog {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jScrollPane4.setViewportView(jPanel41);
+        jScrollPane4.setViewportView(pnlSistemaCardio);
 
         jTabbedPane1.addTab("Sistema Cardiovascular", jScrollPane4);
 
@@ -1890,6 +1908,11 @@ public class VtnConsulta extends javax.swing.JDialog {
 
         jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/hospitalpets/imagenes/eliminar.png"))); // NOI18N
         jButton2.setText("Cancelar");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
 
         jLabel1.setFont(new java.awt.Font("Vijaya", 1, 36));
         jLabel1.setText("SINTOMAS PRESENTES");
@@ -1936,6 +1959,63 @@ public class VtnConsulta extends javax.swing.JDialog {
         jLabel4.setFont(new java.awt.Font("Vijaya", 1, 36));
         jLabel4.setText("CONSULTA");
 
+        jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder("Sistema a Analizar"));
+
+        cbSistemaCardiovascular.setText("Sistema Cardiovascular");
+        cbSistemaCardiovascular.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cbSistemaCardiovascularActionPerformed(evt);
+            }
+        });
+
+        cbSistemaDigestivo.setText("Sistema Digestivo");
+        cbSistemaDigestivo.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cbSistemaDigestivoActionPerformed(evt);
+            }
+        });
+
+        cbDermatologia.setText("Dermatologia");
+        cbDermatologia.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cbDermatologiaActionPerformed(evt);
+            }
+        });
+
+        cbSistemaRespiratorio.setText("Sistema Respiratorio");
+        cbSistemaRespiratorio.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cbSistemaRespiratorioActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(cbSistemaRespiratorio)
+                    .addComponent(cbSistemaDigestivo)
+                    .addComponent(cbDermatologia)
+                    .addComponent(cbSistemaCardiovascular))
+                .addContainerGap())
+        );
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(cbSistemaRespiratorio)
+                .addGap(18, 18, 18)
+                .addComponent(cbSistemaDigestivo)
+                .addGap(18, 18, 18)
+                .addComponent(cbDermatologia)
+                .addGap(18, 18, 18)
+                .addComponent(cbSistemaCardiovascular)
+                .addContainerGap())
+        );
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -1943,44 +2023,50 @@ public class VtnConsulta extends javax.swing.JDialog {
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addContainerGap()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jTabbedPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 681, Short.MAX_VALUE)
-                            .addGroup(layout.createSequentialGroup()
-                                .addGap(161, 161, 161)
-                                .addComponent(btnAceptar)
-                                .addGap(110, 110, 110)
-                                .addComponent(jButton2))))
-                    .addGroup(layout.createSequentialGroup()
                         .addGap(250, 250, 250)
                         .addComponent(jLabel4))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(186, 186, 186)
-                        .addComponent(jLabel1))
+                        .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
-                        .addGap(92, 92, 92)
-                        .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addContainerGap()
+                        .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(84, 84, 84)
+                                .addComponent(btnAceptar)
+                                .addGap(120, 120, 120)
+                                .addComponent(jButton2))
+                            .addComponent(jTabbedPane1, javax.swing.GroupLayout.DEFAULT_SIZE, 610, Short.MAX_VALUE))))
                 .addContainerGap())
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(260, Short.MAX_VALUE)
+                .addComponent(jLabel1)
+                .addGap(217, 217, 217))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+            .addGroup(layout.createSequentialGroup()
                 .addComponent(jLabel4)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(1, 1, 1)
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(jLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 491, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton2)
-                    .addComponent(btnAceptar))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jTabbedPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 491, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 18, Short.MAX_VALUE)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jButton2)
+                            .addComponent(btnAceptar))))
                 .addContainerGap())
         );
 
         java.awt.Dimension screenSize = java.awt.Toolkit.getDefaultToolkit().getScreenSize();
-        setBounds((screenSize.width-717)/2, (screenSize.height-749)/2, 717, 749);
+        setBounds((screenSize.width-813)/2, (screenSize.height-749)/2, 813, 749);
     }// </editor-fold>//GEN-END:initComponents
 
     private void cbFiebreAusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbFiebreAusActionPerformed
@@ -2406,46 +2492,49 @@ public class VtnConsulta extends javax.swing.JDialog {
     }//GEN-LAST:event_cbSoploMitralAusActionPerformed
 
     private void btnAceptarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAceptarActionPerformed
-        ArrayList<Enfermedad> enfermedades = new ArrayList<Enfermedad>();
         Enfermedad enfemedad = new Enfermedad();
+        int deteccion = 0;
+        if (cbSistemaRespiratorio.isSelected()) {
+            deteccion = Sintoma.sistemaRespiratorio(cbTosPres.isSelected(), cbReflejoTusPres.isSelected(),
+                    cbSonidoAfonicoPres.isSelected(), cbSecrecionNasalPres.isSelected(), cbSecrecionOcularPres.isSelected(),
+                    cbDistressRespiratorioPres.isSelected(), cbCrepitacionesPres.isSelected(), cbAnorexiaPres.isSelected(),
+                    cbDisneaRespiratoriaPres.isSelected(), cbFiebrePres.isSelected());
 
-        int deteccion = Sintoma.sistemaRespiratorio(cbTosPres.isSelected(), cbReflejoTusPres.isSelected(),
-                cbSonidoAfonicoPres.isSelected(), cbSecrecionNasalPres.isSelected(), cbSecrecionOcularPres.isSelected(),
-                cbDistressRespiratorioPres.isSelected(), cbCrepitacionesPres.isSelected(), cbAnorexiaPres.isSelected(),
-                cbDisneaRespiratoriaPres.isSelected(), cbFiebrePres.isSelected());
+        } else {
+            if (cbSistemaDigestivo.isSelected()) {
+                deteccion = Sintoma.sistemaDigestivo(cbVomitoPres.isSelected(), cbRegurtigacionPres.isSelected(), cbAnorexiaPres.isSelected(),
+                        cbDiarreaPres.isSelected(), cbDeshidratacionPres.isSelected(), cbDolorAbdominalPres.isSelected(),
+                        cbHuevosParasitosPres.isSelected(), cbHepatomegaliaPres.isSelected(), cbHepatodiniaPres.isSelected(),
+                        cbSecrecionVerdosaVulvaPres.isSelected(), cbDemoraPartoPres.isSelected(),
+                        cbAusenciaContracUterinasPres.isSelected());
+
+            } else {
+                if (cbDermatologia.isSelected()) {
+                    deteccion = Sintoma.sistemaDermatologico(cbEritemaPres.isSelected(), cbPruritoPres.isSelected(), cbUlceraPres.isSelected(),
+                            cbSeborreaPres.isSelected(), cbMalOlorPelajePres.isSelected(), cbSecrecionPurulentaPres.isSelected(),
+                            cbCostrasPres.isSelected(), cbCambioColoracionPelajePres.isSelected());
+
+                } else {
+                    deteccion = Sintoma.sistemaCardiovascular(cbAscitisPres.isSelected(), cbEdemaPulmonarPres.isSelected(), cbEdemaPerifericoPres.isSelected(),
+                            cbReflejoTusPres.isSelected(), cbTosPres.isSelected(), cbResistenciaEjercicioPres.isSelected(), cbDesmayoPres.isSelected(),
+                            cbMucosasCianoticaPres.isSelected(), cbPresionArterialDisminuidaPres.isSelected(), cbPresenciaSoploCardiacoPres.isSelected(),
+                            cbTaquicardiaPres.isSelected(), cbDistressRespiratorioPres.isSelected(), cbBradicardiasPres.isSelected(),
+                            cbCianosisPres.isSelected(), cbSoploMitralPres.isSelected(), cbDerramePleuralPres.isSelected());
+
+                }
+            }
+        }
+
 
         enfemedad = ControlAdministrarEnfermedad.cargarEnfermedad(deteccion);
-        enfermedades.add(enfemedad);
-
-        deteccion = Sintoma.sistemaDigestivo(cbVomitoPres.isSelected(), cbRegurtigacionPres.isSelected(), cbAnorexiaPres.isSelected(),
-                cbDiarreaPres.isSelected(), cbDeshidratacionPres.isSelected(), cbDolorAbdominalPres.isSelected(),
-                cbHuevosParasitosPres.isSelected(), cbHepatomegaliaPres.isSelected(), cbHepatodiniaPres.isSelected(),
-                cbSecrecionVerdosaVulvaPres.isSelected(), cbDemoraPartoPres.isSelected(),
-                cbAusenciaContracUterinasPres.isSelected());
-        enfemedad = ControlAdministrarEnfermedad.cargarEnfermedad(deteccion);
-        enfermedades.add(enfemedad);
-
-        deteccion = Sintoma.sistemaDermatologico(cbEritemaPres.isSelected(), cbPruritoPres.isSelected(), cbUlceraPres.isSelected(),
-                cbSeborreaPres.isSelected(), cbMalOlorPelajePres.isSelected(), cbSecrecionPurulentaPres.isSelected(),
-                cbCostrasPres.isSelected(), cbCambioColoracionPelajePres.isSelected());
-
-        enfemedad = ControlAdministrarEnfermedad.cargarEnfermedad(deteccion);
-        enfermedades.add(enfemedad);
-
-        deteccion = Sintoma.sistemaCardiovascular(cbAscitisPres.isSelected(), cbEdemaPulmonarPres.isSelected(), cbEdemaPerifericoPres.isSelected(),
-                cbReflejoTusPres.isSelected(), cbTosPres.isSelected(), cbResistenciaEjercicioPres.isSelected(), cbDesmayoPres.isSelected(),
-                cbMucosasCianoticaPres.isSelected(), cbPresionArterialDisminuidaPres.isSelected(), cbPresenciaSoploCardiacoPres.isSelected(),
-                cbTaquicardiaPres.isSelected(), cbDistressRespiratorioPres.isSelected(), cbBradicardiasPres.isSelected(),
-                cbCianosisPres.isSelected(), cbSoploMitralPres.isSelected(), cbDerramePleuralPres.isSelected());
-
-        enfemedad = ControlAdministrarEnfermedad.cargarEnfermedad(deteccion);
-        enfermedades.add(enfemedad);
 
         Consulta consulta = new Consulta();
 
-        int num=pacientes.get(cbxPaciente.getSelectedIndex()).getIdPaciente();
-        consulta.setPaciente(ControlAdministraPaciente.cargarPacient(num));
-        consulta.setEnfermedad(enfermedades);
+        Paciente pacient = pacientes.get(cbxPaciente.getSelectedIndex());
+
+        consulta.setPaciente(pacient);
+
+        consulta.setEnfermedad(enfemedad);
         consulta.setFecha(new Date());
 
         ControlAdministraConsulta.crearConsulta(consulta);
@@ -2471,6 +2560,42 @@ public class VtnConsulta extends javax.swing.JDialog {
         }
 
     }//GEN-LAST:event_txtcedulaActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        dispose();
+    }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void cbSistemaRespiratorioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbSistemaRespiratorioActionPerformed
+        cbSistemaCardiovascular.setSelected(false);
+        cbSistemaDigestivo.setSelected(false);
+        cbSistemaRespiratorio.setSelected(true);
+        cbDermatologia.setSelected(false);
+        jTabbedPane1.setSelectedIndex(0);
+    }//GEN-LAST:event_cbSistemaRespiratorioActionPerformed
+
+    private void cbSistemaDigestivoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbSistemaDigestivoActionPerformed
+        cbSistemaCardiovascular.setSelected(false);
+        cbSistemaDigestivo.setSelected(true);
+        cbSistemaRespiratorio.setSelected(false);
+        cbDermatologia.setSelected(false);
+        jTabbedPane1.setSelectedIndex(1);
+    }//GEN-LAST:event_cbSistemaDigestivoActionPerformed
+
+    private void cbDermatologiaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbDermatologiaActionPerformed
+        cbSistemaCardiovascular.setSelected(false);
+        cbSistemaDigestivo.setSelected(false);
+        cbSistemaRespiratorio.setSelected(false);
+        cbDermatologia.setSelected(true);
+        jTabbedPane1.setSelectedIndex(2);
+    }//GEN-LAST:event_cbDermatologiaActionPerformed
+
+    private void cbSistemaCardiovascularActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbSistemaCardiovascularActionPerformed
+        cbSistemaCardiovascular.setSelected(true);
+        cbSistemaDigestivo.setSelected(false);
+        cbSistemaRespiratorio.setSelected(false);
+        cbDermatologia.setSelected(false);
+        jTabbedPane1.setSelectedIndex(3);
+    }//GEN-LAST:event_cbSistemaCardiovascularActionPerformed
 
     /**
      * @param args the command line arguments
@@ -2510,6 +2635,7 @@ public class VtnConsulta extends javax.swing.JDialog {
     private javax.swing.JCheckBox cbCrepitacionesPres;
     private javax.swing.JCheckBox cbDemoraPartoAus;
     private javax.swing.JCheckBox cbDemoraPartoPres;
+    private javax.swing.JCheckBox cbDermatologia;
     private javax.swing.JCheckBox cbDerramePleuralAus;
     private javax.swing.JCheckBox cbDerramePleuralPres;
     private javax.swing.JCheckBox cbDeshidratacionAus;
@@ -2564,6 +2690,9 @@ public class VtnConsulta extends javax.swing.JDialog {
     private javax.swing.JCheckBox cbSecrecionPurulentaPres;
     private javax.swing.JCheckBox cbSecrecionVerdosaVulvaAus;
     private javax.swing.JCheckBox cbSecrecionVerdosaVulvaPres;
+    private javax.swing.JCheckBox cbSistemaCardiovascular;
+    private javax.swing.JCheckBox cbSistemaDigestivo;
+    private javax.swing.JCheckBox cbSistemaRespiratorio;
     private javax.swing.JCheckBox cbSonidoAfonicoAus;
     private javax.swing.JCheckBox cbSonidoAfonicoPres;
     private javax.swing.JCheckBox cbSoploMitralAus;
@@ -2593,8 +2722,7 @@ public class VtnConsulta extends javax.swing.JDialog {
     private javax.swing.JPanel jPanel17;
     private javax.swing.JPanel jPanel18;
     private javax.swing.JPanel jPanel19;
-    private javax.swing.JPanel jPanel20;
-    private javax.swing.JPanel jPanel21;
+    private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel22;
     private javax.swing.JPanel jPanel23;
     private javax.swing.JPanel jPanel24;
@@ -2614,7 +2742,6 @@ public class VtnConsulta extends javax.swing.JDialog {
     private javax.swing.JPanel jPanel38;
     private javax.swing.JPanel jPanel39;
     private javax.swing.JPanel jPanel40;
-    private javax.swing.JPanel jPanel41;
     private javax.swing.JPanel jPanel42;
     private javax.swing.JPanel jPanel43;
     private javax.swing.JPanel jPanel45;
@@ -2628,12 +2755,15 @@ public class VtnConsulta extends javax.swing.JDialog {
     private javax.swing.JPanel jPanel53;
     private javax.swing.JPanel jPanel54;
     private javax.swing.JPanel jPanel55;
-    private javax.swing.JPanel jPanel9;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JScrollPane jScrollPane4;
     private javax.swing.JTabbedPane jTabbedPane1;
+    private javax.swing.JPanel pnlDermatologia;
+    private javax.swing.JPanel pnlSistemaCardio;
+    private javax.swing.JPanel pnlSistemaDigestivo;
+    private javax.swing.JPanel pnlSistemaRespiratorio;
     private javax.swing.JTextField txtcedula;
     // End of variables declaration//GEN-END:variables
     private ArrayList<Paciente> pacientes;
