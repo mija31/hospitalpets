@@ -5,6 +5,6 @@
 
 <index version="1.0">
     <indexitem text="item">
-        <indexitem text="introduccion" target="index"/>
+        <indexitem text="Sistema" target="index"/>
     </indexitem>
 </index>
