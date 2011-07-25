@@ -58,8 +58,9 @@ public class VtnResultados extends javax.swing.JDialog {
         pnlImagen = new org.edisoncor.gui.panel.PanelImage();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setTitle("Resultados");
 
-        jLabel4.setFont(new java.awt.Font("Vijaya", 1, 36)); // NOI18N
+        jLabel4.setFont(new java.awt.Font("Vijaya", 1, 36));
         jLabel4.setForeground(new java.awt.Color(0, 0, 102));
         jLabel4.setText("RESULTADOS");
 
@@ -68,7 +69,7 @@ public class VtnResultados extends javax.swing.JDialog {
         txtTratamiento.setBackground(new java.awt.Color(0, 204, 204));
         txtTratamiento.setColumns(20);
         txtTratamiento.setEditable(false);
-        txtTratamiento.setFont(new java.awt.Font("Monospaced", 1, 14)); // NOI18N
+        txtTratamiento.setFont(new java.awt.Font("Monospaced", 1, 14));
         txtTratamiento.setRows(5);
         jScrollPane1.setViewportView(txtTratamiento);
 
@@ -94,7 +95,7 @@ public class VtnResultados extends javax.swing.JDialog {
         txtDiagnostico.setBackground(new java.awt.Color(0, 204, 204));
         txtDiagnostico.setColumns(20);
         txtDiagnostico.setEditable(false);
-        txtDiagnostico.setFont(new java.awt.Font("Monospaced", 1, 14)); // NOI18N
+        txtDiagnostico.setFont(new java.awt.Font("Monospaced", 1, 14));
         txtDiagnostico.setRows(5);
         jScrollPane2.setViewportView(txtDiagnostico);
 

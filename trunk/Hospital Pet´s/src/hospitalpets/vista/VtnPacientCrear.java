@@ -110,6 +110,7 @@ public class VtnPacientCrear extends javax.swing.JDialog {
         btnsalir = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setTitle("Crear Paciente");
 
         pnlDatosPaciente.setBackground(new java.awt.Color(204, 255, 204));
         pnlDatosPaciente.setMinimumSize(new java.awt.Dimension(620, 450));

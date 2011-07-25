@@ -131,7 +131,7 @@ public class VtnPrincipal extends javax.swing.JFrame {
         jMenuItem13 = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("Hospital Pet´s Beta");
+        setTitle("Hospital Pet´s Consulta");
 
         panelImage1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/hospitalpets/imagenes/hp113.gif"))); // NOI18N
 
@@ -299,6 +299,7 @@ public class VtnPrincipal extends javax.swing.JFrame {
 
         jMenu1.setText("Medico");
 
+        jMenuItem6.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_D, java.awt.event.InputEvent.CTRL_MASK));
         jMenuItem6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/hospitalpets/imagenes/docp.png"))); // NOI18N
         jMenuItem6.setText("Crear Medico");
         jMenuItem6.addActionListener(new java.awt.event.ActionListener() {
@@ -308,6 +309,7 @@ public class VtnPrincipal extends javax.swing.JFrame {
         });
         jMenu1.add(jMenuItem6);
 
+        jMenuItem7.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_M, java.awt.event.InputEvent.CTRL_MASK));
         jMenuItem7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/hospitalpets/imagenes/modifi2.png"))); // NOI18N
         jMenuItem7.setText("Modificar Medico");
         jMenuItem7.addActionListener(new java.awt.event.ActionListener() {
@@ -317,6 +319,7 @@ public class VtnPrincipal extends javax.swing.JFrame {
         });
         jMenu1.add(jMenuItem7);
 
+        jMenuItem8.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_E, java.awt.event.InputEvent.CTRL_MASK));
         jMenuItem8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/hospitalpets/imagenes/docE2.png"))); // NOI18N
         jMenuItem8.setText("Eliminar Medico");
         jMenuItem8.addActionListener(new java.awt.event.ActionListener() {
@@ -330,6 +333,7 @@ public class VtnPrincipal extends javax.swing.JFrame {
 
         jMenu5.setText("Propietario");
 
+        jMenuItem10.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_P, java.awt.event.InputEvent.CTRL_MASK));
         jMenuItem10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/hospitalpets/imagenes/user2c.png"))); // NOI18N
         jMenuItem10.setText("Crear Propietario");
         jMenuItem10.addActionListener(new java.awt.event.ActionListener() {
@@ -339,6 +343,7 @@ public class VtnPrincipal extends javax.swing.JFrame {
         });
         jMenu5.add(jMenuItem10);
 
+        jMenuItem11.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_P, java.awt.event.InputEvent.SHIFT_MASK | java.awt.event.InputEvent.CTRL_MASK));
         jMenuItem11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/hospitalpets/imagenes/modifi2.png"))); // NOI18N
         jMenuItem11.setText("Modificar Propietario");
         jMenuItem11.addActionListener(new java.awt.event.ActionListener() {
@@ -348,6 +353,7 @@ public class VtnPrincipal extends javax.swing.JFrame {
         });
         jMenu5.add(jMenuItem11);
 
+        jMenuItem12.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_B, java.awt.event.InputEvent.CTRL_MASK));
         jMenuItem12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/hospitalpets/imagenes/userE2.png"))); // NOI18N
         jMenuItem12.setText("Eliminar Propietario");
         jMenuItem12.addActionListener(new java.awt.event.ActionListener() {
@@ -361,6 +367,7 @@ public class VtnPrincipal extends javax.swing.JFrame {
 
         jMenu2.setText("Paciente");
 
+        jMenuItem1.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_N, java.awt.event.InputEvent.CTRL_MASK));
         jMenuItem1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/hospitalpets/imagenes/perro2.png"))); // NOI18N
         jMenuItem1.setText("Agregar Paciente ");
         jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
@@ -370,6 +377,7 @@ public class VtnPrincipal extends javax.swing.JFrame {
         });
         jMenu2.add(jMenuItem1);
 
+        jMenuItem9.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_N, java.awt.event.InputEvent.SHIFT_MASK | java.awt.event.InputEvent.CTRL_MASK));
         jMenuItem9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/hospitalpets/imagenes/modifi2.png"))); // NOI18N
         jMenuItem9.setText("Modificar Paciente");
         jMenuItem9.addActionListener(new java.awt.event.ActionListener() {
@@ -383,6 +391,7 @@ public class VtnPrincipal extends javax.swing.JFrame {
 
         jMenu4.setText("Consulta");
 
+        jMenuItem4.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_F, java.awt.event.InputEvent.CTRL_MASK));
         jMenuItem4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/hospitalpets/imagenes/diag2.png"))); // NOI18N
         jMenuItem4.setText("Realizar Consulta");
         jMenuItem4.addActionListener(new java.awt.event.ActionListener() {
@@ -392,6 +401,7 @@ public class VtnPrincipal extends javax.swing.JFrame {
         });
         jMenu4.add(jMenuItem4);
 
+        jMenuItem5.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_I, java.awt.event.InputEvent.CTRL_MASK));
         jMenuItem5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/hospitalpets/imagenes/buscar2.png"))); // NOI18N
         jMenuItem5.setText("Buscar");
         jMenu4.add(jMenuItem5);
@@ -400,6 +410,7 @@ public class VtnPrincipal extends javax.swing.JFrame {
 
         jMenu6.setText("Apariencia");
 
+        jCheckBoxMenuItem1.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_F2, 0));
         jCheckBoxMenuItem1.setSelected(true);
         jCheckBoxMenuItem1.setText("Mac");
         jCheckBoxMenuItem1.addActionListener(new java.awt.event.ActionListener() {
@@ -409,6 +420,7 @@ public class VtnPrincipal extends javax.swing.JFrame {
         });
         jMenu6.add(jCheckBoxMenuItem1);
 
+        jCheckBoxMenuItem2.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_F3, 0));
         jCheckBoxMenuItem2.setText("Trans");
         jCheckBoxMenuItem2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

@@ -53,6 +53,7 @@ public class VtnPropietarioEliminar extends javax.swing.JDialog {
         jLabel5 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        setTitle("Eliminar Propietario");
 
         jPanel1.setBackground(new java.awt.Color(204, 255, 204));
 
