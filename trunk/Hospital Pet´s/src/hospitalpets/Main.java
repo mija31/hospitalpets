@@ -226,7 +226,7 @@ public class Main {
         ControlAdministrarEnfermedad.crearEnfermedad(11, "Obstrucción por cuerpo extraño", ss, "Las obstrucciones del esófago pueden estar causadas por masa"
                 + " tumorales, cuerpos extraños (huesos, anzuelos, agujas, palos, juguetes)."
                 ,"Mesulit gotas \t5 gotas/animal\nAcromaxfenicol \t50 mg/kg c/6-8h\nIntervencion quirurgica de extraccion\nTramal \t2 mg/kg c/12h\nFluidoterapia"
-                + " \tCINa\nMetroclopramida \t0,2 mg/kg c/6-8h\nRanitidina \t2 mg/kg c/8h", "/hospitalpets/imagenes//enfermedades/ObstrucciónCuerpoExtraño");
+                + " \tCINa\nMetroclopramida \t0,2 mg/kg c/6-8h\nRanitidina \t2 mg/kg c/8h", "/hospitalpets/imagenes//enfermedades/ObstrucciónCuerpoExtraño.jpg");
 
         ss = new ArrayList<Sintoma>();
         sintoma = new Sintoma();
