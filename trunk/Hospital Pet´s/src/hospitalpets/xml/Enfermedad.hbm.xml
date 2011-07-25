@@ -5,7 +5,7 @@
     <id column="idEnfermedad" name="idEnfermedad" >
     </id>
     <property column="nombre" name="nombre" not-null="true"/>
-    <property column="descripcion" name="descripcion" not-null="true" length="2000"/>
+    <property column="descripcion" name="descripcion" not-null="true" length="10000"/>
     <property column="tratamiento" name="tratamiento" not-null="true"/>
     <property column="foto" name="foto" not-null="false"/>
 
