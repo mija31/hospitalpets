@@ -111,6 +111,9 @@ public class VtnPacienteModificar extends javax.swing.JDialog {
 
         jLabel4.setText("Especie:");
 
+        txtEspecie.setEditable(false);
+        txtEspecie.setText("Canino");
+        txtEspecie.setOpaque(false);
         txtEspecie.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtEspecieActionPerformed(evt);
@@ -210,7 +213,7 @@ public class VtnPacienteModificar extends javax.swing.JDialog {
                     .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                         .addComponent(txtBarrio, javax.swing.GroupLayout.Alignment.LEADING)
                         .addComponent(cbxRaza, javax.swing.GroupLayout.Alignment.LEADING, 0, 140, Short.MAX_VALUE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED, 31, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel3)
                     .addComponent(jLabel6)
@@ -401,17 +404,16 @@ public class VtnPacienteModificar extends javax.swing.JDialog {
                 .addContainerGap()
                 .addComponent(jLabel19)
                 .addGap(18, 18, 18)
-                .addComponent(pswPasswordDoc, javax.swing.GroupLayout.DEFAULT_SIZE, 200, Short.MAX_VALUE)
+                .addComponent(pswPasswordDoc, javax.swing.GroupLayout.DEFAULT_SIZE, 244, Short.MAX_VALUE)
                 .addContainerGap())
         );
         jPanel5Layout.setVerticalGroup(
             jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel5Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel19)
                     .addComponent(pswPasswordDoc, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap())
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
@@ -421,7 +423,7 @@ public class VtnPacienteModificar extends javax.swing.JDialog {
             .addGroup(jPanel4Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(jPanel4Layout.createSequentialGroup()
                         .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel17)
@@ -429,17 +431,17 @@ public class VtnPacienteModificar extends javax.swing.JDialog {
                             .addComponent(jLabel16))
                         .addGap(18, 18, 18)
                         .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(txtNombreDoc, javax.swing.GroupLayout.DEFAULT_SIZE, 246, Short.MAX_VALUE)
-                            .addComponent(txtCedulaDoc, javax.swing.GroupLayout.DEFAULT_SIZE, 246, Short.MAX_VALUE)
-                            .addComponent(txtApellidoDoc, javax.swing.GroupLayout.DEFAULT_SIZE, 246, Short.MAX_VALUE))))
+                            .addComponent(txtNombreDoc, javax.swing.GroupLayout.DEFAULT_SIZE, 267, Short.MAX_VALUE)
+                            .addComponent(txtCedulaDoc, javax.swing.GroupLayout.DEFAULT_SIZE, 267, Short.MAX_VALUE)
+                            .addComponent(txtApellidoDoc, javax.swing.GroupLayout.DEFAULT_SIZE, 267, Short.MAX_VALUE))))
                 .addContainerGap())
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jPanel5, javax.swing.GroupLayout.DEFAULT_SIZE, 63, Short.MAX_VALUE)
-                .addGap(18, 18, 18)
+                .addComponent(jPanel5, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 29, Short.MAX_VALUE)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel17)
                     .addComponent(txtCedulaDoc, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -481,7 +483,7 @@ public class VtnPacienteModificar extends javax.swing.JDialog {
                 .addComponent(btnModificar)
                 .addGap(145, 145, 145)
                 .addComponent(btnsalir)
-                .addContainerGap(149, Short.MAX_VALUE))
+                .addContainerGap(170, Short.MAX_VALUE))
         );
         jPanel6Layout.setVerticalGroup(
             jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -524,7 +526,7 @@ public class VtnPacienteModificar extends javax.swing.JDialog {
                 .addComponent(jLabel25)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(cbxPaciente2, javax.swing.GroupLayout.PREFERRED_SIZE, 137, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(192, Short.MAX_VALUE))
+                .addContainerGap(213, Short.MAX_VALUE))
         );
         jPanel9Layout.setVerticalGroup(
             jPanel9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -688,24 +690,25 @@ public class VtnPacienteModificar extends javax.swing.JDialog {
     private void cbxPaciente2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbxPaciente2ActionPerformed
         Paciente pacient = pacientes.get(cbxPaciente2.getSelectedIndex());
 
-        txtApellidoDoc.setText("");
-        txtApellidoProp.setText("");
-        txtBarrio.setText("");
-        txtCedulaDoc.setText("");
-        txtCedulaProp.setText("");
-        txtDireccionProp.setText("");
-        txtEspecie.setText("");
-        txtNombreDoc.setText("");
-        txtNombreProp.setText("");
-        txtPaciente.setText("");
-        txtPeso.setText("");
-        txtParroquia.setText("");
-        txtProcedencia.setText("");
-        txttelefonoProp.setText("");
-        cbxRaza.setSelectedIndex(0);
-        cbxSexo.setSelectedIndex(0);
-        fechaNacimiento.setDate(null);
-        pswPasswordDoc.setText("");
+        txtApellidoDoc.setText(pacient.getMedico().getApellido());
+        txtApellidoProp.setText(pacient.getPropietario().getApellido());
+        txtBarrio.setText(pacient.getBarrio());
+        txtCedulaDoc.setText(pacient.getMedico().getCedula());
+        txtCedulaProp.setText(pacient.getPropietario().getCedula());
+        txtDireccionProp.setText(pacient.getPropietario().getDireccion());
+        txtNombreDoc.setText(pacient.getMedico().getNombre());
+        txtNombreProp.setText(pacient.getPropietario().getNombre());
+        txtPaciente.setText(pacient.getPaciente());
+        txtPeso.setText(""+pacient.getPeso());
+        txtParroquia.setText(pacient.getParroquia());
+        txtProcedencia.setText(pacient.getProcedencia());
+        txttelefonoProp.setText(pacient.getPropietario().getTelefono());
+        cbxRaza.setSelectedItem(pacient.getRaza());
+        cbxSexo.setSelectedIndex(pacient.getSexo());
+        fechaNacimiento.setDate(pacient.getFechaNacim());
+        pswPasswordDoc.setText(pacient.getMedico().getClave());
+        propietario=pacient.getPropietario();
+        medico=pacient.getMedico();
     }//GEN-LAST:event_cbxPaciente2ActionPerformed
 
     /**
