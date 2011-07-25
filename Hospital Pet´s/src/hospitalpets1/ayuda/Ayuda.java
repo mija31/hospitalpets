@@ -11,7 +11,7 @@
  *
  * Copyleft
  */
-package hospitalpets.ayuda;
+package hospitalpets1.ayuda;
 
 import java.awt.Component;
 import java.awt.GridLayout;
