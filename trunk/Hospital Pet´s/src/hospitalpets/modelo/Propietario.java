@@ -8,10 +8,10 @@ package hospitalpets.modelo;
  *
  * @author EDU
  */
-public class Propietario extends Persona{
+public class Propietario extends Persona {
 
-    private  String direccion;
-    private  String telefono;
+    private String direccion;
+    private String telefono;
 
     public String getDireccion() {
         return direccion;
@@ -28,5 +28,8 @@ public class Propietario extends Persona{
     public void setTelefono(String telefono) {
         this.telefono = telefono;
     }
-    
+
+    public String toString() {
+        return getApellido() + " " + getNombre();
+    }
 }

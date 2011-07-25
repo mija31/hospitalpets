@@ -10,7 +10,9 @@
  */
 package hospitalpets.vista;
 
+import hospitalpets.control.admin.ControlAdministrarEnfermedad;
 import hospitalpets.modelo.Consulta;
+import hospitalpets.modelo.Enfermedad;
 
 /**
  *
@@ -35,6 +37,21 @@ public class VtnResultados extends javax.swing.JDialog {
         
 
              pnlImagen.setIcon(new javax.swing.ImageIcon(getClass().getResource(consulta.getEnfermedad().getFoto())));
+
+    }
+
+        public VtnResultados(Consulta consulta,int num,java.awt.Frame parent, boolean modal) {
+        super(parent, modal);
+        initComponents();
+            Enfermedad enferm=ControlAdministrarEnfermedad.cargarEnfermedad(consulta.getEnfermedad().getIdEnfermedad());
+
+
+            txtDiagnostico.append(enferm.getNombre()+"\n\n");
+                        txtDiagnostico.append(enferm.getDescripcion()+"\n\n\n\n");
+                        txtTratamiento.append(enferm.getNombre()+"\n\n");
+                        txtTratamiento.append(enferm.getTratamiento()+"\n\n\n\n");
+
+             pnlImagen.setIcon(new javax.swing.ImageIcon(getClass().getResource(enferm.getFoto())));
 
     }
 
