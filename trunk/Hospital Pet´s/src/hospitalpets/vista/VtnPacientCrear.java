@@ -124,6 +124,9 @@ public class VtnPacientCrear extends javax.swing.JDialog {
 
         jLabel4.setText("Especie:");
 
+        txtEspecie.setEditable(false);
+        txtEspecie.setText("Canino");
+        txtEspecie.setOpaque(false);
         txtEspecie.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 txtEspecieActionPerformed(evt);
@@ -648,7 +651,6 @@ public class VtnPacientCrear extends javax.swing.JDialog {
            txtCedulaDoc.setText("");
            txtCedulaProp.setText("");
            txtDireccionProp.setText("");
-           txtEspecie.setText("");
            txtNombreDoc.setText("");
            txtNombreProp.setText("");
            txtPaciente.setText("");
