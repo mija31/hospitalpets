@@ -11,7 +11,6 @@
 package hospitalpets.vista;
 
 import hospitalpets.control.admin.ControlAdministraConsulta;
-import hospitalpets.control.admin.ControlAdministraMedico;
 import hospitalpets.control.admin.ControlAdministraPaciente;
 import hospitalpets.control.admin.ControlAdministrarEnfermedad;
 import hospitalpets.modelo.Consulta;
@@ -21,7 +20,6 @@ import hospitalpets.modelo.Persona;
 import hospitalpets.modelo.Sintoma;
 import java.util.ArrayList;
 import java.util.Date;
-import java.util.List;
 import java.util.Vector;
 import javax.swing.DefaultComboBoxModel;
 import javax.swing.JFrame;
@@ -2539,8 +2537,7 @@ public class VtnConsulta extends javax.swing.JDialog {
 
         ControlAdministraConsulta.crearConsulta(consulta);
         new VtnResultados(consulta, (JFrame) this.getParent(), true).setVisible(true);
-        dispose();
-
+        
     }//GEN-LAST:event_btnAceptarActionPerformed
 
     private void txtcedulaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtcedulaActionPerformed

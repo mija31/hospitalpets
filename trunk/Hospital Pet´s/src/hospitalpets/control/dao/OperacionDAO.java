@@ -151,7 +151,7 @@ public class OperacionDAO {
 
 
 
-    public Vector cargarPorId(String consul, String consul2, String tabla, int id) {
+    public Vector cargarPorId(Object object,String tabla,String columna, String id) {
         Vector esp = new Vector();
 
         List especi;
@@ -162,7 +162,7 @@ public class OperacionDAO {
             if (!tx.isActive()) {
                 tx.begin();
             }
-            especi = session.createSQLQuery("select " + consul + " from " + tabla + " where " + consul2 + "=" + id).setMaxResults(100).list();
+            especi = session.createSQLQuery("select * from " + tabla + " where " + columna + "= '" + id+"'").addEntity(tabla, object.getClass()).setMaxResults(100).list();
 
             tx.commit();
             Configuracion.closeSession();

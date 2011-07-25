@@ -33,6 +33,14 @@ public class ControlAdministraConsulta {
         return (Vector<Consulta>)ope.cargar(new Consulta(), "consulta");
     }
 
+    public static  Vector<Consulta> cargarConsultasMedico(String clave) {
+        return (Vector<Consulta>)ope.cargarPorId(new Consulta(), "consulta","medico",clave);
+    }
+
+    public static  Vector<Consulta> cargarConsultasPropietario() {
+        return (Vector<Consulta>)ope.cargar(new Consulta(), "consulta");
+    }
+
     public boolean  elimminarConsulta(Consulta c) {
         return ope.mt_eliminar(c);
     }
