@@ -12,7 +12,7 @@ package hospitalpets.vista;
 
 import com.nilo.plaf.nimrod.NimRODLookAndFeel;
 import com.nilo.plaf.nimrod.NimRODTheme;
-import hospitalpets.ayuda.Ayuda;
+import hospitalpets1.ayuda.Ayuda;
 
 import java.awt.Color;
 import java.awt.Image;
