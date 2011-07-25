@@ -9,7 +9,8 @@
 -->
 <hibernate-mapping package="hospitalpets.modelo">
     <class name="hospitalpets.modelo.Paciente" table="paciente">
-        <id column="idPaciente" name="paciente">
+        <id column="idPaciente" name="idPaciente">
+            <generator class="increment"/>
         </id>
         <property column="paciente" name="paciente"/>
         <property column="procedencia" name="procedencia"/>

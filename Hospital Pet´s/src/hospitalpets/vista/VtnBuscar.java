@@ -17,8 +17,12 @@ import hospitalpets.control.admin.ControlAdministraPropietario;
 import hospitalpets.modelo.Consulta;
 import hospitalpets.modelo.Paciente;
 import hospitalpets.modelo.Persona;
+import hospitalpets.vista.modelotabla.ModeloTablaConsultas;
+import java.awt.Color;
 import java.util.ArrayList;
 import java.util.Vector;
+import javax.jws.WebParam.Mode;
+import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 import javax.swing.table.AbstractTableModel;
 
@@ -33,36 +37,9 @@ public class VtnBuscar extends javax.swing.JDialog {
         super(parent, modal);
         initComponents();
 
-
-        tblConsultas.setModel(new AbstractTableModel() {
-
-            Vector<Consulta> consultas = ControlAdministraConsulta.cargarConsultas();
-            String titulos[] = {"Numero", "Medico", "Propietario"};
-
-            @Override
-            public String getColumnName(int column) {
-                return titulos[column];
-            }
-
-            public int getRowCount() {
-                return consultas.size();
-            }
-
-            public int getColumnCount() {
-                return titulos.length;
-            }
-
-            public Object getValueAt(int rowIndex, int columnIndex) {
-                System.out.println(consultas.get(rowIndex).getPaciente());
-                switch (columnIndex) {
-                    case 0:
-                        return consultas.get(rowIndex).getNumConsulta();
-                    case 2:
-                        return consultas.get(rowIndex).getFecha();
-                }
-                return null;
-            }
-        });
+                ModeloTablaConsultas modelo = new ModeloTablaConsultas();
+                tblConsultas.setModel(modelo);
+                consultas = modelo.getConsulta();
 
     }
 
@@ -149,6 +126,11 @@ public class VtnBuscar extends javax.swing.JDialog {
         );
 
         jButton1.setText("Aceptar");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         jButton2.setText("Cancelar");
 
@@ -184,7 +166,8 @@ public class VtnBuscar extends javax.swing.JDialog {
                 .addContainerGap())
         );
 
-        pack();
+        java.awt.Dimension screenSize = java.awt.Toolkit.getDefaultToolkit().getScreenSize();
+        setBounds((screenSize.width-688)/2, (screenSize.height-553)/2, 688, 553);
     }// </editor-fold>//GEN-END:initComponents
 
     private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
@@ -196,14 +179,32 @@ public class VtnBuscar extends javax.swing.JDialog {
     }//GEN-LAST:event_jComboBox1ActionPerformed
 
     private void txtingresoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtingresoActionPerformed
+        ModeloTablaConsultas modelo;
         if (jComboBox1.getSelectedIndex() == 0) {
+            modelo = new ModeloTablaConsultas(txtingreso.getText(), 0);
+            tblConsultas.setModel(modelo);
+            consultas = modelo.getConsulta();
         } else {
             if (!Persona.validarCedula(txtingreso.getText())) {
                 JOptionPane.showMessageDialog(this, "El número ingresado debe ser una cédula valida");
             } else {
+
+                modelo = new ModeloTablaConsultas(txtingreso.getText());
+                tblConsultas.setModel(modelo);
+                consultas = modelo.getConsulta();
+
             }
         }
     }//GEN-LAST:event_txtingresoActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+            if(consultas.isEmpty()){
+                JOptionPane.showMessageDialog(this, "No existe consultas disponibles");
+            }else{
+               new  VtnResultados(consultas.get(tblConsultas.getSelectedRow()),1,(JFrame)this.getParent(),true).setVisible(true);
+            }
+
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -234,4 +235,5 @@ public class VtnBuscar extends javax.swing.JDialog {
     private javax.swing.JTable tblConsultas;
     private javax.swing.JTextField txtingreso;
     // End of variables declaration//GEN-END:variables
+    private Vector<Consulta> consultas;
 }

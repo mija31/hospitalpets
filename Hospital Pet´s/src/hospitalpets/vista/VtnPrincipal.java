@@ -38,6 +38,7 @@ public class VtnPrincipal extends javax.swing.JFrame {
         Image imag = im.getImage();
         setIconImage(imag);
     }
+
     public void pielmac() {
         try {
             UIManager.setLookAndFeel("com.birosoft.liquid.LiquidLookAndFeel");
@@ -404,6 +405,11 @@ public class VtnPrincipal extends javax.swing.JFrame {
         jMenuItem5.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_I, java.awt.event.InputEvent.CTRL_MASK));
         jMenuItem5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/hospitalpets/imagenes/buscar2.png"))); // NOI18N
         jMenuItem5.setText("Buscar");
+        jMenuItem5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem5ActionPerformed(evt);
+            }
+        });
         jMenu4.add(jMenuItem5);
 
         jMenuBar1.add(jMenu4);
@@ -471,7 +477,6 @@ public class VtnPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenuItem1ActionPerformed
 
     private void jMenuItem4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem4ActionPerformed
-       
     }//GEN-LAST:event_jMenuItem4ActionPerformed
 
     private void jMenuItem6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem6ActionPerformed
@@ -503,7 +508,7 @@ public class VtnPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_jMenuItem2ActionPerformed
 
     private void jCheckBoxMenuItem2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBoxMenuItem2ActionPerformed
-try {
+        try {
             trans();
         } catch (UnsupportedLookAndFeelException ex) {
             Logger.getLogger(VtnPrincipal.class.getName()).log(Level.SEVERE, null, ex);
@@ -531,7 +536,7 @@ try {
     }//GEN-LAST:event_jButton8ActionPerformed
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-        // TODO add your handling code here:
+        new VtnBuscar(this, true).setVisible(true);
     }//GEN-LAST:event_jButton2ActionPerformed
 
     private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
@@ -555,7 +560,7 @@ try {
     }//GEN-LAST:event_jButton1ActionPerformed
 
     private void jButton12ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton12ActionPerformed
-            new VtnPacienteModificar(this, true).setVisible(true);
+        new VtnPacienteModificar(this, true).setVisible(true);
     }//GEN-LAST:event_jButton12ActionPerformed
 
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
@@ -563,7 +568,7 @@ try {
     }//GEN-LAST:event_jButton3ActionPerformed
 
     private void jButton9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton9ActionPerformed
-        new   VtnConsulta(this, true).setVisible(true);      // TODO add your handling code here:
+        new VtnConsulta(this, true).setVisible(true);      // TODO add your handling code here:
     }//GEN-LAST:event_jButton9ActionPerformed
 
     private void jButton13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton13ActionPerformed
@@ -571,12 +576,16 @@ try {
     }//GEN-LAST:event_jButton13ActionPerformed
 
     private void jMenuItem13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem13ActionPerformed
-        new   AcercaDe().setVisible(true);
+        new AcercaDe().setVisible(true);
     }//GEN-LAST:event_jMenuItem13ActionPerformed
 
     private void jMenuItem9ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem9ActionPerformed
         new VtnPacienteModificar(this, true).setVisible(true);
     }//GEN-LAST:event_jMenuItem9ActionPerformed
+
+    private void jMenuItem5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem5ActionPerformed
+        new VtnBuscar(this, true).setVisible(true);
+    }//GEN-LAST:event_jMenuItem5ActionPerformed
 
     private void datosGenerales() {
     }
@@ -631,5 +640,3 @@ try {
     // End of variables declaration//GEN-END:variables
     int numPanel = 0;
 }
-
-

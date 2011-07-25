@@ -20,5 +20,7 @@ public class Medico extends Persona{
     public void setClave(String clave) {
         this.clave = clave;
     }
-
+    public String toString(){
+        return getApellido()+" "+getNombre();
+    }
 }
