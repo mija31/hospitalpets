@@ -21,7 +21,7 @@
         <property column="fechaNacim" name="fechaNacim">
             <type name="date"/>
         </property>
-        <many-to-one class="hospitalpets.modelo.Propietario" column="propietario" name="propietario" not-null="true"/>
-        <many-to-one class="hospitalpets.modelo.Medico" column="medico" name="medico" not-null="true"/>
+        <many-to-one class="hospitalpets.modelo.Propietario" column="propietario" cascade="all" name="propietario" not-null="true"/>
+        <many-to-one class="hospitalpets.modelo.Medico" column="medico" cascade="all" name="medico" not-null="true"/>
     </class>
 </hibernate-mapping>

@@ -11,7 +11,11 @@
 package hospitalpets.vista;
 
 import hospitalpets.control.admin.ControlAdministraConsulta;
+import hospitalpets.control.admin.ControlAdministraMedico;
+import hospitalpets.control.admin.ControlAdministraPaciente;
+import hospitalpets.control.admin.ControlAdministraPropietario;
 import hospitalpets.modelo.Consulta;
+import hospitalpets.modelo.Paciente;
 import hospitalpets.modelo.Persona;
 import java.util.ArrayList;
 import java.util.Vector;
@@ -33,7 +37,7 @@ public class VtnBuscar extends javax.swing.JDialog {
         tblConsultas.setModel(new AbstractTableModel() {
 
             Vector<Consulta> consultas = ControlAdministraConsulta.cargarConsultas();
-            String titulos[] = {"Numero", "Medico", "Propietario", "Paciente", "Fecha"};
+            String titulos[] = {"Numero", "Medico", "Propietario"};
 
             @Override
             public String getColumnName(int column) {
@@ -49,17 +53,11 @@ public class VtnBuscar extends javax.swing.JDialog {
             }
 
             public Object getValueAt(int rowIndex, int columnIndex) {
-
+                System.out.println(consultas.get(rowIndex).getPaciente());
                 switch (columnIndex) {
                     case 0:
                         return consultas.get(rowIndex).getNumConsulta();
-                    case 1:
-                        return consultas.get(rowIndex).getPaciente().getMedico();
                     case 2:
-                        return consultas.get(rowIndex).getPaciente().getPropietario();
-                    case 3:
-                        return consultas.get(rowIndex).getPaciente();
-                    case 4:
                         return consultas.get(rowIndex).getFecha();
                 }
                 return null;
