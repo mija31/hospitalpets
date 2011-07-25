@@ -503,6 +503,12 @@ public class VtnPacienteModificar extends javax.swing.JDialog {
 
         jLabel25.setText("Paciente:");
 
+        cbxPaciente2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cbxPaciente2ActionPerformed(evt);
+            }
+        });
+
         jLabel26.setText("Cedula del propietario:");
 
         javax.swing.GroupLayout jPanel9Layout = new javax.swing.GroupLayout(jPanel9);
@@ -663,14 +669,14 @@ public class VtnPacienteModificar extends javax.swing.JDialog {
 }//GEN-LAST:event_btnsalirActionPerformed
 
     private void txtcedula2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtcedula2ActionPerformed
-        if (Persona.validarCedula(txtcedula.getText())) {
+        if (Persona.validarCedula(txtcedula2.getText())) {
 
-            pacientes = ControlAdministraPaciente.cargarPacientes(txtcedula.getText());
+            pacientes = ControlAdministraPaciente.cargarPacientes(txtcedula2.getText());
             if (pacientes.isEmpty()) {
                 JOptionPane.showMessageDialog(this, "El usuario ingresado no tiene mascotas", "Mensaje de Informacion", JOptionPane.INFORMATION_MESSAGE);
             } else {
-                cbxPaciente.setModel(new DefaultComboBoxModel(new Vector(pacientes)));
-                cbxPaciente.setSelectedIndex(0);
+                cbxPaciente2.setModel(new DefaultComboBoxModel(new Vector(pacientes)));
+                cbxPaciente2.setSelectedIndex(0);
                 btnModificar.setEnabled(true);
             }
         } else {
@@ -678,6 +684,29 @@ public class VtnPacienteModificar extends javax.swing.JDialog {
 
         }
     }//GEN-LAST:event_txtcedula2ActionPerformed
+
+    private void cbxPaciente2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbxPaciente2ActionPerformed
+        Paciente pacient = pacientes.get(cbxPaciente2.getSelectedIndex());
+
+        txtApellidoDoc.setText("");
+        txtApellidoProp.setText("");
+        txtBarrio.setText("");
+        txtCedulaDoc.setText("");
+        txtCedulaProp.setText("");
+        txtDireccionProp.setText("");
+        txtEspecie.setText("");
+        txtNombreDoc.setText("");
+        txtNombreProp.setText("");
+        txtPaciente.setText("");
+        txtPeso.setText("");
+        txtParroquia.setText("");
+        txtProcedencia.setText("");
+        txttelefonoProp.setText("");
+        cbxRaza.setSelectedIndex(0);
+        cbxSexo.setSelectedIndex(0);
+        fechaNacimiento.setDate(null);
+        pswPasswordDoc.setText("");
+    }//GEN-LAST:event_cbxPaciente2ActionPerformed
 
     /**
      * @param args the command line arguments

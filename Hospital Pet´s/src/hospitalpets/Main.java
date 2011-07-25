@@ -6,7 +6,6 @@ package hospitalpets;
 
 import hospitalpets.control.admin.ControlAdministrarEnfermedad;
 import hospitalpets.modelo.Sintoma;
-import hospitalpets.vista.VtnIngreso;
 import java.util.ArrayList;
 import java.util.List;
 import javax.swing.UnsupportedLookAndFeelException;
@@ -415,8 +414,6 @@ public class Main {
                 + " el músculo que le ayuda a uno a respirar. Esta abertura permite que parte de los órganos abdominales (estómago, bazo, hígado e intestinos) se"
                 + " suban hasta la cavidad torácica cerca de los pulmones."
                 ,"Correccion quirurgica", "foto");
-
-        new VtnIngreso().setVisible(true);
 
     }
 }
