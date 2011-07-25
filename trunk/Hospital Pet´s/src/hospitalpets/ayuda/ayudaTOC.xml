@@ -6,15 +6,15 @@
                 <tocitem text="Introducción"    target="index"/>
         </tocitem>
         <tocitem text="Acerca de Logic Table">
-                <tocitem text="Información del Programa"             target="tema1"/>
-                <tocitem text="Caracteristicas"                      target="tema2"/>
-                <tocitem text="Requerimientos del Sistema"           target="tema3"/>
-                <tocitem text="Crear Nuevo Documento"                target="tema4"/>
-                <tocitem text="Abrir y Guardar"                      target="tema5"/>
-                <tocitem text="Resolver Ejercicio"                   target="tema6"/>
-                <tocitem text="Ayuda"                                target="tema7"/>
-                <tocitem text="Desarrolladores"                      target="tema8"/>
-                <tocitem text="Apariencia"                           target="tema9"/>
+                <tocitem text="Información del Programa"                     target="tema1"/>
+                <tocitem text="Caracteristicas"                              target="tema2"/>
+                <tocitem text="Requerimientos del Sistema"                   target="tema3"/>
+                <tocitem text="Crear, Modificar y Eliminar Médico"           target="tema4"/>
+                <tocitem text="Crear, Modificar y Eliminar Propietario"      target="tema5"/>
+                <tocitem text="Crear, y Modificar Paciente"                  target="tema6"/>
+                <tocitem text="Ayuda"                                        target="tema7"/>
+                <tocitem text="Desarrolladores"                              target="tema8"/>
+                <tocitem text="Apariencia"                                   target="tema9"/>
 
                
 
